@@ -219,28 +219,28 @@ xIcons
 xNavigation Links
 
 -------------------------------- */
-.cd-navigation li {
+.cd-navigation ul li:nth-child(1) {
   color: #382519;
 }
-.cd-navigation li a:nth-child(1) a:link {
+.cd-navigation ul li:nth-child(1) a:link {
   color: #382519;
 }
-.cd-navigation li a:nth-child(1) a:visited {
+.cd-navigation ul li:nth-child(1) a:visited {
   color: #4b5548;
 }
-.cd-navigation li a:nth-child(1) a:hover {
+.cd-navigation ul li:nth-child(1) a:hover {
   color: #ba8563;
 }
-.cd-navigation li a:nth-child(1) a:active {
+.cd-navigation ul li:nth-child(1) a:active {
   color: #4b5548;
 }
-.cd-navigation li a:nth-child(2) {
+.cd-navigation ul li:nth-child(2) {
   color: #4b5548;
 }
-.cd-navigation li a:nth-child(3) {
+.cd-navigation ul li:nth-child(3) {
   color: #ba8563;
 }
-.cd-navigation li a:nth-child(4) {
+.cd-navigation ul li:nth-child(4) {
   color: #4b5548;
 }
 
