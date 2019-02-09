@@ -1,58 +1,75 @@
 @mixin linkstate() {
     a:link {
+        font-weight: bold;
+        text-decoration: none;
         color: $color-2;
     }
     a:visited {
+        font-weight: bold;
+        text-decoration: none;
         color: $color-6;
     }
     a:hover {
         color: lighten($color-2, 40%);
     }
     a:active {
+        font-weight: bold;
+        text-decoration: none;
         color: $color-6;
     }
 }
 
-.cd-navigation li {
-    a:nth-child(1) {
-        @include linkstate();
+.cd-navigation .cd-box div:first-of-type, .cd-navigation .cd-box div:nth-of-type(2) { /* Select a Design and Archives */
+  background-color: $color-3;
+}
+
+.cd-navigation .cd-box div:nth-last-of-type(3) { /* Resources */
+  background-color: $color-4;
+}
+
+.cd-primary-nav ul  {
+
+    li:nth-child(1) a {
+       // @include linkstate();
+       font-weight: bold;
         color: $color-2;//link color
-    }
-    a:nth-child(2) {
+        }
+
+    li:nth-child(2) a {
         color: $color-6;//visited color
     }
-    a:nth-child(3) {
+    li:nth-child(3) a {
         color: lighten($color-2, 40%);//hover color
     }
-    a:nth-child(4) {
+    li:nth-child(4) a {
         color: $color-6;//active color
     }
 }
-.cd-secondary-nav {
-    li:nth-child(1) {
+.cd-secondary-nav ul {
+    li:nth-child(1) a {
         color: $color-1;//link color
     }
-    li:nth-child(2) {
+    li:nth-child(2) a {
         color: $color-6;//visited color
     }
-    li:nth-child(3) {
+    li:nth-child(3) a {
         color: lighten($color-1, 40%);//hover color
     }
-    li:nth-child(4) {
+    li:nth-child(4) a {
         color: $color-6;//active color
     }
 }
-.cd-other-nav {
-    li:nth-child(1) {
+.cd-other-nav ul {
+    li:nth-child(1) a {
         color: $color-2;//link color
     }
-    li:nth-child(2) {
+    li:nth-child(2) a {
         color: $color-6;//visited color
     }
-    li:nth-child(3) {
+    li:nth-child(3) a {
         color: lighten($color-2, 40%);//hover color
     }
-    li:nth-child(4) {
+    li:nth-child(4) a {
         color: $color-6;//active color
     }
 }

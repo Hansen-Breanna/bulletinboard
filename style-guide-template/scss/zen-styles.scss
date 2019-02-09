@@ -11,8 +11,8 @@ $color-6: #ffffff; // white
 $color-7: #f2b975; // orange
 $color-8: #ede3da; // light-cream
 $pin: url('images/blue-push-pin.png');
-$serif: Lora, Georgia, serif;
-$sans-serif: 'Source Sans Pro', Arial, sans-serif;
+$secondary-font: Lora, Georgia, serif;
+$primary-font: 'Source Sans Pro', Arial, sans-serif;
 
 /* SCSS Mixins */
 
@@ -56,7 +56,7 @@ body {
   margin: 0;
   padding: 0;
   border-top: 175px solid $color-2;
-  font-family: $serif;
+  font-family: $secondary-font;
 }
 
 p {
@@ -64,8 +64,9 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $sans-serif;
+  font-family: $primary-font;
 }
+
 h2 {
   text-transform: uppercase;
 }
@@ -95,23 +96,25 @@ footer a {
   background-color: $color-6;
 }
 
-a:link {
-  font-weight: bold;
-  text-decoration: none;
-  color: $color-2;
-}
-a:visited {
-  font-weight: bold;
-  text-decoration: none;
-  color: $color-6;
-}
-a:hover {
-  color: lighten($color-2, 40%);
-}
-a:active {
-  font-weight: bold;
-  text-decoration: none;
-  color: $color-6;
+a {
+  &:link {
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-2;
+  }
+  &:visited {
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-6;
+  }
+  &:hover {
+    color: lighten($color-2, 40%);
+  }
+  &:active {
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-6;
+  }
 }
 
 abbr {
@@ -172,14 +175,12 @@ header h2 {
     right -130px,
     bottom -110px,
     1em);
-}
-
-.summary p {
-  width: 200px;
-}
-
-.summary p:nth-last-of-type(1) {
-  padding-bottom: 75px;
+  & p {
+    width: 200px;
+  }
+  & p:nth-last-of-type(1) {
+    padding-bottom: 75px;
+  }
 }
 
 .preamble {
@@ -225,11 +226,10 @@ header h2 {
     left,
     center,
     1em);
-}
-
-.participation h3,
-.participation p {
-  text-align: right;
+  & h3,
+  & p {
+    text-align: right;
+  }
 }
 
 .benefits {
@@ -250,20 +250,17 @@ header h2 {
   @include box-shadow;
   margin: 20px;
   @include pin;
-}
-
-.requirements h3 {
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.requirements p:nth-of-type(1) {
-  border-top: 15px solid $color-2;
-  padding-top: 15px;
-}
-
-.requirements role {
-  background-color: $color-2;
+  &  h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  & p:nth-of-type(1) {
+    border-top: 15px solid $color-2;
+    padding-top: 15px;
+  }
+  & role {
+    background-color: $color-2;
+  }
 }
 
 .design-archives {
@@ -273,81 +270,71 @@ header h2 {
   font-size: 0.8em;
   width: 150px;
   font-weight: normal;
-  font-family: $serif;
-}
-
-.design-selection h3,
-.design-selection li,
-.design-archives,
-footer {
+  font-family: $secondary-font;
   background-color: $color-3;
+  & ul {
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.design-archives ul {
-  margin: 0;
-  padding: 0;
-}
-
-.design-selection h3 {
-  @include box-shadow;
-  margin: 20px;
-  padding: 15px;
-  font-size: 1em;
-}
-
-.design-selection ul {
-  column-count: 2;
-}
-
-.design-selection li {
-  width: 150px;
-  height: 100px;
-  @include box-shadow;
-  margin: 30px;
-  padding: 50px 20px 20px 20px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  text-align: center;
-}
-
-.design-selection li:nth-child(1) {
-  transform: rotate(-2deg);
-  @include pin;
-}
-
-.design-selection li:nth-child(2) {
-  transform: rotate(3deg);
-  @include pin;
-}
-
-.design-selection li:nth-child(3) {
-  transform: rotate(1deg);
-  @include pin;
-}
-
-.design-selection li:nth-child(4) {
-  transform: rotate(-5deg);
-  @include pin;
-}
-
-.design-selection li:nth-child(5) {
-  transform: rotate(1deg);
-  @include pin;
-}
-
-.design-selection li:nth-child(6) {
-  @include pin;
-}
-
-.design-selection li:nth-child(7) {
-  transform: rotate(-3deg);
-  @include pin;
-}
-
-.design-selection li:nth-child(8) {
-  transform: rotate(1deg);
-  @include pin;
+.design-selection {
+  & h3 {
+    @include box-shadow;
+    margin: 20px;
+    padding: 15px;
+    font-size: 1em;
+    background-color: $color-3;
+  }
+  & ul {
+    column-count: 2;
+  }
+  & li {
+    width: 150px;
+    height: 100px;
+    @include box-shadow;
+    margin: 30px;
+    padding: 50px 20px 20px 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    background-color: $color-3;
+  }
+  & li:nth-child(1) {
+    transform: rotate(-2deg);
+    @include pin;
+  }
+  & li:nth-child(2) {
+    transform: rotate(3deg);
+    @include pin;
+  }
+  & li:nth-child(3) {
+    transform: rotate(1deg);
+    @include pin;
+  }
+  & li:nth-child(4) {
+    transform: rotate(-5deg);
+    @include pin;
+  }
+  & li:nth-child(5) {
+    transform: rotate(1deg);
+    @include pin;
+  }
+  & li:nth-child(6) {
+    @include pin;
+  }
+  & li:nth-child(7) {
+    transform: rotate(-3deg);
+    @include pin;
+  }
+  & li:nth-child(8) {
+    transform: rotate(1deg);
+    @include pin;
+  }
+  & li a:link {
+    color: $color-2;
+  }
 }
 
 p[role=contentinfo] {
@@ -360,10 +347,9 @@ p[role=contentinfo] {
   text-align: right;
   padding: 75px 15% 75px 20%;
   font-size: 1.2em;
-}
-
-p[role=contentinfo] a {
-  color: $color-6;
+  & a {
+    color: $color-6;
+  }
 }
 
 footer a:link,
@@ -372,7 +358,7 @@ footer a:visited {
 }
 
 .sidebar .wrapper {
-  font: 1.2em verdana, $sans-serif;
+  font: 1.2em verdana, $primary-font;
 }
 
 h3.select {
@@ -381,13 +367,13 @@ h3.select {
   text-transform: capitalize;
   @include pin;
   padding-top: 50px;
-  font-family: $serif;
+  font-family: $secondary-font;
 }
 
 h3.archives {
   margin: 25px 0 5px 0;
   text-transform: capitalize;
-  font-family: $serif;
+  font-family: $secondary-font;
 }
 
 h3.resources {
@@ -407,59 +393,48 @@ h3.resources {
     200px,
     right,
     bottom,
-    0.8em)
+    0.8em);
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    margin-bottom: -71px;
+    border-top: 75px solid $color-4;
+    border-right: 140px solid transparent;
+    filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    margin-bottom: -71px;
+    border-top: 75px solid $color-4;
+    border-left: 140px solid transparent;
+    filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+  }
+  & li {
+    line-height: 1.4em;
+    a:link {
+      color: $color-6;
     }
-
-.zen-resources:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  margin-bottom: -71px;
-  border-top: 75px solid $color-4;
-  border-right: 140px solid transparent;
-  filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
-}
-
-.zen-resources:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  margin-bottom: -71px;
-  border-top: 75px solid $color-4;
-  border-left: 140px solid transparent;
-  filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
-}
-
-.zen-resources ul {
-  margin: 0;
-  padding: 0;
-}
-
-.zen-resources li {
-  line-height: 1.4em;
-}
-
-.zen-resources a {
-  font-family: $serif;
-  font-weight: 100;
-}
-
-.design-selection li a:link {
-  color: $color-2;
-}
-
-.zen-resources li a:link {
-  color: $color-6;
-}
-
-.zen-resources li a:hover {
-  color: $color-3;
+    a:hover {
+      color: $color-3;
+    }
+  }
+  & a {
+    font-family: $secondary-font;
+    font-weight: 100;
+  }
 }
 
 .sidebar li a:visited {
@@ -476,14 +451,14 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-footer a {
-  border: 2px solid $color-2;
-  padding: 15px 5px;
-  margin: auto;
-  font-size: 0.8em;
-  width: 50px;
+  background-color: $color-3;
+  & a {
+    border: 2px solid $color-2;
+    padding: 15px 5px;
+    margin: auto;
+    font-size: 0.8em;
+    width: 50px;
+  }
 }
 
 a.zen-validate-html {
@@ -578,24 +553,23 @@ a.zen-accessibility {
     height: 165px;
     padding: 15px 30px 35px 70px;
     margin: 20px;
-  }
-
-  .benefits:after {
-    content: "";
-    padding: 38px 20px;
-    margin-top: -165px;
-    background: $color-6;
-    background-image: url('images/barcode_horizontal_2nd.png');
-    background-size: 175px 50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: rotate(90deg);
-    position: relative;
-    height: 30px;
-    width: 176px;
-    left: 435px;
-    display: block;
-    box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.5);
+    &:after {
+      content: "";
+      padding: 38px 20px;
+      margin-top: -165px;
+      background: $color-6;
+      background-image: url('images/barcode_horizontal_2nd.png');
+      background-size: 175px 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: rotate(90deg);
+      position: relative;
+      height: 30px;
+      width: 176px;
+      left: 435px;
+      display: block;
+      box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.5);
+    }
   }
 
   .requirements {
@@ -604,8 +578,15 @@ a.zen-accessibility {
     margin: 20px;
   }
 
-  .design-selection ul {
-    width: 500px;
+  .design-selection {
+    & ul {
+      width: 500px;
+    }
+    & li {
+      width: 200px;
+      height: 200px;
+      padding: 20px;
+    }
   }
 
   p[role=contentinfo] {
@@ -618,23 +599,16 @@ a.zen-accessibility {
     padding: 40px;
   }
 
-  .design-selection li {
-    width: 200px;
-    height: 200px;
-    padding: 20px;
-  }
-
   .zen-resources {
     padding: 70px 30px 100px 30px;
   }
 
   footer {
     left: -55px;
-  }
-
-  footer a {
-    padding: 20px 10px;
-    margin: 0 10px;
+    & a {
+      padding: 20px 10px;
+      margin: 0 10px;
+    }
   }
 
 }
