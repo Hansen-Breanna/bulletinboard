@@ -210,42 +210,42 @@ xIcons
 xNavigation Links
 
 -------------------------------- */
-.cd-navigation li:nth-of-type(1) {
+.cd-navigation li:nth-child(1) {
   color: #382519;
 }
-.cd-navigation li:nth-of-type(2) {
+.cd-navigation li:nth-child(2) {
   color: #4b5548;
 }
-.cd-navigation li:nth-of-type(3) {
+.cd-navigation li:nth-child(3) {
   color: #ba8563;
 }
-.cd-navigation li:nth-of-type(4) {
+.cd-navigation li:nth-child(4) {
   color: #4b5548;
 }
 
-.cd-secondary-nav li:nth-of-type(1) {
+.cd-secondary-nav li:nth-child(1) {
   color: #b8c8cc;
 }
-.cd-secondary-nav li:nth-of-type(2) {
+.cd-secondary-nav li:nth-child(2) {
   color: #4b5548;
 }
-.cd-secondary-nav li:nth-of-type(3) {
+.cd-secondary-nav li:nth-child(3) {
   color: white;
 }
-.cd-secondary-nav li:nth-of-type(4) {
+.cd-secondary-nav li:nth-child(4) {
   color: #4b5548;
 }
 
-.cd-other-nav li:nth-of-type(1) {
+.cd-other-nav li:nth-child(1) {
   color: #382519;
 }
-.cd-other-nav li:nth-of-type(2) {
+.cd-other-nav li:nth-child(2) {
   color: #4b5548;
 }
-.cd-other-nav li:nth-of-type(3) {
+.cd-other-nav li:nth-child(3) {
   color: #ba8563;
 }
-.cd-other-nav li:nth-of-type(4) {
+.cd-other-nav li:nth-child(4) {
   color: #4b5548;
 }
 
