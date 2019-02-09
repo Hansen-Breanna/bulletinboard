@@ -31,21 +31,21 @@
         color: $color-6;//active color
     }
 }
-.cd-secondary-nav {
-    li:nth-child(1) {
+.cd-secondary-nav ul {
+    li:nth-child(1) a {
         color: $color-1;//link color
     }
-    li:nth-child(2) {
+    li:nth-child(2) a {
         color: $color-6;//visited color
     }
-    li:nth-child(3) {
+    li:nth-child(3) a {
         color: lighten($color-1, 40%);//hover color
     }
-    li:nth-child(4) {
+    li:nth-child(4) a {
         color: $color-6;//active color
     } 
 }
-.cd-other-nav {
+.cd-other-nav ul {
     li:nth-child(1) {
         color: $color-2;//link color
     }
