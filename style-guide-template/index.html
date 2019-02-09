@@ -337,7 +337,13 @@
 				display: inline-block;
 				margin: -175px auto 40px auto;
 				@include box-shadow;
-				@include background-img (url('images/logo-ver-1.jpg'), no-repeat, 350px, 350px, center,	center,	0); /* Image will be an SVG */
+				@include background-img (url('images/logo-ver-1.jpg'),
+					no-repeat,
+					350px,
+					350px,
+					center,
+					center,
+					0); /* Image will be an SVG */
 			}
 
 			header h2 {
@@ -358,7 +364,13 @@
 				margin: auto;
 				padding: 0 25px 25px 25px;
 				@include box-shadow;
-				@include background-img (url('images/flower-combo.png'), no-repeat,	300px, 300px, right -130px, bottom -110px, 1em);
+				@include background-img (url('images/flower-combo.png'),
+					no-repeat,
+					300px,
+					300px,
+					right -130px,
+					bottom -110px,
+					1em);
 				& p {
 					width: 200px;
 				}
@@ -401,7 +413,13 @@
 				@include box-shadow;
 				margin: 20px;
 				background-color: $color-8;
-				@include background-img (url('images/red-leaves.png'), no-repeat, 30%, 60%, left, center, 1em);
+				@include background-img (url('images/red-leaves.png'),
+					no-repeat,
+					30%,
+					60%,
+					left,
+					center,
+					1em);
 				& h3, & p {
 					text-align: right;
 				}
@@ -561,7 +579,13 @@
 				transform: rotate(-15deg);
 				width: 200px;
 				background-color: $color-4;
-				@include background-img (url('images/blue-leaves.png'),	no-repeat, 100px, 200px, right, bottom, 0.8em);
+				@include background-img (url('images/blue-leaves.png'),
+					no-repeat,
+					100px,
+					200px,
+					right,
+					bottom,
+					0.8em);
 				&:before {
 					content: "";
 					position: absolute;
@@ -630,23 +654,53 @@
 			}
 
 			a.zen-validate-html {
-				@include background-img (url('images/icons/html.png'), no-repeat, 50px,	50px, center, center, 0);
+				@include background-img (url('images/icons/html.png'), 
+					no-repeat, 
+					50px,	
+					50px, 
+					center, 
+					center, 
+					0);
 			}
 
 			a.zen-validate-css {
-				@include background-img (url('images/icons/css.png'), no-repeat, 50px, 50px, center, center, 0);
+				@include background-img (url('images/icons/css.png'),
+					no-repeat,
+					50px,
+					50px,
+					center,
+					center,
+					0);
 			}
 
 			a.zen-license {
-				@include background-img (url('images/icons/creative-commons.png'), no-repeat, 50px, 50px, center, center, 0);
+				@include background-img (url('images/icons/creative-commons.png'),
+					no-repeat,
+					50px,
+					50px,
+					center,
+					center,
+					0);
 			}
 
 			a.zen-github {
-				@include background-img (url('images/icons/github.png'), no-repeat, 50px, 50px, center, center, 0);
+				@include background-img (url('images/icons/github.png'),
+					no-repeat,
+					50px,
+					50px,
+					center,
+					center,
+					0);
 			}
 
 			a.zen-accessibility {
-				@include background-img (url('images/icons/accessible.png'), no-repeat, 50px, 50px, center, center, 0);
+				@include background-img (url('images/icons/accessible.png'),
+					no-repeat,
+					50px,
+					50px,
+					center,
+					center,
+					0);
 			}
 
 			@media (min-width: 700px) {
@@ -677,7 +731,13 @@
 				.participation {
 					padding: 15px 30px 15px 140px;
 					width: 650px;
-					@include background-img (url('images/red-leaves.png'), no-repeat, 150px, 90%, left, center, 1em);
+					@include background-img (url('images/red-leaves.png'),
+					no-repeat,
+					150px,
+					90%,
+					left,
+					center,
+					1em);
 				}
 
 				.benefits {
