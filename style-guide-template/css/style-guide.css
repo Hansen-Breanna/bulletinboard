@@ -33,8 +33,8 @@ header {
 
 .cd-logo {
   /* logo box style */
-  background-color: #5f8ee4;
-  width: 120px;
+  background-color: #b8c8cc;
+  width: 220px;
 }
 @media only screen and (min-width: 1024px) {
   .cd-logo {
@@ -183,7 +183,7 @@ xButtons
   box-shadow: none;
   border-radius: .25em;
   font-size: 1.4rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #ffffff;
   padding: .6em 2.2em;
   cursor: pointer;
@@ -196,10 +196,10 @@ xButtons
   background: #759de8;
 }
 .btn.btn-success {
-  background: #6fce72;
+  background: #efd9bf;
 }
 .no-touch .btn.btn-success:hover {
-  background: #82d485;
+  background: #f4e5d3;
 }
 .btn.btn-alert {
   background: #e4655f;
@@ -257,8 +257,8 @@ input[type=text] {
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
 }
 input[type=text].success {
-  border-color: #6fce72;
-  box-shadow: 0 0 6px rgba(111, 206, 114, 0.2);
+  border-color: #efd9bf;
+  box-shadow: 0 0 6px rgba(239, 217, 191, 0.2);
 }
 input[type=text].alert {
   border-color: #e4655f;
@@ -388,7 +388,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Merriweather", serif;
+  font-family: "Lora", serif;
 }
 
 a {
@@ -400,7 +400,7 @@ img {
 }
 
 input, textarea, select {
-  font-family: "Merriweather", serif;
+  font-family: "Lora", serif;
   font-size: 1.6rem;
 }
 
