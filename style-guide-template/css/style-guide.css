@@ -1,14 +1,14 @@
-/* -------------------------------- 
+/* --------------------------------
 
-xBackground 
+xBackground
 
 -------------------------------- */
 body {
-  /* this is the page background */
+  /* this is the page background  white */
   background-color: #ffffff;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 xPatterns
 
@@ -22,9 +22,9 @@ xPatterns
   padding: 6px;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xNavigation 
+xNavigation
 
 -------------------------------- */
 header {
@@ -98,9 +98,9 @@ header {
   border-color: #b8c8cc;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xPage title 
+xPage title
 
 -------------------------------- */
 main > h1 {
@@ -113,17 +113,17 @@ main > h1 {
   }
 }
 
+/* --------------------------------
+
+xTypography
+
+-------------------------------- */
 /* -------------------------------- 
 
 xTypography 
 
 -------------------------------- */
-/* -------------------------------- 
-
-xTypography 
-
--------------------------------- */
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Source Sans Pro", sans-serif;
   color: #382519;
 }
@@ -168,6 +168,15 @@ h3 {
   }
 }
 
+h4 {
+  margin: 0 0 0.5em 0;
+}
+@media only screen and (min-width: 768px) {
+  h4 {
+    font-size: 4rem;
+  }
+}
+
 section > h2::before {
   /* number before each section title */
   color: #e41f44;
@@ -189,74 +198,25 @@ p a {
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xButtons 
+xButtons
 
 -------------------------------- */
-.btn {
-  border: none;
-  box-shadow: none;
-  border-radius: 0.25em;
-  font-size: 1.4rem;
-  font-family: "Lora", serif;
-  color: #ffffff;
-  padding: 0.6em 2.2em;
-  cursor: pointer;
-  background: #b8c8cc;
-}
-.btn:focus {
-  outline: none;
-}
-.no-touch .btn:hover {
-  background: #c7d3d7;
-}
-.btn.btn-success {
-  background: #6fce72;
-}
-.no-touch .btn.btn-success:hover {
-  background: #82d485;
-}
-.btn.btn-alert {
-  background: #efd9bf;
-}
-.no-touch .btn.btn-alert:hover {
-  background: #f4e5d3;
-}
-.btn.btn-outline {
-  color: #b8c8cc;
-  background: transparent;
-  box-shadow: inset 0 0 0 1px #b8c8cc;
-}
-.no-touch .btn.btn-outline:hover {
-  color: #ffffff;
-  background: #b8c8cc;
-}
-@media only screen and (min-width: 768px) {
-  .btn {
-    font-size: 1.6rem;
-  }
-}
+/* --------------------------------
 
-.cd-buttons .cd-box:nth-of-type(2) span {
-  /* CSS class name color */
-  color: #b8c8cc;
-}
-
-/* -------------------------------- 
-
-xIcons 
+xIcons
 
 -------------------------------- */
 .cd-icons li {
   /* icons size */
-  width: 32px;
-  height: 32px;
+  width: 100px;
+  height: 100px;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xForm 
+xForm
 
 -------------------------------- */
 input[type=text], select {
@@ -273,12 +233,12 @@ input[type=text] {
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
 }
 input[type=text].success {
-  border-color: #6fce72;
-  box-shadow: 0 0 6px rgba(111, 206, 114, 0.2);
+  border-color: #b8c8cc;
+  box-shadow: 0 0 6px rgba(184, 200, 204, 0.2);
 }
 input[type=text].alert {
-  border-color: #efd9bf;
-  box-shadow: 0 0 6px rgba(239, 217, 191, 0.2);
+  border-color: #382519;
+  box-shadow: 0 0 6px rgba(56, 37, 25, 0.2);
 }
 input[type=text]:focus {
   border-color: #b8c8cc;
@@ -382,7 +342,7 @@ select {
   appearance: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 xBasic style
 
@@ -404,7 +364,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Lora", serif;
 }
 
 a {
@@ -416,7 +376,7 @@ img {
 }
 
 input, textarea, select {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Lora", serif;
   font-size: 1.6rem;
 }
 
@@ -896,6 +856,15 @@ section:nth-of-type(10) h2::before {
 }
 .cd-colors li:nth-of-type(5) .cd-color-swatch::after {
   background: #f2f2f2;
+}
+.cd-colors li:nth-of-type(6) .cd-color-swatch {
+  background: #4b5548;
+}
+.cd-colors li:nth-of-type(6) .cd-color-swatch::before {
+  background: #576354;
+}
+.cd-colors li:nth-of-type(6) .cd-color-swatch::after {
+  background: #3f473c;
 }
 @media only screen and (min-width: 768px) {
   .cd-colors li {
