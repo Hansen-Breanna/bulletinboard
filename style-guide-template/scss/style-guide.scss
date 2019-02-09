@@ -4,6 +4,7 @@
 
 // color palette - these colors will be the color swatches of the Colors section
 
+@import 'partials/colors';
 
 // fonts
 
@@ -17,7 +18,7 @@ xBackground
 -------------------------------- */
 
 body {
-    /* this is the page background */
+    /* this is the page background  white */
     background-color: $color-5;
 }
 
