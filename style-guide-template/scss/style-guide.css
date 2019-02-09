@@ -123,7 +123,7 @@ xTypography
 xTypography 
 
 -------------------------------- */
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: "Source Sans Pro", sans-serif;
   color: #382519;
 }
@@ -168,15 +168,6 @@ h3 {
   }
 }
 
-h4 {
-  margin: 0 0 0.5em 0;
-}
-@media only screen and (min-width: 768px) {
-  h4 {
-    font-size: 4rem;
-  }
-}
-
 section > h2::before {
   /* number before each section title */
   color: #e41f44;
@@ -210,8 +201,53 @@ xIcons
 -------------------------------- */
 .cd-icons li {
   /* icons size */
-  width: 100px;
-  height: 100px;
+  width: 32px;
+  height: 32px;
+}
+
+/* --------------------------------
+
+xNavigation Links
+
+-------------------------------- */
+.cd-navigation li a:nth-child(1) {
+  color: #382519;
+  hover-color: #ba8563;
+}
+.cd-navigation li a:nth-child(2) {
+  color: #4b5548;
+}
+.cd-navigation li a:nth-child(3) {
+  color: #ba8563;
+}
+.cd-navigation li a:nth-child(4) {
+  color: #4b5548;
+}
+
+.cd-secondary-nav li:nth-child(1) {
+  color: #b8c8cc;
+}
+.cd-secondary-nav li:nth-child(2) {
+  color: #4b5548;
+}
+.cd-secondary-nav li:nth-child(3) {
+  color: white;
+}
+.cd-secondary-nav li:nth-child(4) {
+  color: #4b5548;
+}
+
+.cd-other-nav li:nth-child(1) {
+  color: #382519;
+}
+.cd-other-nav li:nth-child(2) {
+  color: #4b5548;
+}
+.cd-other-nav li:nth-child(3) {
+  color: #ba8563;
+}
+.cd-other-nav li:nth-child(4) {
+  color: #4b5548;
 }
 
 /* --------------------------------
