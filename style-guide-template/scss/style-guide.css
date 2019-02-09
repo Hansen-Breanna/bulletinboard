@@ -265,31 +265,30 @@ xIcons
 xNavigation Links
 
 -------------------------------- */
-.cd-primary-nav ul li:nth-child(1) {
+/*@mixin linkstate() {
+    a:link {
+        color: $color-2;
+    }
+    a:visited {
+        color: $color-6;
+    }
+    a:hover {
+        color: lighten($color-2, 40%);
+    }
+    a:active {
+        color: $color-6;
+    }
+}*/
+.cd-primary-nav li:nth-child(1) {
   color: #382519;
 }
-.cd-primary-nav ul li:nth-child(1) a:link {
-  color: #382519;
-}
-.cd-primary-nav ul li:nth-child(1) a:visited {
+.cd-primary-nav li:nth-child(2) {
   color: #4b5548;
 }
-.cd-primary-nav ul li:nth-child(1) a:hover {
+.cd-primary-nav li:nth-child(3) {
   color: #ba8563;
 }
-.cd-primary-nav ul li:nth-child(1) a:active {
-  color: #4b5548;
-}
-.cd-primary-nav ul li:nth-child(1):hover {
-  color: #ba8563;
-}
-.cd-primary-nav ul li:nth-child(2) {
-  color: #4b5548;
-}
-.cd-primary-nav ul li:nth-child(3) {
-  color: #ba8563;
-}
-.cd-primary-nav ul li:nth-child(4) {
+.cd-primary-nav li:nth-child(4) {
   color: #4b5548;
 }
 

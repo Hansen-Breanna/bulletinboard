@@ -1,33 +1,39 @@
-@mixin linkstate() {
+/*@mixin linkstate() {
     a:link {
+        font-weight: bold;
+        text-decoration: none;
         color: $color-2;
     }
     a:visited {
+        font-weight: bold;
+        text-decoration: none;
         color: $color-6;
     }
     a:hover {
         color: lighten($color-2, 40%);
     }
     a:active {
+        font-weight: bold;
+        text-decoration: none;
         color: $color-6;
     }
-}
+}*/
 
-.cd-primary-nav ul {
+.cd-primary-nav  {
     
-    li:nth-child(1) {
-        @include linkstate();
+    li:nth-child(1) a {
+       // @include linkstate();
+       font-weight: bold;
         color: $color-2;//link color
-        &:hover {color: lighten($color-2, 40%);//hover color
         }
-    }
-    li:nth-child(2) {
+    
+    li:nth-child(2) a {
         color: $color-6;//visited color
     }
-    li:nth-child(3) {
+    li:nth-child(3) a {
         color: lighten($color-2, 40%);//hover color
     }
-    li:nth-child(4) {
+    li:nth-child(4) a {
         color: $color-6;//active color
     }
 }
@@ -46,16 +52,16 @@
     } 
 }
 .cd-other-nav ul {
-    li:nth-child(1) {
+    li:nth-child(1) a {
         color: $color-2;//link color
     }
-    li:nth-child(2) {
+    li:nth-child(2) a {
         color: $color-6;//visited color
     }
-    li:nth-child(3) {
+    li:nth-child(3) a {
         color: lighten($color-2, 40%);//hover color
     }
-    li:nth-child(4) {
+    li:nth-child(4) a {
         color: $color-6;//active color
     } 
 }
