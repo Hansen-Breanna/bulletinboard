@@ -265,56 +265,52 @@ xIcons
 xNavigation Links
 
 -------------------------------- */
-/*@mixin linkstate() {
-    a:link {
-        color: $color-2;
-    }
-    a:visited {
-        color: $color-6;
-    }
-    a:hover {
-        color: lighten($color-2, 40%);
-    }
-    a:active {
-        color: $color-6;
-    }
-}*/
-.cd-primary-nav li:nth-child(1) {
-  color: #382519;
-}
-.cd-primary-nav li:nth-child(2) {
-  color: #4b5548;
-}
-.cd-primary-nav li:nth-child(3) {
-  color: #ba8563;
-}
-.cd-primary-nav li:nth-child(4) {
-  color: #4b5548;
+.cd-navigation .cd-box div:first-of-type, .cd-navigation .cd-box div:nth-of-type(2) {
+  /* Select a Design and Archives */
+  background-color: #efd9bf;
 }
 
-.cd-secondary-nav ul li:nth-child(1) a {
-  color: #b8c8cc;
+.cd-navigation .cd-box div:nth-last-of-type(3) {
+  /* Resources */
+  background-color: #ec637d;
 }
-.cd-secondary-nav ul li:nth-child(2) a {
+
+.cd-primary-nav ul li:nth-of-type(1) {
+  color: #382519;
+}
+.cd-primary-nav ul li:nth-of-type(2) {
   color: #4b5548;
 }
-.cd-secondary-nav ul li:nth-child(3) a {
+.cd-primary-nav ul li:nth-of-type(3) {
   color: white;
 }
-.cd-secondary-nav ul li:nth-child(4) a {
+.cd-primary-nav ul li:nth-of-type(4) {
   color: #4b5548;
 }
 
-.cd-other-nav ul li:nth-child(1) {
-  color: #382519;
+.cd-secondary-nav ul li:nth-of-type(1) a {
+  color: #b8c8cc;
 }
-.cd-other-nav ul li:nth-child(2) {
+.cd-secondary-nav ul li:nth-of-type(2) a {
   color: #4b5548;
 }
-.cd-other-nav ul li:nth-child(3) {
-  color: #ba8563;
+.cd-secondary-nav ul li:nth-of-type(3) a {
+  color: white;
 }
-.cd-other-nav ul li:nth-child(4) {
+.cd-secondary-nav ul li:nth-of-type(4) a {
+  color: #4b5548;
+}
+
+.cd-other-nav ul li:nth-of-type(1) a {
+  color: #382519;
+}
+.cd-other-nav ul li:nth-of-type(2) a {
+  color: #4b5548;
+}
+.cd-other-nav ul li:nth-of-type(3) a {
+  color: white;
+}
+.cd-other-nav ul li:nth-of-type(4) a {
   color: #4b5548;
 }
 
