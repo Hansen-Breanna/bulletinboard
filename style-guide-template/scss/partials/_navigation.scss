@@ -13,18 +13,18 @@
     }
 }
 
-.cd-navigation {
-    li a:nth-child(1) {
+.cd-navigation li {
+    a:nth-child(1) {
         @include linkstate();
         color: $color-2;//link color
     }
-    li a:nth-child(2) {
+    a:nth-child(2) {
         color: $color-6;//visited color
     }
-    li a:nth-child(3) {
+    a:nth-child(3) {
         color: lighten($color-2, 40%);//hover color
     }
-    li a:nth-child(4) {
+    a:nth-child(4) {
         color: $color-6;//active color
     }
 }

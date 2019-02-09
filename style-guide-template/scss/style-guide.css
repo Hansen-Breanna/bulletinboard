@@ -221,7 +221,18 @@ xNavigation Links
 -------------------------------- */
 .cd-navigation li a:nth-child(1) {
   color: #382519;
-  hover-color: #ba8563;
+}
+.cd-navigation li a:nth-child(1) a:link {
+  color: #382519;
+}
+.cd-navigation li a:nth-child(1) a:visited {
+  color: #4b5548;
+}
+.cd-navigation li a:nth-child(1) a:hover {
+  color: #ba8563;
+}
+.cd-navigation li a:nth-child(1) a:active {
+  color: #4b5548;
 }
 .cd-navigation li a:nth-child(2) {
   color: #4b5548;
