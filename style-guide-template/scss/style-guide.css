@@ -210,16 +210,17 @@ xIcons
 xNavigation Links
 
 -------------------------------- */
-.cd-navigation li:nth-child(1) {
+.cd-navigation li a:nth-child(1) {
   color: #382519;
+  hover-color: #ba8563;
 }
-.cd-navigation li:nth-child(2) {
+.cd-navigation li a:nth-child(2) {
   color: #4b5548;
 }
-.cd-navigation li:nth-child(3) {
+.cd-navigation li a:nth-child(3) {
   color: #ba8563;
 }
-.cd-navigation li:nth-child(4) {
+.cd-navigation li a:nth-child(4) {
   color: #4b5548;
 }
 
