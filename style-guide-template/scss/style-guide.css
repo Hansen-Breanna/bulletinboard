@@ -219,7 +219,7 @@ xIcons
 xNavigation Links
 
 -------------------------------- */
-.cd-navigation li a:nth-child(1) {
+.cd-navigation li {
   color: #382519;
 }
 .cd-navigation li a:nth-child(1) a:link {
