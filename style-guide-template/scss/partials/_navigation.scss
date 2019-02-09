@@ -1,8 +1,22 @@
+@mixin linkstate() {
+    a:link {
+        color: $color-2;
+    }
+    a:visited {
+        color: $color-6;
+    }
+    a:hover {
+        color: lighten($color-2, 40%);
+    }
+    a:active {
+        color: $color-6;
+    }
+}
+
 .cd-navigation {
     li a:nth-child(1) {
+        @include linkstate();
         color: $color-2;//link color
-        &:hover: {color: lighten($color-2, 40%);//hover color
-        }
     }
     li a:nth-child(2) {
         color: $color-6;//visited color
