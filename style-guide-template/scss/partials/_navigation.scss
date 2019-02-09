@@ -29,11 +29,12 @@
 
 .cd-primary-nav ul  {
     
-    li:nth-child(1) a:link {
-       // @include linkstate();
-       font-weight: bold;
+    li:nth-child(1) a {
+       &:link: {
+        font-weight: bold;
         color: $color-2;//link color
         }
+    }
     
     li:nth-child(2) a:link {
         color: $color-6;//visited color
@@ -44,6 +45,9 @@
     li:nth-child(4) a {
         color: $color-6;//active color
     }
+}
+.cd-secondary-nav ul li  {
+    a:link: {color: $color-1;}
 }
 .cd-secondary-nav ul {
     li:nth-child(1) a {
