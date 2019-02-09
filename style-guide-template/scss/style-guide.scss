@@ -2,17 +2,14 @@
 @import 'partials/prefix-mixins';
 @import 'partials/layout'; // responsive grid and media queries
 
+// color palette - these colors will be the color swatches of the Colors section
+
 @import 'partials/colors';
-
-// additional colors
-
-$success: #6fce72; // green
-$alert: $color-3;  // red
 
 // fonts
 
-$primary-font: 'Source Sans Pro', sans-serif;
-$secondary-font: 'Lora', serif;
+$primary-font: 'Lora', serif;
+$secondary-font: 'Source Sans Pro', sans-serif;
 
 /* -------------------------------- 
 
@@ -53,7 +50,8 @@ header {
 .cd-logo {
 	/* logo box style */
 	background-color: $color-1;
-	width: 120px;
+	width: 220px;
+
 
 	@include MQ(M) {
 		width: 180px;
