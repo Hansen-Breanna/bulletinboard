@@ -1,7 +1,7 @@
 .cd-navigation {
     li a:nth-child(1) {
         color: $color-2;//link color
-        &:hover: {color: lighten($color-2, 40%);//hover color
+        &:hover {color: lighten($color-2, 40%);//hover color
         }
     }
     li a:nth-child(2) {

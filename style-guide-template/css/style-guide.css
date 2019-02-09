@@ -124,7 +124,7 @@ xTypography
 
 -------------------------------- */
 h1, h2, h3, h4 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Lora", serif;
   color: #382519;
 }
 
@@ -208,10 +208,62 @@ xButtons
 xIcons
 
 -------------------------------- */
+/* --------------------------------
+
+xIcons
+
+-------------------------------- */
 .cd-icons li {
   /* icons size */
   width: 100px;
   height: 100px;
+}
+
+/* --------------------------------
+
+xNavigation Links
+
+-------------------------------- */
+.cd-navigation li a:nth-child(1) {
+  color: #382519;
+}
+.cd-navigation li a:nth-child(1):hover {
+  color: #ba8563;
+}
+.cd-navigation li a:nth-child(2) {
+  color: #4b5548;
+}
+.cd-navigation li a:nth-child(3) {
+  color: #ba8563;
+}
+.cd-navigation li a:nth-child(4) {
+  color: #4b5548;
+}
+
+.cd-secondary-nav li:nth-child(1) {
+  color: #b8c8cc;
+}
+.cd-secondary-nav li:nth-child(2) {
+  color: #4b5548;
+}
+.cd-secondary-nav li:nth-child(3) {
+  color: white;
+}
+.cd-secondary-nav li:nth-child(4) {
+  color: #4b5548;
+}
+
+.cd-other-nav li:nth-child(1) {
+  color: #382519;
+}
+.cd-other-nav li:nth-child(2) {
+  color: #4b5548;
+}
+.cd-other-nav li:nth-child(3) {
+  color: #ba8563;
+}
+.cd-other-nav li:nth-child(4) {
+  color: #4b5548;
 }
 
 /* --------------------------------
@@ -364,7 +416,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Lora", serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 a {
@@ -376,7 +428,7 @@ img {
 }
 
 input, textarea, select {
-  font-family: "Lora", serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.6rem;
 }
 
