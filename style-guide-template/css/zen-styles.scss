@@ -9,6 +9,7 @@
 /* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
 
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+@import url('https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro');
 
 /* SCSS variables */
 
@@ -20,7 +21,9 @@ $color-5: #4b5548; // green
 $color-6: #ffffff; // white
 $color-7: #f2b975; // orange
 $color-8: #ede3da; // light-cream
-$pin: url('https://github.com/Austin-Marilee/bulletinboard/blob/master/Wireframes/MapMarker_PushPin_Left_Azure.png?raw=true');
+$pin: url('images/blue-push-pin.png');
+$serif: Lora, Georgia, serif;
+$sans-serif: 'Source Sans Pro', Arial, sans-serif;
 
 /* SCSS Extends */
 
@@ -38,19 +41,18 @@ $pin: url('https://github.com/Austin-Marilee/bulletinboard/blob/master/Wireframe
 }
 
 @mixin background-img ($url,
-$repeat,
-$size1,
-$size2,
-$position1,
-$position2,
-$font-size) {
-  background-image: $url;
-  background-repeat: $repeat;
-  background-size: $size1 $size2;
-  background-position: $position1 $position2;
-  font-size: $font-size;
+  $repeat,
+  $size1,
+  $size2,
+  $position1,
+  $position2,
+  $font-size) {
+    background-image: $url;
+    background-repeat: $repeat;
+    background-size: $size1 $size2;
+    background-position: $position1 $position2;
+    font-size: $font-size;
 }
-
 
 /* basic elements */
 
@@ -67,18 +69,21 @@ body {
   margin: 0;
   padding: 0;
   border-top: 175px solid $color-2;
+  font-family: $serif;
 }
 
 p {
   margin-top: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans-serif;
+}
 h2 {
   text-transform: uppercase;
 }
 
 h3 {
-  font: bold normal 1.4em georgia, sans-serif;
   letter-spacing: 1px;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -108,17 +113,17 @@ a:link {
   text-decoration: none;
   color: $color-2;
 }
-
 a:visited {
   font-weight: bold;
   text-decoration: none;
-  color: $color-5;
+  color: $color-6;
 }
-
-a:hover,
-a:focus,
+a:hover {
+  color: lighten($color-2, 40%);
+}
 a:active {
-  text-decoration: underline;
+  font-weight: bold;
+  text-decoration: none;
   color: $color-6;
 }
 
@@ -146,13 +151,13 @@ header h1 {
   display: inline-block;
   margin: -175px auto 40px auto;
   @include box-shadow;
-  @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/style-guide-template/assets/branding/logo-ver-1.jpg?raw=true'),
-  no-repeat,
-  350px,
-  350px,
-  center,
-  center,
-  0);
+  @include background-img (url('images/logo-ver-1.jpg'),
+    no-repeat,
+    350px,
+    350px,
+    center,
+    center,
+    0); /* Image will be an SVG */
 }
 
 header h2 {
@@ -174,13 +179,13 @@ header h2 {
   margin: auto;
   padding: 0 25px 25px 25px;
   @include box-shadow;
-  @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/Wireframes/flowers/b3.png?raw=true'),
-  no-repeat,
-  300px,
-  300px,
-  right -130px,
-  bottom -110px,
-  1em);
+  @include background-img (url('images/flower-combo.png'),
+    no-repeat,
+    300px,
+    300px,
+    right -130px,
+    bottom -110px,
+    1em);
 }
 
 .summary p {
@@ -227,13 +232,13 @@ header h2 {
   @include box-shadow;
   margin: 20px;
   background-color: $color-8;
-  @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/Wireframes/flowers/9.png?raw=true'),
-  no-repeat,
-  30%,
-  60%,
-  left,
-  center,
-  1em);
+  @include background-img (url('images/red-leaves.png'),
+    no-repeat,
+    30%,
+    60%,
+    left,
+    center,
+    1em);
 }
 
 .participation h3,
@@ -281,6 +286,8 @@ header h2 {
   padding: 15px;
   font-size: 0.8em;
   width: 150px;
+  font-weight: normal;
+  font-family: $serif;
 }
 
 .design-selection h3,
@@ -288,6 +295,11 @@ header h2 {
 .design-archives,
 footer {
   background-color: $color-3;
+}
+
+.design-archives ul {
+  margin: 0;
+  padding: 0;
 }
 
 .design-selection h3 {
@@ -374,7 +386,7 @@ footer a:visited {
 }
 
 .sidebar .wrapper {
-  font: 1.2em verdana, sans-serif;
+  font: 1.2em verdana, $sans-serif;
 }
 
 h3.select {
@@ -383,11 +395,13 @@ h3.select {
   text-transform: capitalize;
   @include pin;
   padding-top: 50px;
+  font-family: $serif;
 }
 
 h3.archives {
   margin: 25px 0 5px 0;
   text-transform: capitalize;
+  font-family: $serif;
 }
 
 h3.resources {
@@ -401,14 +415,14 @@ h3.resources {
   transform: rotate(-15deg);
   width: 200px;
   background-color: $color-4;
-  @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/Wireframes/flowers/3.png?raw=true'),
-  no-repeat,
-  100px,
-  200px,
-  right,
-  bottom,
-  0.8em)
-}
+  @include background-img (url('images/blue-leaves.png'),
+    no-repeat,
+    100px,
+    200px,
+    right,
+    bottom,
+    0.8em)
+    }
 
 .zen-resources:before {
   content: "";
@@ -443,6 +457,11 @@ h3.resources {
 
 .zen-resources li {
   line-height: 1.4em;
+}
+
+.zen-resources a {
+  font-family: $serif;
+  font-weight: 100;
 }
 
 .design-selection li a:link {
@@ -482,55 +501,54 @@ footer a {
 }
 
 a.zen-validate-html {
-  @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/style-guide-template/icons/html.png?raw=true'),
-  no-repeat,
-  50px,
-  50px,
-  center,
-  center,
-  0);
+  @include background-img (url('images/icons/html.png'),
+    no-repeat,
+    50px,
+    50px,
+    center,
+    center,
+    0);
 }
 
 a.zen-validate-css {
-  @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/style-guide-template/icons/css.png?raw=true'),
-  no-repeat,
-  50px,
-  50px,
-  center,
-  center,
-  0);
+  @include background-img (url('images/icons/css.png'),
+    no-repeat,
+    50px,
+    50px,
+    center,
+    center,
+    0);
 }
 
 a.zen-license {
-  @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/style-guide-template/icons/creative.png?raw=true'),
-  no-repeat,
-  50px,
-  50px,
-  center,
-  center,
-  0);
+  @include background-img (url('images/icons/creative-commons.png'),
+    no-repeat,
+    50px,
+    50px,
+    center,
+    center,
+    0);
 }
 
 a.zen-github {
-  @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/style-guide-template/icons/github.png?raw=true'),
-  no-repeat,
-  50px,
-  50px,
-  center,
-  center,
-  0);
+  @include background-img (url('images/icons/github.png'),
+    no-repeat,
+    50px,
+    50px,
+    center,
+    center,
+    0);
 }
 
 a.zen-accessibility {
-  @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/style-guide-template/icons/github.png?raw=true'),
-  no-repeat,
-  50px,
-  50px,
-  center,
-  center,
-  0);
+  @include background-img (url('images/icons/accessible.png'),
+    no-repeat,
+    50px,
+    50px,
+    center,
+    center,
+    0);
 }
-
 
 @media (min-width: 700px) {
 
@@ -539,7 +557,7 @@ a.zen-accessibility {
     padding: 0 40px;
     margin: auto;
     position: relative;
-    background-image: url("https://github.com/Austin-Marilee/bulletinboard/blob/master/Wireframes/texture-1099399_960_720.jpg?raw=true");
+    background-image: url('images/burlap.jpg');
     background-repeat: repeat;
   }
 
@@ -553,13 +571,13 @@ a.zen-accessibility {
     @include box-shadow;
     position: relative;
     line-height: 0.7em;
-    @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/style-guide-template/assets/branding/logo-ver-1.jpg?raw=true'),
-    no-repeat,
-    350px,
-    350px,
-    center,
-    center,
-    0);
+    @include background-img (url('images/logo-ver-1.jpg'),
+      no-repeat,
+      350px,
+      350px,
+      center,
+      center,
+      0); /* Image will be an SVG */
   }
 
   header h2,
@@ -569,22 +587,24 @@ a.zen-accessibility {
 
   .preamble {
     width: 500px;
+    margin: 0;
   }
 
   .explanation {
     width: 500px;
+    margin: 0;
   }
 
   .participation {
     padding: 15px 30px 15px 140px;
     width: 650px;
-    @include background-img (url('https://github.com/Austin-Marilee/bulletinboard/blob/master/Wireframes/flowers/9.png?raw=true'),
-    no-repeat,
-    150px,
-    90%,
-    left,
-    center,
-    1em);
+    @include background-img (url('images/red-leaves.png'),
+      no-repeat,
+      150px,
+      90%,
+      left,
+      center,
+      1em);
   }
 
   .benefits {
@@ -601,9 +621,9 @@ a.zen-accessibility {
   .benefits:after {
     content: "";
     padding: 38px 20px;
-    margin-top: -145px;
+    margin-top: -165px;
     background: $color-6;
-    background-image: url('https://github.com/Austin-Marilee/bulletinboard/blob/master/Wireframes/barcode_horizontal_2nd.png?raw=true');
+    background-image: url('images/barcode_horizontal_2nd.png');
     background-size: 175px 50px;
     background-repeat: no-repeat;
     background-position: center;
