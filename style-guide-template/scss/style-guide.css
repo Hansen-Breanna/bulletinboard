@@ -265,57 +265,12 @@ xIcons
 xNavigation Links
 
 -------------------------------- */
-/*@mixin linkstate() {
-    a:link {
-        color: $color-2;
-    }
-    a:visited {
-        color: $color-6;
-    }
-    a:hover {
-        color: lighten($color-2, 40%);
-    }
-    a:active {
-        color: $color-6;
-    }
-}*/
-.cd-primary-nav li:nth-child(1) {
-  color: #382519;
-}
-.cd-primary-nav li:nth-child(2) {
-  color: #4b5548;
-}
-.cd-primary-nav li:nth-child(3) {
-  color: #ba8563;
-}
-.cd-primary-nav li:nth-child(4) {
-  color: #4b5548;
+.cd-navigation li a:nth-child(1) {
+  display: none;
 }
 
-.cd-secondary-nav ul li:nth-child(1) a {
-  color: #b8c8cc;
-}
-.cd-secondary-nav ul li:nth-child(2) a {
-  color: #4b5548;
-}
-.cd-secondary-nav ul li:nth-child(3) a {
-  color: white;
-}
-.cd-secondary-nav ul li:nth-child(4) a {
-  color: #4b5548;
-}
-
-.cd-other-nav ul li:nth-child(1) {
-  color: #382519;
-}
-.cd-other-nav ul li:nth-child(2) {
-  color: #4b5548;
-}
-.cd-other-nav ul li:nth-child(3) {
-  color: #ba8563;
-}
-.cd-other-nav ul li:nth-child(4) {
-  color: #4b5548;
+.cd-primary-nav li a {
+  color: #pink;
 }
 
 /* --------------------------------
