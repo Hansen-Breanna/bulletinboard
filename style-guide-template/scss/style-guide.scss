@@ -5,10 +5,7 @@
 // color palette - these colors will be the color swatches of the Colors section
 @import 'partials/colors';
 
-// fonts
 
-$primary-font: 'Lora', serif;
-$secondary-font: 'Source Sans Pro', sans-serif;
 
 /* --------------------------------
 
@@ -160,8 +157,8 @@ xIcons
 
 .cd-icons li {
     /* icons size */
-    width: 32px;
-    height: 32px;
+    width: 100px;
+    height: 100px;
 }
 
 /* --------------------------------

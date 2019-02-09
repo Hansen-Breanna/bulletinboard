@@ -123,7 +123,7 @@ xTypography
 xTypography 
 
 -------------------------------- */
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Source Sans Pro", sans-serif;
   color: #382519;
 }
@@ -168,6 +168,15 @@ h3 {
   }
 }
 
+h4 {
+  margin: 0 0 0.5em 0;
+}
+@media only screen and (min-width: 768px) {
+  h4 {
+    font-size: 4rem;
+  }
+}
+
 section > h2::before {
   /* number before each section title */
   color: #e41f44;
@@ -201,8 +210,8 @@ xIcons
 -------------------------------- */
 .cd-icons li {
   /* icons size */
-  width: 32px;
-  height: 32px;
+  width: 100px;
+  height: 100px;
 }
 
 /* --------------------------------

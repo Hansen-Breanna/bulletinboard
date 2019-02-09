@@ -3,8 +3,20 @@
 xTypography 
 
 -------------------------------- */
+$primary-font: 'Source Sans Pro', sans-serif;
+$secondary-font: 'Lora', serif;
 
-h1, h2, h3 {
+$decorfont-1: 'Great Vibes', cursive;
+$decorfont-2: 'Fredericka the Great', cursive;
+$decorfont-3: 'Special Elite', cursive;
+$decorfont-4: 'Boogaloo', cursive;
+$decorfont-5: 'Shadows Into Light', cursive;
+$decorfont-6: 'Sacramento', cursive;
+$decorfont-7: 'PT Sans', sans-serif;
+$decorfont-8: 'Raleway', sans-serif;
+
+
+h1, h2, h3, h4 {
 	font-family: $secondary-font;
 	color: $color-2;
 }
@@ -45,6 +57,15 @@ h3 {
 	}
 }
 
+h4 {
+	margin: 0 0 .5em 0;
+
+	@include MQ(S) {
+		font-size: 4rem;
+	}
+
+}
+
 section > h2::before {
 	/* number before each section title */
 	color: darken($color-4, 15%);
@@ -65,3 +86,5 @@ p {
 		line-height: 1.6;
 	}
 }
+
+
