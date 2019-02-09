@@ -1,4 +1,4 @@
-/*@mixin linkstate() {
+@mixin linkstate() {
     a:link {
         font-weight: bold;
         text-decoration: none;
@@ -17,16 +17,24 @@
         text-decoration: none;
         color: $color-6;
     }
-}*/
+}
+
+.cd-navigation .cd-box div:first-of-type, .cd-navigation .cd-box div:nth-of-type(2) { /* Select a Design and Archives */
+  background-color: $color-3;
+}
+
+.cd-navigation .cd-box div:nth-last-of-type(3) { /* Resources */
+  background-color: $color-4;
+}
 
 .cd-primary-nav ul  {
-    
+
     li:nth-child(1) a {
        // @include linkstate();
        font-weight: bold;
         color: $color-2;//link color
         }
-    
+
     li:nth-child(2) a {
         color: $color-6;//visited color
     }
