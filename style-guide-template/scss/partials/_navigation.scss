@@ -20,21 +20,22 @@
 }
 
 .cd-navigation .cd-box div:first-of-type, .cd-navigation .cd-box div:nth-of-type(2) { /* Select a Design and Archives */
-  background-color: $color-3;
-}
-
-.cd-navigation .cd-box div:nth-last-of-type(3) { /* Resources */
-  background-color: $color-4;
-}
+    background-color: $color-3;
+    padding: 10px;
+  }
+  
+  .cd-navigation .cd-box div:nth-of-type(3) { /* Resources */
+    background-color: $color-4;
+    padding: 10px;
+  }
 
 .cd-primary-nav ul  {
     
     li:nth-of-type(1)  {      
         color: $color-2;//link color
     }
-    
     li:nth-of-type(2){
-        color: $color-6;//visited color
+        color: $color-2;//visited color
     }
     li:nth-of-type(3) {
         color: lighten($color-1, 40%);//hover color
@@ -46,7 +47,7 @@
 
 .cd-secondary-nav ul {
     li:nth-of-type(1) a {
-        color: $color-1;//link color
+        color: $color-2;//link color
     }
     li:nth-of-type(2) a {
         color: $color-6;//visited color

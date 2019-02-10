@@ -118,7 +118,11 @@ main > h1 {
 xTypography
 
 -------------------------------- */
+/* -------------------------------- 
 
+xTypography 
+
+-------------------------------- */
 h1, h2, h3, h4 {
   font-family: "Lora", serif;
   color: #382519;
@@ -194,6 +198,42 @@ p a {
   }
 }
 
+p.decorfont1 {
+  font-size: 24px;
+}
+
+p.decorfont1:nth-of-type(1) {
+  font-family: "Great Vibes", cursive;
+}
+
+p.decorfont1:nth-of-type(2) {
+  font-family: "Fredericka the Great", cursive;
+}
+
+p.decorfont1:nth-of-type(3) {
+  font-family: "Special Elite", cursive;
+}
+
+p.decorfont1:nth-of-type(4) {
+  font-family: "Boogaloo", cursive;
+}
+
+p.decorfont1:nth-of-type(5) {
+  font-family: "Shadows Into Light", cursive;
+}
+
+p.decorfont1:nth-of-type(6) {
+  font-family: "Sacramento", cursive;
+}
+
+p.decorfont1:nth-of-type(7) {
+  font-family: "PT Sans", sans-serif;
+}
+
+p.decorfont1:nth-of-type(8) {
+  font-family: "Raleway", sans-serif;
+}
+
 /* --------------------------------
 
 xButtons
@@ -215,50 +255,100 @@ xIcons
   height: 100px;
 }
 
+/* xIcons section - from basic styles basic style */
+/* .cd-icons {
+    li {
+        display: inline-block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin: 1em;
+    }
+
+    .cd-icon-1 {
+        background-image: url('../assets/icons/icon-1.svg');
+    }
+
+    .cd-icon-2 {
+        background-image: url('../assets/icons/icon-2.svg');
+    }
+
+    .cd-icon-3 {
+        background-image: url('../assets/icons/icon-3.svg');
+    }
+
+    .cd-icon-4 {
+        background-image: url('../assets/icons/icon-4.svg');
+    }
+
+    .cd-icon-5 {
+        background-image: url('../assets/icons/icon-5.svg');
+    }
+
+    .cd-icon-6 {
+        background-image: url('../assets/icons/icon-6.svg');
+    }
+
+    .cd-icon-7 {
+        background-image: url('../assets/icons/icon-7.svg');
+    }
+
+    .cd-icon-8 {
+        background-image: url('../assets/icons/icon-8.svg');
+    }
+} */
 /* --------------------------------
 
 xNavigation Links
 
 -------------------------------- */
-.cd-navigation li a:nth-child(1) {
-  color: #382519;
-}
-.cd-navigation li a:nth-child(1):hover {
-  color: #ba8563;
-}
-.cd-navigation li a:nth-child(2) {
-  color: #4b5548;
-}
-.cd-navigation li a:nth-child(3) {
-  color: #ba8563;
-}
-.cd-navigation li a:nth-child(4) {
-  color: #4b5548;
+.cd-navigation .cd-box div:first-of-type, .cd-navigation .cd-box div:nth-of-type(2) {
+  /* Select a Design and Archives */
+  background-color: #efd9bf;
+  padding: 10px;
 }
 
-.cd-secondary-nav li:nth-child(1) {
-  color: #b8c8cc;
+.cd-navigation .cd-box div:nth-of-type(3) {
+  /* Resources */
+  background-color: #ec637d;
+  padding: 10px;
 }
-.cd-secondary-nav li:nth-child(2) {
+
+.cd-primary-nav ul li:nth-of-type(1) {
+  color: #382519;
+}
+.cd-primary-nav ul li:nth-of-type(2) {
   color: #4b5548;
 }
-.cd-secondary-nav li:nth-child(3) {
+.cd-primary-nav ul li:nth-of-type(3) {
   color: white;
 }
-.cd-secondary-nav li:nth-child(4) {
+.cd-primary-nav ul li:nth-of-type(4) {
   color: #4b5548;
 }
 
-.cd-other-nav li:nth-child(1) {
-  color: #382519;
+.cd-secondary-nav ul li:nth-of-type(1) a {
+  color: #b8c8cc;
 }
-.cd-other-nav li:nth-child(2) {
+.cd-secondary-nav ul li:nth-of-type(2) a {
   color: #4b5548;
 }
-.cd-other-nav li:nth-child(3) {
-  color: #ba8563;
+.cd-secondary-nav ul li:nth-of-type(3) a {
+  color: white;
 }
-.cd-other-nav li:nth-child(4) {
+.cd-secondary-nav ul li:nth-of-type(4) a {
+  color: #4b5548;
+}
+
+.cd-other-nav ul li:nth-of-type(1) a {
+  color: #382519;
+}
+.cd-other-nav ul li:nth-of-type(2) a {
+  color: #4b5548;
+}
+.cd-other-nav ul li:nth-of-type(3) a {
+  color: white;
+}
+.cd-other-nav ul li:nth-of-type(4) a {
   color: #4b5548;
 }
 

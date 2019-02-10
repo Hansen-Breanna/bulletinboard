@@ -403,7 +403,7 @@ h3.resources {
     right,
     bottom,
     0.8em);
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     left: 0;
@@ -415,7 +415,7 @@ h3.resources {
     border-right: 140px solid transparent;
     filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
   }
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     right: 0;
@@ -562,7 +562,7 @@ a.zen-accessibility {
     height: 165px;
     padding: 15px 30px 35px 70px;
     margin: 20px;
-    &:after {
+    &::after {
       content: "";
       padding: 38px 20px;
       margin-top: -165px;
