@@ -151,10 +151,10 @@
           <h3>Primary</h3>
           <nav class="cd-primary-nav">
             <ul>
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-              <li><a href="#">Four</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Visited</a></li>
+              <li><a href="#">Hover</a></li>
+              <li><a href="#">Active</a></li>
             </ul>
           </nav>
         </div>
@@ -162,11 +162,10 @@
           <h3>Secondary</h3>
           <nav class="cd-secondary-nav">
             <ul>
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-              <li><a href="#">Four</a></li>
-
+							<li><a href="#">Link</a></li>
+              <li><a href="#">Visited</a></li>
+              <li><a href="#">Hover</a></li>
+              <li><a href="#">Active</a></li>
             </ul>
           </nav>
         </div>
@@ -174,11 +173,10 @@
           <h3>Other Links</h3>
           <nav class="cd-other-nav">
             <ul>
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-              <li><a href="#">Four</a></li>
-
+							<li><a href="#">Link</a></li>
+              <li><a href="#">Visited</a></li>
+              <li><a href="#">Hover</a></li>
+              <li><a href="#">Active</a></li>
             </ul>
           </nav>
         </div>
@@ -218,7 +216,13 @@
 				background-repeat: no-repeat;
 			}
 
-			@mixin background-img ($url, $repeat, $size1, $size2, $position1, $position2, $font-size) {
+			@mixin background-img ($url, 
+			$repeat, 
+			$size1, 
+			$size2, 
+			$position1, 
+			$position2, 
+			$font-size) {
 				background-image: $url;
 				background-repeat: $repeat;
 				background-size: $size1 $size2;
@@ -263,7 +267,12 @@
 				color: $color-2;
 			}
 
-			.preamble h3, .explanation h3, .zen-resouces h3, .preamble, .explanation, .zen-resources {
+			.preamble h3, 
+			.explanation h3, 
+			.zen-resouces h3, 
+			.preamble, 
+			.explanation, 
+			.zen-resources {
 				color: $color-6;
 			}
 

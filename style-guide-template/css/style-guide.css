@@ -124,7 +124,7 @@ xTypography
 
 -------------------------------- */
 h1, h2, h3, h4 {
-  font-family: "Lora", serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #382519;
 }
 
@@ -328,16 +328,17 @@ xNavigation Links
 }
 
 .cd-secondary-nav ul li:nth-child(1) a {
-  color: #b8c8cc;
+  color: #382519;
+  font-size: 40px;
 }
 .cd-secondary-nav ul li:nth-child(2) a {
   color: #4b5548;
 }
 .cd-secondary-nav ul li:nth-child(3) a {
-  color: white;
+  color: #4b5548;
 }
 .cd-secondary-nav ul li:nth-child(4) a {
-  color: #4b5548;
+  color: #b8c8cc;
 }
 
 .cd-other-nav ul li:nth-child(1) a {
@@ -503,7 +504,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Lora", serif;
 }
 
 a {
@@ -515,7 +516,7 @@ img {
 }
 
 input, textarea, select {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Lora", serif;
   font-size: 1.6rem;
 }
 

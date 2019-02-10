@@ -29,7 +29,7 @@
     padding: 10px;
   }
 
-.cd-primary-nav ul  {
+.cd-primary-nav ul, .cd-secondary-nav ul  {
 
     li:nth-child(1) a {
         font-weight: bold;
@@ -40,37 +40,24 @@
         color: $color-6;//visited color
     }
     li:nth-child(3) a {
-        color: lighten($color-2, 40%);//hover color
+        color: $color-1;//hover color
     }
     li:nth-child(4) a {
         color: $color-6;//active color
     }
 }
-.cd-secondary-nav ul {
-    li:nth-child(1) a {
-        color: $color-1;//link color
-    }
-    li:nth-child(2) a {
-        color: $color-6;//visited color
-    }
-    li:nth-child(3) a {
-        color: lighten($color-1, 40%);//hover color
-    }
-    li:nth-child(4) a {
-        color: $color-6;//active color
-    }
-}
+
 .cd-other-nav ul {
     li:nth-child(1) a {
-        color: $color-2;//link color
+        color: $color-5;//link color
     }
     li:nth-child(2) a {
         color: $color-6;//visited color
     }
     li:nth-child(3) a {
-        color: lighten($color-2, 40%);//hover color
+        color: $color-1;//hover color
     }
     li:nth-child(4) a {
-        color: $color-6;//active color
+        color: $color-6//active color
     }
 }
