@@ -313,43 +313,27 @@ xNavigation Links
   padding: 10px;
 }
 
-.cd-primary-nav ul li:nth-of-type(1) {
+.cd-primary-nav ul li:nth-of-type(1) a, .cd-secondary-nav ul li:nth-of-type(1) a {
   color: #382519;
 }
-.cd-primary-nav ul li:nth-of-type(2) {
-  color: #4b5548;
-}
-.cd-primary-nav ul li:nth-of-type(3) {
-  color: white;
-}
-.cd-primary-nav ul li:nth-of-type(4) {
-  color: #4b5548;
-}
-
-
-.cd-secondary-nav ul li:nth-child(1) a {
-  color: #382519;
-  font-size: 40px;
-}
-.cd-secondary-nav ul li:nth-of-type(2) a {
-  color: #4b5548;
-}
-
-.cd-secondary-nav ul li:nth-child(3) a {
-  color: #4b5548;
-}
-.cd-secondary-nav ul li:nth-child(4) a {
+.cd-primary-nav ul li:nth-of-type(2) a, .cd-secondary-nav ul li:nth-of-type(2) a {
   color: #b8c8cc;
+}
+.cd-primary-nav ul li:nth-of-type(3) a, .cd-secondary-nav ul li:nth-of-type(3) a {
+  color: #4b5548;
+}
+.cd-primary-nav ul li:nth-of-type(4) a, .cd-secondary-nav ul li:nth-of-type(4) a {
+  color: #382519;
 }
 
 .cd-other-nav ul li:nth-of-type(1) a {
-  color: #382519;
+  color: #ffffff;
 }
 .cd-other-nav ul li:nth-of-type(2) a {
   color: #4b5548;
 }
 .cd-other-nav ul li:nth-of-type(3) a {
-  color: white;
+  color: #b8c8cc;
 }
 .cd-other-nav ul li:nth-of-type(4) a {
   color: #4b5548;
