@@ -3,6 +3,7 @@
 xTypography 
 
 -------------------------------- */
+
 $primary-font: 'Source Sans Pro', sans-serif;
 $secondary-font: 'Lora', serif;
 
@@ -87,4 +88,15 @@ p {
 	}
 }
 
+p.decorfont1 {
+	font-size: 24px;
+}
 
+p.decorfont1:nth-of-type(1) {font-family: $decorfont-1;}
+p.decorfont1:nth-of-type(2) {font-family: $decorfont-2;}
+p.decorfont1:nth-of-type(3) {font-family: $decorfont-3;}
+p.decorfont1:nth-of-type(4) {font-family: $decorfont-4;}
+p.decorfont1:nth-of-type(5) {font-family: $decorfont-5;}
+p.decorfont1:nth-of-type(6) {font-family: $decorfont-6;}
+p.decorfont1:nth-of-type(7) {font-family: $decorfont-7;}
+p.decorfont1:nth-of-type(8) {font-family: $decorfont-8;}

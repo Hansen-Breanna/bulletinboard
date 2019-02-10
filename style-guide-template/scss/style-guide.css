@@ -198,6 +198,42 @@ p a {
   }
 }
 
+p.decorfont1 {
+  font-size: 24px;
+}
+
+p.decorfont1:nth-of-type(1) {
+  font-family: "Great Vibes", cursive;
+}
+
+p.decorfont1:nth-of-type(2) {
+  font-family: "Fredericka the Great", cursive;
+}
+
+p.decorfont1:nth-of-type(3) {
+  font-family: "Special Elite", cursive;
+}
+
+p.decorfont1:nth-of-type(4) {
+  font-family: "Boogaloo", cursive;
+}
+
+p.decorfont1:nth-of-type(5) {
+  font-family: "Shadows Into Light", cursive;
+}
+
+p.decorfont1:nth-of-type(6) {
+  font-family: "Sacramento", cursive;
+}
+
+p.decorfont1:nth-of-type(7) {
+  font-family: "PT Sans", sans-serif;
+}
+
+p.decorfont1:nth-of-type(8) {
+  font-family: "Raleway", sans-serif;
+}
+
 /* --------------------------------
 
 xButtons
@@ -265,12 +301,56 @@ xIcons
 xNavigation Links
 
 -------------------------------- */
-.cd-navigation li a:nth-child(1) {
-  display: none;
+.cd-navigation .cd-box div:first-of-type, .cd-navigation .cd-box div:nth-of-type(2) {
+  /* Select a Design and Archives */
+  background-color: #efd9bf;
+  padding: 10px;
 }
 
-.cd-primary-nav li a {
-  color: #pink;
+.cd-navigation .cd-box div:nth-of-type(3) {
+  /* Resources */
+  background-color: #ec637d;
+  padding: 10px;
+}
+
+.cd-primary-nav ul li:nth-child(1) a {
+  font-weight: bold;
+  color: #382519;
+}
+.cd-primary-nav ul li:nth-child(2) a {
+  color: #4b5548;
+}
+.cd-primary-nav ul li:nth-child(3) a {
+  color: #ba8563;
+}
+.cd-primary-nav ul li:nth-child(4) a {
+  color: #4b5548;
+}
+
+.cd-secondary-nav ul li:nth-child(1) a {
+  color: #b8c8cc;
+}
+.cd-secondary-nav ul li:nth-child(2) a {
+  color: #4b5548;
+}
+.cd-secondary-nav ul li:nth-child(3) a {
+  color: white;
+}
+.cd-secondary-nav ul li:nth-child(4) a {
+  color: #4b5548;
+}
+
+.cd-other-nav ul li:nth-child(1) a {
+  color: #382519;
+}
+.cd-other-nav ul li:nth-child(2) a {
+  color: #4b5548;
+}
+.cd-other-nav ul li:nth-child(3) a {
+  color: #ba8563;
+}
+.cd-other-nav ul li:nth-child(4) a {
+  color: #4b5548;
 }
 
 /* --------------------------------

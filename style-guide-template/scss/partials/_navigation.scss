@@ -19,6 +19,16 @@
     }
 }
 
+.cd-navigation .cd-box div:first-of-type, .cd-navigation .cd-box div:nth-of-type(2) { /* Select a Design and Archives */
+    background-color: $color-3;
+    padding: 10px;
+  }
+  
+  .cd-navigation .cd-box div:nth-of-type(3) { /* Resources */
+    background-color: $color-4;
+    padding: 10px;
+  }
+
 .cd-primary-nav ul  {
 
     li:nth-child(1) a {
