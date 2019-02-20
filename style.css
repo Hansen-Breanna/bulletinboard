@@ -221,7 +221,6 @@ header h2 {
   margin: auto;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
-  border-right: 10px solid #f2b975;
   background-image: url("images/blue-push-pin.png");
   background-position: top center;
   background-size: 50px 50px;
@@ -236,6 +235,14 @@ header h2 {
   font-size: .9rem;
   line-height: 1.2rem;
   max-width: 80%;
+}
+
+.benefits::before {
+  content: "";
+  background-color: white;
+  width: 400px;
+  height: 200px;
+  border-right: 10px solid #f2b975;
 }
 
 .requirements {

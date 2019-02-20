@@ -250,7 +250,7 @@ header h2 {
   @include box-shadow;
   margin: auto;
   transform: rotate(2deg);
-  border-right: 10px solid $color-7;
+
   @include pin;
   & h3 {
     margin: 0;
@@ -265,7 +265,11 @@ header h2 {
 }
 
 .benefits::before {
-  
+  content: "";
+  background-color: white;
+  width: 400px;
+  height: 200px;
+  border-right: 10px solid $color-7;
 }
 
 .requirements {
