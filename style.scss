@@ -227,7 +227,7 @@ header h2 {
   margin: auto;
   height: auto;
   @include box-shadow;
-  background-color: $color-8;
+  background-color: $color-3;
   @include background-img (url('images/red-leaves.png'),
     no-repeat,
     75%,
