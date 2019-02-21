@@ -22,7 +22,7 @@ body {
   background: #b8c8cc;
   margin: 0;
   padding: 0;
-  border-top: 220px solid #382519;
+  border-top: 120px solid #382519;
   font-family: Lora, Georgia, serif;
 }
 
@@ -30,7 +30,12 @@ p {
   margin-top: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
@@ -102,27 +107,27 @@ li {
 
 header h1 {
   background: transparent;
-  width: 255px;
-  height: 230px;
+  width: 155px;
+  height: 130px;
   padding: 80px 30px 0px 30px;
   vertical-align: middle;
-  margin: -225px auto 10px auto;
+  margin: -125px auto 10px auto;
   background-image: url(images/logo.svg);
   background-repeat: no-repeat;
-  background-size: 325px 325px;
+  background-size: 225px 225px;
   background-position: center center;
   font-size: 0;
   /* Image will be an SVG */
 }
 
 header h2 {
-  font-size: 1.2em;
-  width: 360px;
+  font-size: 1em;
+  width: 225px;
   height: 50px;
   color: #382519;
   background-color: #ffffff;
   line-height: 1em;
-  padding: 60px 25px 0 25px;
+  padding: 50px 25px 0 25px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-image: url("images/blue-push-pin.png");
@@ -133,20 +138,21 @@ header h2 {
 }
 
 .summary {
-  width: 360px;
-  margin: 0 auto 50px auto;
+  width: 225px;
+  margin: 0 auto 20px auto;
   padding: 0 25px 25px 25px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-image: url("images/flower-combo.png");
   background-repeat: no-repeat;
-  background-size: 320px 320px;
-  background-position: right -130px bottom -110px;
-  font-size: 1em;
+  background-size: 220px 220px;
+  background-position: right -50px bottom -85px;
+  font-size: 0.8em;
 }
 
 .summary p {
-  width: 250px;
+  width: 200px;
+  line-height: 1rem;
 }
 
 .summary p:nth-last-of-type(1) {
@@ -154,13 +160,13 @@ header h2 {
 }
 
 .preamble {
-  margin: 0 auto 50px auto;
+  margin: 0 auto 20px auto;
   width: 90%;
   padding: 30px;
   background-color: #382519;
   color: #ffffff;
-  -webkit-transform: rotate(-6deg);
-          transform: rotate(-6deg);
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-image: url("images/blue-push-pin.png");
@@ -169,10 +175,10 @@ header h2 {
   background-repeat: no-repeat;
 }
 
-.preamble h3,
-.preamble p,
-.explanation h3 {
+.preamble.preamble h3,
+.preamble .preamble p {
   text-align: center;
+  font-size: .8rem;
 }
 
 .explanation {
@@ -180,8 +186,8 @@ header h2 {
   padding: 30px;
   width: 75%;
   height: auto;
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: #ec637d;
@@ -190,41 +196,47 @@ header h2 {
   background-size: 50px 50px;
   background-repeat: no-repeat;
   font-size: .8rem;
+  margin-bottom: 30px;
+}
+
+.explanation h3 {
+  text-align: center;
+  font-size: .8rem;
 }
 
 .participation {
-  margin: auto;
-  height: auto;
+  max-width: 100%;
+  margin: auto auto 30px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: #efd9bf;
-  background-image: url("images/red-leaves.png");
-  background-repeat: no-repeat;
-  background-size: 75% 75%;
-  background-position: left center;
-  font-size: 1em;
+  border: 20px outset #4b5548;
+  background: url("images/red-leaves.png") -20% 35% no-repeat, url("images/blue-push-pin.png") 50% 0% no-repeat, #efd9bf;
+  background-size: 150px, 50px;
 }
 
-.participation h3,
-.participation p {
+.participation h3 {
+  font-size: 1rem;
   text-align: right;
   padding: 10px;
-  background-clip: padding-box;
+}
+
+.participation p {
+  font-size: .7rem;
+  line-height: .9rem;
+  text-align: right;
+  padding: 5px 20px;
+  margin-left: 70px;
 }
 
 .benefits {
   width: 100%;
-  height: 200px;
-  padding: 15px;
+  padding: 20px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  margin: auto;
+  background: url("images/barcode.png") 105% 35% no-repeat, url("images/blue-push-pin.png") 50% 0% no-repeat, #ffffff;
+  background-size: 120px, 50px;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
-  background-image: url("images/blue-push-pin.png");
-  background-position: top center;
-  background-size: 50px 50px;
-  background-repeat: no-repeat;
 }
 
 .benefits h3 {
@@ -232,17 +244,9 @@ header h2 {
 }
 
 .benefits p {
-  font-size: .9rem;
+  font-size: .8rem;
   line-height: 1.2rem;
-  max-width: 80%;
-}
-
-.benefits::before {
-  content: "";
-  background-color: white;
-  width: 400px;
-  height: 200px;
-  border-right: 10px solid #f2b975;
+  padding-right: 90px;
 }
 
 .requirements {
@@ -261,6 +265,10 @@ header h2 {
 .requirements h3 {
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+.requirements p {
+  font-size: .8rem;
 }
 
 .requirements p:nth-of-type(1) {
@@ -592,7 +600,8 @@ a.zen-accessibility {
     background-image: url("images/burlap.jpg");
     background-repeat: repeat;
   }
-  header h2, .summary {
+  header h2,
+  .summary {
     margin: 0;
   }
   .preamble {
@@ -617,25 +626,6 @@ a.zen-accessibility {
     height: 165px;
     padding: 15px 30px 35px 70px;
     margin: 20px;
-  }
-  .benefits:after {
-    content: "";
-    padding: 38px 20px;
-    margin-top: -165px;
-    background: #ffffff;
-    background-image: url("images/barcode_horizontal_2nd.png");
-    background-size: 175px 50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    position: relative;
-    height: 30px;
-    width: 176px;
-    left: 435px;
-    display: block;
-    -webkit-box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.5);
-            box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.5);
   }
   .requirements {
     padding: 30px 30px 30px 80px;
