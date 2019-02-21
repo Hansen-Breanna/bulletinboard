@@ -122,7 +122,7 @@ header h1 {
 
 header h2 {
   font-size: 1em;
-  width: 225px;
+  width: 70%;
   height: 50px;
   color: #382519;
   background-color: #ffffff;
@@ -138,7 +138,7 @@ header h2 {
 }
 
 .summary {
-  width: 225px;
+  width: 70%;
   margin: 0 auto 20px auto;
   padding: 0 25px 25px 25px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -234,7 +234,7 @@ header h2 {
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background: url("images/barcode.png") 105% 35% no-repeat, url("images/blue-push-pin.png") 50% 0% no-repeat, #ffffff;
-  background-size: 120px, 50px;
+  background-size: 130px, 50px;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
 }
@@ -246,7 +246,7 @@ header h2 {
 .benefits p {
   font-size: .8rem;
   line-height: 1.2rem;
-  padding-right: 90px;
+  padding-right: 120px;
 }
 
 .requirements {

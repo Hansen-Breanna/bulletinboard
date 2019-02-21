@@ -172,7 +172,7 @@ header h1 {
 
 header h2 {
     font-size: 1em;
-    width: 225px;
+    width: 70%;
     height: 50px;
     color: $color-2;
     background-color: $color-6;
@@ -184,7 +184,7 @@ header h2 {
 }
 
 .summary {
-    width: 225px;
+    width: 70%;
     margin: 0 auto 20px auto;
     padding: 0 25px 25px 25px;
     @include box-shadow;
@@ -263,7 +263,7 @@ header h2 {
     padding: 20px;
     @include box-shadow;
     background: url('images/barcode.png') 105% 35% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #ffffff;
-    background-size: 120px, 50px;
+    background-size: 130px, 50px;
     // border-right: 10px solid $color-7;
     transform: rotate(2deg);
     & h3 {
@@ -272,7 +272,7 @@ header h2 {
     & p {
         font-size: .8rem;
         line-height: 1.2rem;
-        padding-right: 90px;
+        padding-right: 120px;
     }
 }
 
