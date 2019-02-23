@@ -6,6 +6,16 @@
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 @import url("https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro");
 /* SCSS variables */
+/* $height-1: 100% / 12;
+$height-2: 100% / 6;
+$height-3: 100% / 4;
+$height-4: 100% / 3;
+$height-6: 100% / 2;
+$height-half: 100% / 24;
+$width-1: 100% / 6;
+$width-2: 100% / 3;
+$width-3: 100% / 2;
+$width-6: 100% / 1; */
 /* SCSS Mixins */
 /* basic elements */
 html {
@@ -16,13 +26,13 @@ html {
 }
 
 body {
+  font-size: 18px;
   font: 1em georgia, sans-serif;
-  line-height: 1.5em;
+  line-height: 1.5rem;
   color: #382519;
   background: #b8c8cc;
   margin: 0;
   padding: 0;
-  border-top: 120px solid #382519;
   font-family: Lora, Georgia, serif;
 }
 
@@ -63,8 +73,7 @@ h1,
 h2,
 .summary,
 .benefits,
-.requirements,
-footer a {
+.requirements {
   background-color: #ffffff;
 }
 
@@ -100,8 +109,12 @@ li {
 
 /* specific divs */
 .page-wrapper {
+  border-top: 150px solid #382519;
+  background-image: url("images/burlap.jpg");
+  background-size: 500px;
+  background-repeat: repeat;
+  margin: 0 30px;
   padding: 0 40px;
-  margin: auto;
   position: relative;
 }
 
@@ -111,7 +124,7 @@ header h1 {
   height: 130px;
   padding: 80px 30px 0px 30px;
   vertical-align: middle;
-  margin: -125px auto 10px auto;
+  margin: -155px auto 10px auto;
   background-image: url(images/logo.svg);
   background-repeat: no-repeat;
   background-size: 225px 225px;
@@ -121,9 +134,8 @@ header h1 {
 }
 
 header h2 {
-  font-size: 1em;
-  width: 70%;
-  height: 50px;
+  font-size: 1rem;
+  width: 200px;
   color: #382519;
   background-color: #ffffff;
   line-height: 1em;
@@ -138,8 +150,9 @@ header h2 {
 }
 
 .summary {
-  width: 70%;
-  margin: 0 auto 20px auto;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 20px;
   padding: 0 25px 25px 25px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -160,8 +173,11 @@ header h2 {
 }
 
 .preamble {
-  margin: 0 auto 20px auto;
   width: 90%;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
   padding: 30px;
   background-color: #382519;
   color: #ffffff;
@@ -175,17 +191,27 @@ header h2 {
   background-repeat: no-repeat;
 }
 
-.preamble.preamble h3,
-.preamble .preamble p {
+.preamble.preamble h3 {
   text-align: center;
-  font-size: .8rem;
+  font-size: 1rem;
+}
+
+.preamble.preamble p {
+  font-size: .7rem;
+}
+
+@media (min-width: 50em) {
+  .preamble {
+    float: right;
+  }
 }
 
 .explanation {
-  margin: auto;
   padding: 30px;
-  width: 75%;
-  height: auto;
+  width: 90%;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-transform: rotate(1deg);
           transform: rotate(1deg);
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -196,7 +222,7 @@ header h2 {
   background-size: 50px 50px;
   background-repeat: no-repeat;
   font-size: .8rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .explanation h3 {
@@ -205,12 +231,15 @@ header h2 {
 }
 
 .participation {
+  width: 90%;
   max-width: 100%;
-  margin: auto auto 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   border: 20px outset #4b5548;
-  background: url("images/red-leaves.png") -20% 35% no-repeat, url("images/blue-push-pin.png") 50% 0% no-repeat, #efd9bf;
+  background: url("images/red-leaves.png") -15% 25% no-repeat, url("images/blue-push-pin.png") 50% 0% no-repeat, #efd9bf;
   background-size: 150px, 50px;
 }
 
@@ -229,7 +258,11 @@ header h2 {
 }
 
 .benefits {
-  width: 100%;
+  width: 90%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
   padding: 20px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -251,11 +284,12 @@ header h2 {
 
 .requirements {
   padding: 30px 20px 30px 50px;
-  width: 80%;
-  margin: auto;
+  width: 90%;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  margin: 20px;
   background-image: url("images/blue-push-pin.png");
   background-position: top center;
   background-size: 50px 50px;
@@ -288,10 +322,11 @@ header h2 {
   background-size: 50px 50px;
   background-repeat: no-repeat;
   position: absolute;
-  top: 120px;
+  top: -30px;
+  left: 25px;
   margin: 0 auto;
   padding: 15px;
-  font-size: 0.6em;
+  font-size: 0.7rem;
   width: 100px;
   font-weight: normal;
   font-family: Lora, Georgia, serif;
@@ -311,26 +346,23 @@ header h2 {
 .design-selection {
   display: -ms-grid;
   display: grid;
-  max-width: 400px;
-  margin: 0 auto;
+  width: 90%;
+  max-width: 60% 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .design-selection h3 {
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  margin: 20px;
   padding: 15px;
-  font-size: 1em;
+  font-size: 1rem;
   background-color: #efd9bf;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / 3;
   -ms-grid-column-align: center;
       justify-self: center;
-}
-
-.design-selection nav {
-  margin-left: 1.5em;
 }
 
 .design-selection ul {
@@ -340,11 +372,13 @@ header h2 {
 }
 
 .design-selection li {
-  width: 120px;
-  height: 90px;
+  width: 90%;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  font-size: .75em;
+  font-size: .8rem;
   margin: 10px;
   padding: 35px 15px 20px 15px;
   display: -webkit-box;
@@ -463,18 +497,16 @@ p[role=contentinfo] a {
   color: #ffffff;
 }
 
-footer a:link,
-footer a:visited {
-  margin-right: 20px;
-}
-
 .sidebar .wrapper {
-  font: 1.2em verdana, "Source Sans Pro", Arial, sans-serif;
+  font: 1.2rem verdana, "Source Sans Pro", Arial, sans-serif;
 }
 
 h3.select {
   margin: 10px 0 5px 0;
-  width: 200px;
+  width: 90%;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
   text-transform: capitalize;
   background-image: url("images/blue-push-pin.png");
   background-position: top center;
@@ -547,8 +579,8 @@ h3.resources {
 }
 
 .zen-resources li {
-  line-height: 1.4em;
-  font-size: .75em;
+  line-height: 1.4rem;
+  font-size: .75rem;
 }
 
 .zen-resources li a:link {
@@ -569,31 +601,30 @@ h3.resources {
 }
 
 footer {
-  width: 105%;
+  width: 100%;
+  padding: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 150px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   bottom: -200px;
-  left: -3%;
+  left: 0px;
   background-color: #efd9bf;
 }
 
 footer a {
   background: transparent;
-  padding: 15px 5px;
-  margin: auto;
-  font-size: 0.8em;
-  width: 40px;
 }
 
 a.zen-validate-html {
   padding: 35px;
   background-image: url("images/icons/html.png");
   background-repeat: no-repeat;
-  background-size: 55px 55px;
-  background-position: 100% center;
+  background-size: 60px 60px;
+  background-position: center center;
   font-size: 0;
 }
 
@@ -628,77 +659,46 @@ a.zen-accessibility {
   padding: 35px;
   background-image: url("images/icons/accessible.png");
   background-repeat: no-repeat;
-  background-size: 55px 55px;
+  background-size: 60px 60px;
   background-position: center center;
   font-size: 0;
 }
 
-@media (min-width: 700px) {
-  .page-wrapper {
+@media (min-width: 45em) {
+  section.intro {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  header {
+    position: absolute;
+    left: 220px;
+  }
+  div#zen-summary {
+    position: absolute;
+    top: 155px;
+    left: 220px;
+  }
+  div#zen-preamble {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
     width: 90%;
-    padding: 0 40px;
-    margin: auto;
-    position: relative;
-    background-image: url("images/burlap.jpg");
-    background-repeat: repeat;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
   }
-  header h2,
-  .summary {
-    margin: 0;
+  div#zen-supporting {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
-  .preamble {
-    width: 500px;
-    margin: 0;
-  }
-  .explanation {
-    width: 500px;
-    margin: 0;
-  }
-  .participation {
-    padding: 15px 30px 15px 140px;
-    width: 650px;
-    background-image: url("images/red-leaves.png");
-    background-repeat: no-repeat;
-    background-size: 150px 90%;
-    background-position: left center;
-    font-size: 1em;
-  }
-  .benefits {
-    width: 450px;
-    height: 165px;
-    padding: 15px 30px 35px 70px;
-    margin: 20px;
-  }
-  .requirements {
-    padding: 30px 30px 30px 80px;
-    width: 500px;
-    margin: 20px;
-  }
-  .design-selection ul {
-    width: 500px;
-  }
-  .design-selection li {
-    width: 200px;
-    height: 200px;
-    padding: 20px;
-  }
-  p[role=contentinfo] {
-    width: 600px;
-    padding: 100px 150px 100px 65%;
-    left: -65px;
-  }
-  .sidebar .wrapper {
-    padding: 40px;
-  }
-  .zen-resources {
-    padding: 70px 30px 100px 30px;
-  }
-  footer {
-    left: auto;
-  }
-  footer a {
-    padding: 20px 10px;
-    margin: 0 10px;
+  div.benefits {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
   }
 }
 /*# sourceMappingURL=style.css.map */
