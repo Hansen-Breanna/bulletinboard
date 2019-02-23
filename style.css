@@ -313,6 +313,10 @@ header h2 {
 }
 
 @media (min-width: 65em) {
+  .participation {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
   .participation p {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -407,9 +411,9 @@ header h2 {
 
 @media (min-width: 65em) {
   .requirements {
-    -ms-grid-column: 2;
+    -ms-grid-column: 1;
     -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
   }
 }
 
@@ -603,6 +607,17 @@ header h2 {
   color: #382519;
 }
 
+@media (min-width: 65em) {
+  .design-selection {
+    position: absolute;
+    top: 1200px;
+    left: 400px;
+  }
+  .design-selection li {
+    font-size: 1rem;
+  }
+}
+
 p[role=contentinfo] {
   position: absolute;
   bottom: -100px;
@@ -713,6 +728,17 @@ h3.archives {
 .zen-resources h3 {
   margin: 25px 0 5px 0;
   color: #ffffff;
+}
+
+@media (min-width: 65em) {
+  .zen-resources {
+    z-index: 1;
+    margin-top: -50px;
+    font-size: 1.2rem;
+  }
+  .zen-resources li {
+    font-size: 1rem;
+  }
 }
 
 .sidebar li a:visited {

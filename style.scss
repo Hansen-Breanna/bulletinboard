@@ -231,7 +231,7 @@ header h1 {
         300px,
         center,
         center,
-        0);  
+        0);
     }
 }
 
@@ -271,7 +271,7 @@ header h2 {
     & p:nth-last-of-type(1) {
         padding-bottom: 75px;
     }
-    @include breakpoint(small){
+    @include breakpoint(small) {
         position: absolute;
         top: 240px;
         left: 570px;
@@ -349,6 +349,7 @@ header h2 {
             font-size: 1rem;
             line-height: 1.5rem;
         }
+        transform: rotate(-3deg);
     }
 }
 
@@ -404,7 +405,7 @@ header h2 {
         max-width: 600px;
     }
     @include breakpoint(medium) {
-        grid-column: 2 / 3;
+        grid-column: 1 / 2;
     }
 }
 
@@ -508,6 +509,14 @@ header h2 {
     & li a:link {
         color: $color-2;
     }
+    @include breakpoint(medium) {
+        position: absolute;
+        top: 1200px;
+        left: 400px;
+        & li {
+            font-size: 1rem;
+        }
+    }
 }
 
 p[role=contentinfo] {
@@ -603,6 +612,14 @@ h3.archives {
         margin: 25px 0 5px 0;
         color: $color-6;
     }
+    @include breakpoint(medium) {
+      z-index: 1;
+        margin-top: -50px;
+        font-size: 1.2rem;
+        & li {
+            font-size: 1rem;
+        }
+    }
 }
 
 .sidebar li a:visited {
@@ -692,10 +709,8 @@ a.zen-accessibility {
         position: absolute;
         left: 220px;
     }
- 
     div#zen-supporting {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
 }
