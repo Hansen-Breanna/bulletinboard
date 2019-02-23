@@ -7,7 +7,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro');
 /* SCSS variables */
-
 $color-1: #b8c8cc; // Blue background
 $color-2: #382519; // Dark Brown
 $color-3: #efd9bf; // cream
@@ -39,20 +38,29 @@ $width-3: 100% / 2;
 $width-6: 100% / 1; */
 //set breakpoint sizes
 $break-small: 45em;
-$break-medium: 65em;
+$break-medium: 60em;
+$break-large: 75em;
 
 /* SCSS Mixins */
 @mixin breakpoint($break) {
-    @if $break==medium {
+    @if $break==large {
+        @media (min-width: $break-large) {
+            @content;
+        }
+    }
+
+    @else if $break==medium {
         @media (min-width: $break-medium) {
             @content;
         }
     }
+
     @else if $break==small {
         @media (min-width: $break-small) {
             @content;
         }
     }
+
     @else {
         @media ($break) {
             @content;
@@ -92,8 +100,9 @@ $font-size) {
     background-position: $position1 $position2;
     font-size: $font-size;
 }
+
 @mixin font-size($font-size) {
-  font-size: ($font-size);
+    font-size: ($font-size);
 }
 
 /* basic elements */
@@ -104,8 +113,7 @@ html {
 }
 
 body {
-    font-size: 18px;
-    font: 1em georgia, sans-serif;
+    font: 1.125em georgia, sans-serif;
     line-height: 1.5rem;
     color: $color-2;
     background: $color-1;
@@ -161,14 +169,17 @@ a {
         text-decoration: none;
         color: $color-2;
     }
+
     &:visited {
         font-weight: bold;
         text-decoration: none;
         color: $color-6;
     }
+
     &:hover {
         color: lighten($color-2, 40%);
     }
+
     &:active {
         font-weight: bold;
         text-decoration: none;
@@ -193,6 +204,7 @@ li {
     margin: 0 30px;
     padding: 0 40px;
     position: relative;
+
     @include breakpoint(medium) {
         max-width: 1200px;
         margin: auto;
@@ -205,7 +217,7 @@ header h1 {
     height: 130px;
     padding: 80px 30px 0px 30px;
     vertical-align: middle;
-    margin: -155px auto 10px auto;
+    margin: -155px auto 100px auto;
     @include background-img (url(images/logo.svg),
     no-repeat,
     225px,
@@ -213,33 +225,34 @@ header h1 {
     center,
     center,
     0);
+
+    /* Image will be an SVG */
     @include breakpoint(small) {
-        width: 255px;
-        height: 230px;
-        margin-top: -170px;
-        @include background-img (url(images/logo.svg),
-        no-repeat,
-        300px,
-        300px,
-        center,
-        center,
-        0);
+        margin: -155px auto 20px auto;
     }
 }
 
 header h2 {
-  @include font-size($font-size-medium);
+    @include font-size($font-size-medium);
     width: 200px;
     color: $color-2;
     background-color: $color-6;
     line-height: 1em;
-    padding: 50px 25px 0 25px;
+    padding: 50px 25px 5px 25px;
     @include box-shadow;
     @include pin;
     margin: auto;
+
     @include breakpoint(small) {
-        position: absolute;
-        left: 350px;
+        position: relative;
+        right: 150px;
+        top: 55px;
+    }
+
+    @include breakpoint(medium) {
+        position: relative;
+        right: 0px;
+        top: 0px;
     }
 }
 
@@ -256,17 +269,14 @@ header h2 {
     right -50px,
     bottom -85px,
     .8em);
+
     & p {
         width: 200px;
         line-height: 1rem;
     }
+
     & p:nth-last-of-type(1) {
         padding-bottom: 75px;
-    }
-    @include breakpoint(small) {
-        position: absolute;
-        top: 245px;
-        left: 570px;
     }
 }
 
@@ -279,69 +289,67 @@ header h2 {
     transform: rotate(-1deg);
     @include box-shadow;
     @include pin;
+
     &.preamble h3 {
         text-align: center;
         @include font-size($font-size-medium);
     }
+
     &.preamble p {
-      @include font-size($font-size-small);
+        @include font-size($font-size-small);
     }
+
     @include breakpoint(small) {
-        @include center (70%);
-        margin-top: 150px;
-        transform: rotate(-4deg);
-    }
-    @include breakpoint(medium) {
-        margin-left: 0;
+        float: right;
     }
 }
 
 .explanation {
     padding: 30px;
-    @include center(75%);
+    @include center(80%);
     transform: rotate(1deg);
     @include box-shadow;
     background-color: $color-4;
     @include pin;
     @include font-size($font-size-small);
-    margin-bottom: 20px;
+    margin: 0 10px 20px 0;
+
     & h3 {
+        padding-top: 10px;
         text-align: center;
         @include font-size($font-size-small);
-    }
-    @include breakpoint (medium) {
-        position: absolute;
-        top: 150px;
-        right: 50px;
-        max-width: 300px;
     }
 }
 
 .participation {
     @include center(100%);
-    margin-bottom: 30px;
+    margin: 0 0 30px 10px;
     @include box-shadow;
     border: 20px outset #4b5548;
-    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #efd9bf;
-    background-size: 150px, 50px;
+    background-color: $color-3;
+
     & h3 {
-      @include font-size($font-size-medium);
+        margin-top: 40px;
+        @include font-size($font-size-medium);
         text-align: right;
         padding: 10px;
     }
+
     & p {
-      @include font-size($font-size-small);
-        line-height: .9rem;
+        @include font-size($font-size-small);
+        line-height: 1.2rem;
         text-align: right;
         padding: 5px 20px;
-        margin-left: 70px;
+        margin-left: 20px;
     }
-    @include breakpoint(medium) {
-        p {
-          @include font-size($font-size-medium);
-            line-height: 1.5rem;
+
+    @include breakpoint(small) {
+        background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #efd9bf;
+        background-size: 150px, 50px;
+
+        & p {
+            margin-left: 75px;
         }
-        transform: rotate(-3deg);
     }
 }
 
@@ -353,23 +361,26 @@ header h2 {
     background: url('images/barcode.png') 105% 45% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #ffffff;
     background-size: 130px, 50px;
     transform: rotate(2deg);
+
     & h3 {
         margin: 0;
     }
+
     & p {
-      @include font-size($font-size-small);
+        font-size: .8rem;
         line-height: 1.2rem;
-        padding-right: 120px;
+        padding: 10px 120px 0 0;
     }
+
     @include breakpoint(small) {
-        max-width: 600px;
+        max-width: 70%;
+        margin: 20px auto;
         grid-column: 1 / span 2;
     }
+
     @include breakpoint(medium) {
-        grid-column: 2 / 3;
-        margin: 250px -20px;
-        max-width: 700px;
-        max-height: 200px;
+        grid-column: 1 / span 2;
+        max-width: 50%;
     }
 }
 
@@ -378,26 +389,32 @@ header h2 {
     @include center(80%);
     @include box-shadow;
     @include pin;
+
     & h3 {
         margin-bottom: 10px;
         text-transform: uppercase;
     }
+
     & p {
-      @include font-size($font-size-small);
+        @include font-size($font-size-small);
     }
+
     & p:nth-of-type(1) {
         border-top: 15px solid $color-2;
         padding-top: 15px;
     }
+
     & role {
         background-color: $color-2;
     }
+
     @include breakpoint(small) {
         grid-column: 1 / span 2;
-        max-width: 600px;
+        margin: 20px auto;
     }
+
     @include breakpoint(medium) {
-        grid-column: 1 / 2;
+        grid-column: 1 / span 1;
     }
 }
 
@@ -405,133 +422,150 @@ header h2 {
     @include box-shadow;
     @include pin;
     position: absolute;
-    top: -50px;
-    left: 25px;
+    top: 10px;
+    left: 20px;
     margin: 0 auto;
     padding: 15px;
     @include font-size($font-size-small);
-    max-width: 200px; 
+    width: 100px;
     font-weight: normal;
     font-family: $secondary-font;
     background-color: $color-3;
     transform: rotate(-5deg);
+
     & ul {
         margin: 0;
         padding: 0;
         grid-column: 1 / 3;
     }
-    & h3 {
-      margin: 25px 0 5px 0;
-      text-transform: capitalize;
-      font-family: $secondary-font;
-    }
+
     @include breakpoint(small) {
-        top: -50px;
-        left: 600px;
-        transform: rotate(0deg);
-    }
-    @include breakpoint(medium) {
-        left: 800px;
-        @include font-size($font-size-medium);
+        top: -20px;
+        left: 70px;
     }
 }
 
 .design-selection {
     @include center(60% 100%);
+
     & h3 {
-        padding: 45px 10px;
+        padding: 55px 10px 45px 10px;
         @include center(250px);
         text-transform: capitalize;
         @include pin;
         font-family: $secondary-font;
         @include box-shadow;
-        @include font-size($font-size-large);
+        @include font-size($font-size-medium);
         background-color: $color-3;
         text-align: center;
     }
+
     & ul {
         display: grid;
         padding: 0;
-        max-width: 500px;
-        margin: auto;
     }
+
     & li {
         @include center(70%);
         @include box-shadow;
         @include font-size(0.8rem);
-        font-size: .8rem;
         margin: 10px;
-        padding: 35px 15px 20px 15px; //50px 20px 20px 20px
+        padding: 50px 15px 20px 15px; //50px 20px 20px 20px
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         text-align: center;
         background-color: $color-3;
+
+        @include breakpoint(small) {
+            @include center(50%);
+        }
     }
+
     & li:nth-child(1) {
         transform: rotate(-3deg);
         @include pin;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
+
     & li:nth-child(2) {
         transform: rotate(3deg);
         @include pin;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
+
     & li:nth-child(3) {
         transform: rotate(2deg);
         @include pin;
     }
+
     & li:nth-child(4) {
         transform: rotate(-5deg);
         @include pin;
     }
+
     & li:nth-child(5) {
         transform: rotate(3deg);
         @include pin;
     }
+
     & li:nth-child(6) {
         @include pin;
     }
+
     & li:nth-child(7) {
         transform: rotate(-3deg);
         @include pin;
     }
+
     & li:nth-child(8) {
         transform: rotate(2deg);
         @include pin;
     }
+
     & li a:link {
         color: $color-2;
     }
+
     @include breakpoint(medium) {
-      @include font-size($font-size-small);
+        @include font-size($font-size-small);
         position: absolute;
-        top: 1200px;
-        left: 400px;
-        & li {
-          @include font-size($font-size-medium);
+        bottom: 17%;
+        left: 35%;
+        @include center(80%);
+
+        ul {
+            @include center(60%);
         }
     }
 }
 
 p[role=contentinfo] {
     position: absolute;
-    bottom: -100px;
+    bottom: -200px;
     left: 0px;
     background-color: #382519;
     color: #ffffff;
     max-width: 100%;
     text-align: right;
-    padding: 75px 5% 75px 50%;
+    padding: 75px 5% 75px 35%;
     @include font-size($font-size-small);
+
     & a {
         color: $color-6;
     }
+
     @include breakpoint(small) {
         bottom: -120px;
+        padding: 75px 5% 75px 50%;
+    }
+
+    @include breakpoint(medium) {
+        bottom: 50px;
+        padding: 75px 5% 75px 50%;
+        width: 576px;
     }
 }
 
@@ -539,11 +573,18 @@ p[role=contentinfo] {
     font: 1.2rem verdana, $primary-font;
 }
 
+h3.archives {
+    margin: 35px 0 5px 0;
+    text-transform: capitalize;
+    font-family: $secondary-font;
+}
+
 .zen-resources {
+    margin: 40px 0;
     padding: 70px 20px 100px 20px;
     @include box-shadow;
     transform: rotate(-5deg);
-    max-width: 200px;
+    width: 175px; //200px
     position: relative;
     top: -20px;
     background-color: $color-4;
@@ -554,6 +595,7 @@ p[role=contentinfo] {
     right,
     bottom,
     0.8em);
+
     &:before {
         content: "";
         position: absolute;
@@ -566,6 +608,7 @@ p[role=contentinfo] {
         border-right: 140px solid transparent;
         filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
     }
+
     &:after {
         content: "";
         position: absolute;
@@ -578,39 +621,42 @@ p[role=contentinfo] {
         border-left: 140px solid transparent;
         filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
     }
+
     & ul {
         margin: 0;
         padding: 0;
     }
+
     & li {
         line-height: 1.4rem;
         @include font-size($font-size-small);
+
         a:link {
             color: $color-6;
         }
+
         a:hover {
             color: $color-3;
         }
     }
+
     & a {
         font-family: $secondary-font;
         font-weight: 100;
     }
-    @include breakpoint(small) {
-        top: 15px;
-        left: 100px;
-    }
+
     & h3 {
         margin: 25px 0 5px 0;
         color: $color-6;
     }
+
+    @include breakpoint(small) {
+        top: 15px;
+        left: 100px;
+    }
+
     @include breakpoint(medium) {
-      z-index: 1;
-        margin-top: -50px;
-        @include font-size($font-size-large);
-        & li {
-          @include font-size($font-size-medium);
-        }
+        top: -90px;
     }
 }
 
@@ -624,14 +670,20 @@ footer {
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: -200px;
+    bottom: -300px;
     left: 0px;
     background-color: $color-3;
+
     & a {
         background: transparent;
     }
+
     @include breakpoint(small) {
         bottom: -250px;
+    }
+
+    @include breakpoint(medium) {
+        bottom: -80px;
     }
 }
 
@@ -691,18 +743,41 @@ a.zen-accessibility {
 }
 
 /*medium styles*/
-
 @media (min-width: 45em) {
     section.intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
     header {
         position: absolute;
         left: 220px;
     }
+
+    .summary {
+        position: absolute;
+        top: 220px;
+        left: 70px;
+        padding-top: 5px;
+
+        @include breakpoint(medium) {
+            top: 165px;
+            left: 220px;
+        }
+    }
+
+    .preamble {
+        grid-column-start: 2;
+        @include center (70%);
+        margin: 50px auto 40px auto;
+    }
+
     div#zen-supporting {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .zen-resources {
+        left: 40px;
     }
 }
