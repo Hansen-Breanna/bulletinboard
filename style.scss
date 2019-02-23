@@ -28,7 +28,55 @@ serif;
 $primary-font: 'Source Sans Pro',
 Arial,
 sans-serif;
+
+//set widths and heights
+/* $height-1: 100% / 12;
+$height-2: 100% / 6;
+$height-3: 100% / 4;
+$height-4: 100% / 3;
+$height-6: 100% / 2;
+$height-half: 100% / 24;
+$width-1: 100% / 6;
+$width-2: 100% / 3;
+$width-3: 100% / 2;
+$width-6: 100% / 1; */
+
+//set breakpoint sizes
+$break-small: 50em;
+$break-medium: 55em;
+$break-large: 60em;
+
 /* SCSS Mixins */
+
+@mixin breakpoint($break) {
+    @if $break==large {
+        @media (min-width: $break-large) {
+            @content;
+        }
+    }
+    @else if $break==medium {
+        @media (min-width: $break-medium) {
+            @content;
+        }
+    }
+    @else if $break==small {
+        @media (min-width: $break-small) {
+            @content;
+        }
+    }
+    @else {
+        @media ($break) {
+            @content;
+        }
+    }
+}
+
+@mixin center($max-width, $width: 90%) {
+    width: $width;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @mixin box-shadow {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -64,13 +112,14 @@ html {
 }
 
 body {
+    font-size: 18px;
     font: 1em georgia, sans-serif;
-    line-height: 1.5em;
+    line-height: 1.5rem;
     color: $color-2;
     background: $color-1;
     margin: 0;
     padding: 0;
-    border-top: 120px solid $color-2;
+    // border-top: 120px solid $color-2;
     font-family: $secondary-font;
 }
 
@@ -111,8 +160,7 @@ h1,
 h2,
 .summary,
 .benefits,
-.requirements,
-footer a {
+.requirements {
     background-color: $color-6;
 }
 
@@ -122,14 +170,17 @@ a {
         text-decoration: none;
         color: $color-2;
     }
+
     &:visited {
         font-weight: bold;
         text-decoration: none;
         color: $color-6;
     }
+
     &:hover {
         color: lighten($color-2, 40%);
     }
+
     &:active {
         font-weight: bold;
         text-decoration: none;
@@ -148,8 +199,12 @@ li {
 /* specific divs */
 
 .page-wrapper {
+    border-top: 150px solid $color-2;
+    background-image: url('images/burlap.jpg');
+    background-size: 500px;
+    background-repeat: repeat;
+    margin: 0 30px;
     padding: 0 40px;
-    margin: auto;
     position: relative;
 }
 
@@ -159,7 +214,7 @@ header h1 {
     height: 130px;
     padding: 80px 30px 0px 30px;
     vertical-align: middle;
-    margin: -125px auto 10px auto;
+    margin: -155px auto 10px auto;
     @include background-img (url(images/logo.svg),
     no-repeat,
     225px,
@@ -171,9 +226,8 @@ header h1 {
 }
 
 header h2 {
-    font-size: 1em;
-    width: 70%;
-    height: 50px;
+    font-size: 1rem;
+    width: 200px;
     color: $color-2;
     background-color: $color-6;
     line-height: 1em;
@@ -184,8 +238,9 @@ header h2 {
 }
 
 .summary {
-    width: 70%;
-    margin: 0 auto 20px auto;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 20px;
     padding: 0 25px 25px 25px;
     @include box-shadow;
     @include background-img (url('images/flower-combo.png'),
@@ -195,42 +250,49 @@ header h2 {
     right -50px,
     bottom -85px,
     .8em);
+
     & p {
         width: 200px;
         line-height: 1rem;
     }
+
     & p:nth-last-of-type(1) {
         padding-bottom: 75px;
     }
 }
 
 .preamble {
-    margin: 0 auto 20px auto;
-    width: 90%;
+    @include center(90%);
+    margin-bottom: 20px;
     padding: 30px;
     background-color: $color-2;
     color: $color-6;
     transform: rotate(-1deg);
     @include box-shadow;
     @include pin;
-    &.preamble h3,
-    .preamble p {
+
+    &.preamble h3 {
         text-align: center;
-        font-size: .8rem;
+        font-size: 1rem;
+    }
+    &.preamble p {
+        font-size: .7rem;
+    }
+    @include breakpoint(small) {
+        float: right;
     }
 }
 
 .explanation {
-    margin: auto;
     padding: 30px;
-    width: 75%;
-    height: auto;
+    @include center(75%);
     transform: rotate(1deg);
     @include box-shadow;
     background-color: $color-4;
     @include pin;
     font-size: .8rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+
     & h3 {
         text-align: center;
         font-size: .8rem;
@@ -238,17 +300,19 @@ header h2 {
 }
 
 .participation {
-    max-width: 100%;
-    margin: auto auto 30px;
+    @include center(100%);
+    margin-bottom: 30px;
     @include box-shadow;
     border: 20px outset #4b5548;
-    background: url('images/red-leaves.png') -20% 35% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #efd9bf;
+    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #efd9bf;
     background-size: 150px, 50px;
+
     & h3 {
         font-size: 1rem;
         text-align: right;
         padding: 10px;
     }
+
     & p {
         font-size: .7rem;
         line-height: .9rem;
@@ -259,15 +323,18 @@ header h2 {
 }
 
 .benefits {
-    width: 100%;
+    @include center(100%);
+    margin-bottom: 20px;
     padding: 20px;
     @include box-shadow;
     background: url('images/barcode.png') 105% 45% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #ffffff;
     background-size: 130px, 50px;
     transform: rotate(2deg);
+
     & h3 {
         margin: 0;
     }
+
     & p {
         font-size: .8rem;
         line-height: 1.2rem;
@@ -277,22 +344,24 @@ header h2 {
 
 .requirements {
     padding: 30px 20px 30px 50px;
-    width: 80%;
-    margin: auto;
+    @include center(80%);
     @include box-shadow;
-    margin: 20px;
     @include pin;
+
     & h3 {
         margin-bottom: 10px;
         text-transform: uppercase;
     }
+
     & p {
         font-size: .8rem;
     }
+
     & p:nth-of-type(1) {
         border-top: 15px solid $color-2;
         padding-top: 15px;
     }
+
     & role {
         background-color: $color-2;
     }
@@ -302,15 +371,17 @@ header h2 {
     @include box-shadow;
     @include pin; //margin: -0.7em 120px -0.7em 120px;//20px
     position: absolute;
-    top: 120px;
+    top: -30px;
+    left: 25px;
     margin: 0 auto;
     padding: 15px;
-    font-size: 0.6em;
+    font-size: 0.7rem;
     width: 100px;
     font-weight: normal;
     font-family: $secondary-font;
     background-color: $color-3;
     transform: rotate(-5deg);
+
     & ul {
         margin: 0;
         padding: 0;
@@ -320,29 +391,25 @@ header h2 {
 
 .design-selection {
     display: grid;
-    max-width: 400px;
-    margin: 0 auto;
+    @include center(60% 100%);
     & h3 {
         @include box-shadow;
-        margin: 20px;
         padding: 15px;
-        font-size: 1em;
+        font-size: 1rem;
         background-color: $color-3;
         grid-column: 1 / 3;
         justify-self: center;
     }
-    & nav {
-        margin-left: 1.5em;
-    }
+
     & ul {
         display: grid;
         padding: 0;
     }
+
     & li {
-        width: 120px; //150px
-        height: 90px; //100px
+        @include center(70%);
         @include box-shadow;
-        font-size: .75em;
+        font-size: .8rem;
         margin: 10px;
         padding: 35px 15px 20px 15px; //50px 20px 20px 20px
         display: flex;
@@ -351,41 +418,50 @@ header h2 {
         text-align: center;
         background-color: $color-3;
     }
+
     & li:nth-child(1) {
         transform: rotate(-3deg);
         @include pin;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
+
     & li:nth-child(2) {
         transform: rotate(3deg);
         @include pin;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
+
     & li:nth-child(3) {
         transform: rotate(2deg);
         @include pin;
     }
+
     & li:nth-child(4) {
         transform: rotate(-5deg);
         @include pin;
     }
+
     & li:nth-child(5) {
         transform: rotate(3deg);
         @include pin;
     }
+
     & li:nth-child(6) {
         @include pin;
     }
+
     & li:nth-child(7) {
         transform: rotate(-3deg);
         @include pin;
     }
+
     & li:nth-child(8) {
         transform: rotate(2deg);
         @include pin;
     }
+
     & li a:link {
         color: $color-2;
     }
@@ -401,23 +477,19 @@ p[role=contentinfo] {
     text-align: right;
     padding: 75px 5% 75px 50%;
     font-size: .75em;
+
     & a {
         color: $color-6;
     }
 }
 
-footer a:link,
-footer a:visited {
-    margin-right: 20px;
-}
-
 .sidebar .wrapper {
-    font: 1.2em verdana, $primary-font;
+    font: 1.2rem verdana, $primary-font;
 }
 
 h3.select {
     margin: 10px 0 5px 0;
-    width: 200px;
+    @include center(50%);
     text-transform: capitalize;
     @include pin;
     padding-top: 50px;
@@ -451,6 +523,7 @@ h3.resources {
     right,
     bottom,
     0.8em);
+
     &:before {
         content: "";
         position: absolute;
@@ -463,6 +536,7 @@ h3.resources {
         border-right: 140px solid transparent;
         filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
     }
+
     &:after {
         content: "";
         position: absolute;
@@ -475,20 +549,25 @@ h3.resources {
         border-left: 140px solid transparent;
         filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
     }
+
     & ul {
         margin: 0;
         padding: 0;
     }
+
     & li {
-        line-height: 1.4em;
-        font-size: .75em;
+        line-height: 1.4rem;
+        font-size: .75rem;
+
         a:link {
             color: $color-6;
         }
+
         a:hover {
             color: $color-3;
         }
     }
+
     & a {
         font-family: $secondary-font;
         font-weight: 100;
@@ -500,20 +579,17 @@ h3.resources {
 }
 
 footer {
-    width: 105%;
+    width: 100%;
+    padding: 30px 0;
     display: flex;
-    height: 150px;
+    justify-content: center;
     position: absolute;
     bottom: -200px;
-    left: -3%;
-
+    left: 0px;
     background-color: $color-3;
+
     & a {
         background: transparent;
-        padding: 15px 5px;
-        margin: auto;
-        font-size: 0.8em;
-        width: 40px;
     }
 }
 
@@ -521,9 +597,9 @@ a.zen-validate-html {
     padding: 35px;
     @include background-img (url('images/icons/html.png'),
     no-repeat,
-    55px,
-    55px,
-    100%,
+    60px,
+    60px,
+    center,
     center,
     0);
 }
@@ -565,82 +641,47 @@ a.zen-accessibility {
     padding: 35px;
     @include background-img (url('images/icons/accessible.png'),
     no-repeat,
-    55px,
-    55px,
+    60px,
+    60px,
     center,
     center,
     0);
 }
 
-@media (min-width: 700px) {
-    .page-wrapper {
-        width: 90%;
-        padding: 0 40px;
-        margin: auto;
-        position: relative;
-        background-image: url('images/burlap.jpg');
-        background-repeat: repeat;
+@media (min-width: 45em) {
+
+    section.intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
-    header h2,
-    .summary {
-        margin: 0;
+    header {
+        position: absolute;
+        left: 220px;
     }
-    .preamble {
-        width: 500px;
-        margin: 0;
+    div#zen-summary {
+        position: absolute;
+        top: 155px;
+        left: 220px;
+
     }
-    .explanation {
-        width: 500px;
-        margin: 0;
+    div#zen-preamble {
+        grid-column-start: 2;
+        @include center (70%);
+        margin-top: 20px;
     }
-    .participation {
-        padding: 15px 30px 15px 140px;
-        width: 650px;
-        @include background-img (url('images/red-leaves.png'),
-        no-repeat,
-        150px,
-        90%,
-        left,
-        center,
-        1em);
+
+    div#zen-supporting {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
-    .benefits {
-        width: 450px;
-        height: 165px;
-        padding: 15px 30px 35px 70px;
-        margin: 20px;
+
+    div.benefits {
+        grid-column: 1 / span 2;
     }
-    .requirements {
-        padding: 30px 30px 30px 80px;
-        width: 500px;
-        margin: 20px;
-    }
-    .design-selection {
-        & ul {
-            width: 500px;
-        }
-        & li {
-            width: 200px;
-            height: 200px;
-            padding: 20px;
-        }
-    }
-    p[role=contentinfo] {
-        width: 600px;
-        padding: 100px 150px 100px 65%;
-        left: -65px;
-    }
-    .sidebar .wrapper {
-        padding: 40px;
-    }
-    .zen-resources {
-        padding: 70px 30px 100px 30px;
-    }
-    footer {
-        left: auto;
-        & a {
-            padding: 20px 10px;
-            margin: 0 10px;
-        }
-    }
-}
+
+
+
+
+
+
+} 
