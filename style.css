@@ -608,6 +608,7 @@ p[role=contentinfo] a {
   max-width: 200px;
   position: relative;
   top: 0px;
+  margin: auto;
   background-color: #ec637d;
   background-image: url("images/blue-leaves.png");
   background-repeat: no-repeat;
@@ -661,6 +662,7 @@ p[role=contentinfo] a {
   .zen-resources {
     top: 15px;
     left: 50px;
+    margin: 0;
   }
 }
 .zen-resources h3 {

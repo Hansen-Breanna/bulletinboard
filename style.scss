@@ -565,6 +565,7 @@ p[role=contentinfo] {
   max-width: 200px;
   position: relative;
   top: 0px;
+  margin: auto;
   background-color: $color-4;
   @include background-img (url('images/blue-leaves.png'),
   no-repeat,
@@ -617,6 +618,7 @@ p[role=contentinfo] {
   @include breakpoint(small) {
     top: 15px;
     left: 50px;
+    margin: 0;
   }
   & h3 {
     margin: 25px 0 5px 0;
