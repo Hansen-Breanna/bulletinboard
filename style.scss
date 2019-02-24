@@ -451,7 +451,7 @@ header h2 {
 
 .design-selection {
   @include center(60% 100%);
-  & h3 {
+  & h3 { //moved from top down to be by links so more intuitive
     padding: 45px 10px;
     @include center(250px);
     text-transform: capitalize;
@@ -525,7 +525,7 @@ header h2 {
   @include breakpoint(medium) {
     @include font-size($font-size-small);
     position: absolute;
-    bottom: 17%;
+    bottom: 10%;
     left: 35%;
     @include center(80%);
     ul {
