@@ -448,7 +448,7 @@ header h2 {
 }
 
 .design-selection {
-  @include center(60% 100%);
+  @include center(100%);
   & h3 { //moved from top down to be by links so more intuitive
     padding: 45px 10px;
     @include center(250px);
