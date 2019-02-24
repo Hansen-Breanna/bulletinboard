@@ -125,9 +125,9 @@ header h1 {
   background: transparent;
   width: 155px;
   height: 130px;
+  margin: -155px auto 40px auto;
   padding: 80px 30px 0px 30px;
   vertical-align: middle;
-  margin: -155px auto 40px auto;
   background-image: url(images/logo.png);
   background-repeat: no-repeat;
   background-size: 225px 225px;
@@ -154,13 +154,13 @@ header h2 {
   color: #382519;
   background-color: #ffffff;
   line-height: 1em;
-  padding: 50px 25px 5px 25px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-image: url("images/blue-push-pin.png");
   background-position: top center;
   background-size: 50px 50px;
   background-repeat: no-repeat;
   margin: auto;
+  padding: 50px 25px 5px 25px;
 }
 @media (min-width: 45em) {
   header h2 {
@@ -177,8 +177,7 @@ header h2 {
 
 .summary {
   width: 200px;
-  margin: auto;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   padding: 0 25px 25px 25px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-image: url("images/flower-combo.png");
@@ -213,7 +212,7 @@ header h2 {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   padding: 30px;
   background-color: #382519;
   color: #ffffff;
@@ -248,7 +247,6 @@ header h2 {
 }
 
 .explanation {
-  padding: 30px;
   width: 90%;
   max-width: 75%;
   margin-left: auto;
@@ -261,7 +259,8 @@ header h2 {
   background-size: 50px 50px;
   background-repeat: no-repeat;
   font-size: 0.9rem;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+  padding: 30px;
 }
 .explanation h3 {
   margin-top: 20px;
@@ -288,17 +287,17 @@ header h2 {
   background-color: #efd9bf;
 }
 .participation h3 {
-  margin-top: 40px;
+  margin: 40px 0 0 0;
+  padding: 10px;
   font-size: 1.2rem;
   text-align: right;
-  padding: 10px;
 }
 .participation p {
   font-size: 0.9rem;
   line-height: 1.2rem;
   text-align: right;
+  margin: 0 0 0 20px;
   padding: 5px 20px;
-  margin-left: 20px;
 }
 @media (min-width: 45em) {
   .participation {
@@ -325,7 +324,7 @@ header h2 {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
   padding: 20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background: url("images/barcode.png") 105% 45% no-repeat, url("images/blue-push-pin.png") 50% 0% no-repeat, #ffffff;
@@ -461,9 +460,9 @@ header h2 {
 }
 .design-selection ul {
   display: grid;
+  margin: 20px auto;
   padding: 0;
   max-width: 500px;
-  margin: 20px auto;
 }
 .design-selection li {
   width: 90%;
