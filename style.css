@@ -136,6 +136,7 @@ header h1 {
 }
 @media (min-width: 45em) {
   header h1 {
+    margin-left: -100px;
     width: 255px;
     height: 230px;
     margin-top: -170px;
@@ -164,7 +165,13 @@ header h2 {
 @media (min-width: 45em) {
   header h2 {
     position: absolute;
-    left: 150px;
+    left: 180px;
+  }
+}
+@media (min-width: 65em) {
+  header h2 {
+    top: 100px;
+    right: -495px;
   }
 }
 
@@ -190,8 +197,14 @@ header h2 {
 @media (min-width: 45em) {
   .summary {
     position: absolute;
-    top: 245px;
-    left: 570px;
+    top: 270px;
+    left: 400px;
+  }
+}
+@media (min-width: 65em) {
+  .summary {
+    top: 190px;
+    left: 540px;
   }
 }
 
@@ -413,13 +426,12 @@ header h2 {
 @media (min-width: 45em) {
   .design-archives {
     top: -50px;
-    left: 600px;
+    left: 70%;
     transform: rotate(0deg);
   }
 }
 @media (min-width: 65em) {
   .design-archives {
-    left: 800px;
     font-size: 1.2rem;
   }
 }
@@ -451,7 +463,7 @@ header h2 {
   display: grid;
   padding: 0;
   max-width: 500px;
-  margin-left: -10px;
+  margin: 20px auto;
 }
 .design-selection li {
   width: 90%;
@@ -475,6 +487,8 @@ header h2 {
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
+    font-size: 0.9rem;
+    padding: 50px 20px;
   }
 }
 .design-selection li:nth-child(1) {
@@ -543,11 +557,18 @@ header h2 {
   .design-selection {
     font-size: 0.9rem;
     position: absolute;
-    top: 1200px;
-    left: 400px;
+    bottom: 17%;
+    left: 35%;
+    width: 90%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .design-selection li {
-    font-size: 1.2rem;
+  .design-selection ul {
+    width: 90%;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -644,6 +665,7 @@ p[role=contentinfo] a {
 @media (min-width: 65em) {
   .zen-resources {
     z-index: 1;
+    left: 100px;
     margin-top: -50px;
     font-size: 1.4rem;
   }
