@@ -242,14 +242,13 @@ header h2 {
   color: $color-2;
   background-color: $color-6;
   line-height: 1em;
-  padding: 50px 25px 0 25px;
+  padding: 50px 25px 5px 25px;
   @include box-shadow;
   @include pin;
   margin: auto;
-
   @include breakpoint(small) {
     position: absolute;
-    left: 350px;
+    left: 150px;
   }
 }
 
@@ -322,12 +321,11 @@ header h2 {
   @include pin;
   @include font-size($font-size-small);
   margin-bottom: 20px;
-
   & h3 {
+    margin-top: 20px;
     text-align: center;
     @include font-size($font-size-small);
   }
-
   @include breakpoint (medium) {
     position: absolute;
     top: 150px;
@@ -358,6 +356,7 @@ header h2 {
   @include breakpoint(small) {
     background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #efd9bf;
     background-size: 150px, 50px;
+    margin-left: 15px;
     & p {
       margin-left: 70px;
     }
@@ -390,6 +389,7 @@ header h2 {
   @include breakpoint(small) {
     max-width: 600px;
     grid-column: 1 / span 2;
+    margin: 10px auto;
   }
   @include breakpoint(medium) {
     grid-column: 2 / 3;
@@ -404,28 +404,24 @@ header h2 {
   @include center(80%);
   @include box-shadow;
   @include pin;
-
   & h3 {
     margin-bottom: 10px;
     text-transform: uppercase;
   }
-
   & p {
     @include font-size($font-size-small);
   }
-
   & p:nth-of-type(1) {
     border-top: 15px solid $color-2;
     padding-top: 15px;
   }
-
   & role {
     background-color: $color-2;
   }
-
   @include breakpoint(small) {
     grid-column: 1 / span 2;
     max-width: 600px;
+    margin: 20px auto;
   }
 
   @include breakpoint(medium) {
@@ -593,7 +589,6 @@ p[role=contentinfo] {
   right,
   bottom,
   0.8em);
-
   &:before {
     content: "";
     position: absolute;
@@ -606,7 +601,6 @@ p[role=contentinfo] {
     border-right: 140px solid transparent;
     filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
   }
-
   &:after {
     content: "";
     position: absolute;
@@ -619,33 +613,27 @@ p[role=contentinfo] {
     border-left: 140px solid transparent;
     filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
   }
-
   & ul {
     margin: 0;
     padding: 0;
   }
-
   & li {
     line-height: 1.4rem;
     @include font-size($font-size-small);
-
     a:link {
       color: $color-6;
     }
-
     a:hover {
       color: $color-3;
     }
   }
-
   & a {
     font-family: $secondary-font;
     font-weight: 100;
   }
-
   @include breakpoint(small) {
     top: 15px;
-    left: 100px;
+    left: 50px;
   }
 
   & h3 {
