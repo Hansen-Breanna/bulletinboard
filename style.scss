@@ -213,7 +213,7 @@ header h1 {
   height: 130px;
   padding: 80px 30px 0px 30px;
   vertical-align: middle;
-  margin: -155px auto 10px auto;
+  margin: -155px auto 40px auto;
   @include background-img (url(images/logo.png),
   no-repeat,
   225px,
@@ -341,29 +341,32 @@ header h2 {
   margin-bottom: 30px;
   @include box-shadow;
   border: 20px outset #4b5548;
-  background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #efd9bf;
-  background-size: 150px, 50px;
-
+  background-color: $color-3;
   & h3 {
+    margin-top: 40px;
     @include font-size($font-size-medium);
     text-align: right;
     padding: 10px;
   }
-
   & p {
     @include font-size($font-size-small);
-    line-height: .9rem;
+    line-height: 1.2rem;
     text-align: right;
     padding: 5px 20px;
-    margin-left: 70px;
+    margin-left: 20px;
   }
-
+  @include breakpoint(small) {
+    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #efd9bf;
+    background-size: 150px, 50px;
+    & p {
+      margin-left: 70px;
+    }
+  }
   @include breakpoint(medium) {
     p {
       @include font-size($font-size-medium);
       line-height: 1.5rem;
     }
-
     transform: rotate(-3deg);
   }
 }
@@ -376,22 +379,18 @@ header h2 {
   background: url('images/barcode.png') 105% 45% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #ffffff;
   background-size: 130px, 50px;
   transform: rotate(2deg);
-
   & h3 {
     margin: 0;
   }
-
   & p {
     @include font-size($font-size-small);
     line-height: 1.2rem;
     padding-right: 120px;
   }
-
   @include breakpoint(small) {
     max-width: 600px;
     grid-column: 1 / span 2;
   }
-
   @include breakpoint(medium) {
     grid-column: 2 / 3;
     margin: 250px -20px;
@@ -438,7 +437,7 @@ header h2 {
   @include box-shadow;
   @include pin;
   position: absolute;
-  top: -50px;
+  top: -20px;
   left: 25px;
   margin: 0 auto;
   padding: 15px;
@@ -475,7 +474,6 @@ header h2 {
 
 .design-selection {
   @include center(60% 100%);
-
   & h3 {
     padding: 45px 10px;
     @include center(250px);
@@ -487,81 +485,71 @@ header h2 {
     background-color: $color-3;
     text-align: center;
   }
-
   & ul {
     display: grid;
     padding: 0;
     max-width: 500px;
-    margin: auto;
+    margin-left: -10px;
   }
-
   & li {
     @include center(70%);
     @include box-shadow;
     @include font-size(0.8rem);
     font-size: .8rem;
     margin: 10px;
-    padding: 35px 15px 20px 15px; //50px 20px 20px 20px
+    padding: 35px 15px 20px 15px; 
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     text-align: center;
     background-color: $color-3;
+    @include breakpoint(small) {
+      @include center(50%);
+    }
   }
-
   & li:nth-child(1) {
     transform: rotate(-3deg);
     @include pin;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
-
   & li:nth-child(2) {
     transform: rotate(3deg);
     @include pin;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
-
   & li:nth-child(3) {
     transform: rotate(2deg);
     @include pin;
   }
-
   & li:nth-child(4) {
     transform: rotate(-5deg);
     @include pin;
   }
-
   & li:nth-child(5) {
     transform: rotate(3deg);
     @include pin;
   }
-
   & li:nth-child(6) {
     @include pin;
   }
-
   & li:nth-child(7) {
     transform: rotate(-3deg);
     @include pin;
   }
-
   & li:nth-child(8) {
     transform: rotate(2deg);
     @include pin;
   }
-
   & li a:link {
     color: $color-2;
   }
-
   @include breakpoint(medium) {
     @include font-size($font-size-small);
     position: absolute;
     top: 1200px;
     left: 400px;
-
     & li {
       @include font-size($font-size-medium);
     }
@@ -570,7 +558,7 @@ header h2 {
 
 p[role=contentinfo] {
   position: absolute;
-  bottom: -100px;
+  bottom: -300px;
   left: 0px;
   background-color: #382519;
   color: #ffffff;
@@ -578,11 +566,9 @@ p[role=contentinfo] {
   text-align: right;
   padding: 75px 5% 75px 50%;
   @include font-size($font-size-small);
-
   & a {
     color: $color-6;
   }
-
   @include breakpoint(small) {
     bottom: -120px;
   }
