@@ -549,13 +549,13 @@ header h2 {
 
 p[role=contentinfo] {
   position: absolute;
-  bottom: -300px;
+  bottom: -225px;
   left: 0px;
   background-color: #382519;
   color: #ffffff;
   max-width: 100%;
   text-align: right;
-  padding: 75px 5% 75px 50%;
+  padding: 75px 5% 75px 55%;
   font-size: 0.9rem;
 }
 p[role=contentinfo] a {
@@ -577,7 +577,7 @@ p[role=contentinfo] a {
   transform: rotate(-5deg);
   max-width: 200px;
   position: relative;
-  top: -20px;
+  top: 0px;
   background-color: #ec637d;
   background-image: url("images/blue-leaves.png");
   background-repeat: no-repeat;
@@ -658,7 +658,7 @@ footer {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: -200px;
+  bottom: -325px;
   left: 0px;
   background-color: #efd9bf;
 }
