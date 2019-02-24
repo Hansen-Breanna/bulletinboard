@@ -191,11 +191,14 @@ li {
 /* specific divs */
 .page-wrapper {
   border-top: 150px solid $color-2;
+  @include margin-padding(0 30px, 0 40px 200px 40px);
   background-image: url('images/burlap.jpg');
   background-size: 500px;
   background-repeat: repeat;
-  @include margin-padding(0 30px, 0 40px);
   position: relative;
+  @include breakpoint(small) {
+    @include margin-padding(0 30px, 0 40px);
+  }
   @include breakpoint(medium) {
     max-width: 1200px;
     margin: auto;
@@ -534,19 +537,20 @@ header h2 {
 
 p[role=contentinfo] {
   position: absolute;
-  bottom: -225px;
+  bottom: -150px;
   left: 0px;
   background-color: #382519;
   color: #ffffff;
   max-width: 100%;
   text-align: right;
-  padding: 75px 5% 75px 55%;
+  padding: 75px 5% 75px 15%;
   @include font-size($font-size-small);
   & a {
     color: $color-6;
   }
   @include breakpoint(small) {
     bottom: -120px;
+    padding: 75px 5% 75px 55%;
   }
 }
 
@@ -639,7 +643,7 @@ footer {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: -325px;
+  bottom: -275px;
   left: 0px;
   background-color: $color-3;
   & a {
