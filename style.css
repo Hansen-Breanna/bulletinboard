@@ -141,7 +141,7 @@ header h1 {
 }
 @media (min-width: 45em) {
   header h1 {
-    margin-left: -100px;
+    transform: translateX(-100px);
     width: 255px;
     height: 230px;
     margin-top: -170px;
@@ -160,9 +160,8 @@ header h2 {
   background-color: #ffffff;
   line-height: 1em;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
   margin: auto;
   padding: 50px 25px 5px 25px;
@@ -208,7 +207,7 @@ header h2 {
 @media (min-width: 65em) {
   .summary {
     top: 190px;
-    left: 540px;
+    left: 590px;
   }
 }
 
@@ -223,9 +222,8 @@ header h2 {
   color: #ffffff;
   transform: rotate(-1deg);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
 }
 .preamble.preamble h3 {
@@ -259,9 +257,8 @@ header h2 {
   transform: rotate(1deg);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: #ec637d;
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
   font-size: 0.9rem;
   margin: 0 0 20px 0;
@@ -271,6 +268,11 @@ header h2 {
   margin-top: 20px;
   text-align: center;
   font-size: 0.9rem;
+}
+@media (min-width: 45em) {
+  .explanation h3 {
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 65em) {
   .explanation {
@@ -306,7 +308,7 @@ header h2 {
 }
 @media (min-width: 45em) {
   .participation {
-    background: url("images/red-leaves.png") -15% 25% no-repeat, url("images/blue-push-pin.png") 50% 0% no-repeat, #efd9bf;
+    background: url("images/red-leaves.png") -15% 25% no-repeat, url("images/blue-push-pin-50.png") 50% 0% no-repeat, #efd9bf;
     background-size: 150px, 50px;
     margin-left: 15px;
   }
@@ -332,7 +334,7 @@ header h2 {
   margin: 0 0 20px 0;
   padding: 20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background: url("images/barcode.png") 105% 45% no-repeat, url("images/blue-push-pin.png") 50% 0% no-repeat, #ffffff;
+  background: url("images/barcode.png") 105% 45% no-repeat, url("images/blue-push-pin-50.png") 50% 0% no-repeat, #ffffff;
   background-size: 130px, 50px;
   transform: rotate(2deg);
 }
@@ -367,9 +369,8 @@ header h2 {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
 }
 .requirements h3 {
@@ -401,9 +402,8 @@ header h2 {
 
 .design-archives {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
   position: absolute;
   top: -20px;
@@ -434,11 +434,6 @@ header h2 {
     transform: rotate(0deg);
   }
 }
-@media (min-width: 65em) {
-  .design-archives {
-    font-size: 1.2rem;
-  }
-}
 
 .design-selection {
   width: 90%;
@@ -453,9 +448,8 @@ header h2 {
   margin-left: auto;
   margin-right: auto;
   text-transform: capitalize;
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
   font-family: Lora, Georgia, serif;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -484,6 +478,7 @@ header h2 {
   justify-content: center;
   text-align: center;
   background-color: #efd9bf;
+  transition: 0.5s;
 }
 @media (min-width: 45em) {
   .design-selection li {
@@ -497,62 +492,60 @@ header h2 {
 }
 .design-selection li:nth-child(1) {
   transform: rotate(-3deg);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
   grid-column: 1/2;
   grid-row: 1/2;
 }
 .design-selection li:nth-child(2) {
   transform: rotate(3deg);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
   grid-column: 2/3;
   grid-row: 1/2;
 }
 .design-selection li:nth-child(3) {
   transform: rotate(2deg);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
 }
 .design-selection li:nth-child(4) {
   transform: rotate(-5deg);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
 }
 .design-selection li:nth-child(5) {
   transform: rotate(3deg);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
 }
 .design-selection li:nth-child(6) {
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
 }
 .design-selection li:nth-child(7) {
   transform: rotate(-3deg);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
 }
 .design-selection li:nth-child(8) {
   transform: rotate(2deg);
-  background-image: url("images/blue-push-pin.png");
+  background-image: url("images/blue-push-pin-50.png");
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
+}
+.design-selection li a:nth-child(2) {
+  font-weight: normal;
+}
+.design-selection li:hover {
+  transform: scale(1.2);
 }
 .design-selection li a:link {
   color: #382519;
@@ -711,6 +704,7 @@ a.zen-validate-html {
   background-size: 60px 60px;
   background-position: center center;
   font-size: 0;
+  transition: 0.5s;
 }
 
 a.zen-validate-css {
@@ -720,6 +714,7 @@ a.zen-validate-css {
   background-size: 55px 55px;
   background-position: center center;
   font-size: 0;
+  transition: 0.5s;
 }
 
 a.zen-license {
@@ -729,6 +724,7 @@ a.zen-license {
   background-size: 55px 55px;
   background-position: center center;
   font-size: 0;
+  transition: 0.5s;
 }
 
 a.zen-github {
@@ -738,6 +734,7 @@ a.zen-github {
   background-size: 55px 55px;
   background-position: center center;
   font-size: 0;
+  transition: 0.5s;
 }
 
 a.zen-accessibility {
@@ -747,6 +744,11 @@ a.zen-accessibility {
   background-size: 60px 60px;
   background-position: center center;
   font-size: 0;
+  transition: 0.5s;
+}
+
+a.zen-validate-html:hover, a.zen-validate-css:hover, a.zen-license:hover, a.zen-github:hover, a.zen-accessibility:hover {
+  transform: scale(1.2);
 }
 
 /*medium styles*/

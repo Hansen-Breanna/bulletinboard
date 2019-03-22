@@ -17,7 +17,7 @@ $color-5: #4b5548; // green
 $color-6: #ffffff; // white
 $color-7: #f2b975; // orange
 $color-8: #ede3da; // light-cream
-$pin: url('images/blue-push-pin.png');
+$pin: url('images/blue-push-pin-50.png');
 $secondary-font: Lora,
 Georgia,
 serif;
@@ -76,7 +76,6 @@ $width: 90%) {
 @mixin pin {
   background-image: $pin;
   background-position: top center;
-  background-size: 50px 50px;
   background-repeat: no-repeat;
 }
 
@@ -219,7 +218,7 @@ header h1 {
   center,
   0);
   @include breakpoint(small) {
-    margin-left: -100px;
+    transform: translateX(-100px);
     width: 255px;
     height: 230px;
     margin-top: -170px;
@@ -241,7 +240,7 @@ header h2 {
   line-height: 1em;
   @include box-shadow;
   @include pin;
-  @include margin-padding(auto, 50px 25px 5px 25px); 
+  @include margin-padding(auto, 50px 25px 5px 25px);
   @include breakpoint(small) {
     position: absolute;
     left: 180px;
@@ -277,7 +276,7 @@ header h2 {
   }
   @include breakpoint(medium) {
     top: 190px;
-    left: 540px;
+    left: 590px;
   }
 }
 
@@ -319,6 +318,11 @@ header h2 {
     text-align: center;
     @include font-size($font-size-small);
   }
+  @include breakpoint (small) {
+    & h3 {
+      @include font-size($font-size-medium);
+    }
+  }
   @include breakpoint (medium) {
     position: absolute;
     top: 150px;
@@ -345,7 +349,7 @@ header h2 {
     @include margin-padding(0 0 0 20px, 5px 20px);
   }
   @include breakpoint(small) {
-    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #efd9bf;
+    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/blue-push-pin-50.png') 50% 0% no-repeat, #efd9bf;
     background-size: 150px, 50px;
     margin-left: 15px;
     & p {
@@ -365,7 +369,7 @@ header h2 {
   @include center(100%);
   @include margin-padding(0 0 20px 0, 20px);
   @include box-shadow;
-  background: url('images/barcode.png') 105% 45% no-repeat, url('images/blue-push-pin.png') 50% 0% no-repeat, #ffffff;
+  background: url('images/barcode.png') 105% 45% no-repeat, url('images/blue-push-pin-50.png') 50% 0% no-repeat, #ffffff;
   background-size: 130px, 50px;
   transform: rotate(2deg);
   & h3 {
@@ -445,9 +449,6 @@ header h2 {
     left: 70%;
     transform: rotate(0deg);
   }
-  @include breakpoint(medium) {
-    @include font-size($font-size-medium);
-  }
 }
 
 .design-selection {
@@ -479,6 +480,7 @@ header h2 {
     justify-content: center;
     text-align: center;
     background-color: $color-3;
+    transition: 0.5s;
     @include breakpoint(small) {
       @include center(50%);
       @include font-size($font-size-small);
@@ -519,6 +521,12 @@ header h2 {
   & li:nth-child(8) {
     transform: rotate(2deg);
     @include pin;
+  }
+  & li a:nth-child(2) {
+    font-weight: normal;
+  }
+  & li:hover {
+    transform: scale(1.2);
   }
   & li a:link {
     color: $color-2;
@@ -665,6 +673,7 @@ a.zen-validate-html {
   center,
   center,
   0);
+  transition: 0.5s;
 }
 
 a.zen-validate-css {
@@ -676,6 +685,7 @@ a.zen-validate-css {
   center,
   center,
   0);
+  transition: 0.5s;
 }
 
 a.zen-license {
@@ -687,6 +697,7 @@ a.zen-license {
   center,
   center,
   0);
+  transition: 0.5s;
 }
 
 a.zen-github {
@@ -698,6 +709,7 @@ a.zen-github {
   center,
   center,
   0);
+  transition: 0.5s;
 }
 
 a.zen-accessibility {
@@ -709,6 +721,11 @@ a.zen-accessibility {
   center,
   center,
   0);
+  transition: 0.5s;
+}
+
+a.zen-validate-html:hover, a.zen-validate-css:hover, a.zen-license:hover, a.zen-github:hover, a.zen-accessibility:hover {
+  transform: scale(1.2);
 }
 
 /*medium styles*/
