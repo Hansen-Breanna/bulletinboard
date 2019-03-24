@@ -1,0 +1,83 @@
+//footer section
+
+footer {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -275px;
+    left: 0px;
+    background-color: $color-3;
+    & a {
+      background: transparent;
+    }
+    @include breakpoint(small) {
+      bottom: -250px;
+    }
+}
+//Five icons and links
+  
+a.zen-validate-html {
+    padding: 35px;
+    @include background-img (url('images/icons/html.png'),
+    no-repeat,
+    60px,
+    60px,
+    center,
+    center,
+    0);
+    transition: 0.5s;
+}
+  
+a.zen-validate-css {
+    padding: 35px;
+    @include background-img (url('images/icons/css.png'),
+    no-repeat,
+    55px,
+    55px,
+    center,
+    center,
+    0);
+    transition: 0.5s;
+}
+  
+a.zen-license {
+    padding: 35px;
+    @include background-img (url('images/icons/creative.png'),
+    no-repeat,
+    55px,
+    55px,
+    center,
+    center,
+    0);
+    transition: 0.5s;
+}
+  
+a.zen-github {
+    padding: 35px;
+    @include background-img (url('images/icons/github.png'),
+    no-repeat,
+    55px,
+    55px,
+    center,
+    center,
+    0);
+    transition: 0.5s;
+}
+  
+a.zen-accessibility {
+    padding: 35px;
+    @include background-img (url('images/icons/accessible.png'),
+    no-repeat,
+    60px,
+    60px,
+    center,
+    center,
+    0);
+    transition: 0.5s;
+}
+  
+a.zen-validate-html:hover, a.zen-validate-css:hover, a.zen-license:hover, a.zen-github:hover, a.zen-accessibility:hover {
+    transform: scale(1.2);
+}
