@@ -7,12 +7,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro');
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes');
-@import 'partials/footer';
+@import 'partials/variables';
+@import 'partials/mix-ins';
 @import 'partials/intro';
 @import 'partials/main';
-@import 'partials/mix-ins';
 @import 'partials/sidebar';
-@import 'partials/variables';
+@import 'partials/footer';
 
 
 
