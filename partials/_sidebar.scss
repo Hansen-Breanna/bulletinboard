@@ -1,0 +1,207 @@
+//sidebar (aside) section including Design Selection, Design Archives, and Zen Resources
+
+.sidebar .wrapper {
+    font: 1.2rem verdana, $primary-font;
+}
+  
+.sidebar li a:visited {
+    color: $color-5; 
+}
+//"Archives"links card--cream card with brown text at top right of screen
+.design-archives {
+    @include box-shadow;
+    @include pin;
+    position: absolute;
+    top: -20px;
+    left: 25px;
+    @include margin-padding(0 auto, 15px);
+    @include font-size($font-size-small);
+    max-width: 200px;
+    font-weight: normal;
+    font-family: $secondary-font;
+    background-color: $color-3;
+    transform: rotate(-5deg);
+    & ul {
+      @include margin-padding(0, 0);
+      grid-column: 1 / 3;
+    }
+    & h3 {
+      margin: 25px 0 5px 0;
+      text-transform: capitalize;
+      font-family: $secondary-font;
+    }
+    @include breakpoint(small) {
+      top: -50px;
+      left: 70%;
+      transform: rotate(0deg);
+    }
+}
+// 8 cream colored notes with dark brown text--one per site/creator (8 notes, one title card) 
+.design-selection {
+    @include center(100%);
+    & h3 { //moved from top down to be by links so more intuitive
+      padding: 45px 10px;
+      @include center(250px);
+      text-transform: capitalize;
+      @include pin;
+      font-family: $secondary-font;
+      @include box-shadow;
+      @include font-size($font-size-large);
+      background-color: $color-3;
+      text-align: center;
+    }
+    & ul {
+      display: grid;
+      @include margin-padding(20px auto, 0);
+      max-width: 500px;
+    }
+    & li {
+      @include center(70%);
+      @include box-shadow;
+      @include font-size(0.8rem);
+      font-size: .8rem;
+      @include margin-padding(10px, 35px 15px 20px 15px);
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      text-align: center;
+      background-color: $color-3;
+      transition: 0.5s;
+      @include breakpoint(small) {
+        @include center(50%);
+        @include font-size($font-size-small);
+        padding: 50px 20px;
+      }
+    }
+    & li:nth-child(1) {
+      transform: rotate(-3deg);
+      @include pin;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+    & li:nth-child(2) {
+      transform: rotate(3deg);
+      @include pin;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+    & li:nth-child(3) {
+      transform: rotate(2deg);
+      @include pin;
+    }
+    & li:nth-child(4) {
+      transform: rotate(-5deg);
+      @include pin;
+    }
+    & li:nth-child(5) {
+      transform: rotate(3deg);
+      @include pin;
+    }
+    & li:nth-child(6) {
+      @include pin;
+    }
+    & li:nth-child(7) {
+      transform: rotate(-3deg);
+      @include pin;
+    }
+    & li:nth-child(8) {
+      transform: rotate(2deg);
+      @include pin;
+    }
+    & li a:nth-child(2) {
+      font-weight: normal;
+    }
+    & li:hover {
+      transform: scale(1.2);
+    }
+    & li a:link {
+      color: $color-2;
+    }
+    @include breakpoint(medium) {
+      @include font-size($font-size-small);
+      position: absolute;
+      bottom: 10%;
+      left: 35%;
+      @include center(80%);
+      ul {
+          @include center(60%);
+      }
+    }
+}
+//"Resources" ribbon--Pink ribbon with white text and green floral image
+.zen-resources {
+    padding: 70px 20px 100px 20px;
+    @include box-shadow;
+    transform: rotate(-5deg);
+    max-width: 200px;
+    position: relative;
+    top: 0px;
+    margin: auto;
+    background-color: $color-4;
+    @include background-img (url('images/blue-leaves.png'),
+    no-repeat,
+    100px,
+    200px,
+    right,
+    bottom,
+    0.8em);
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      margin-bottom: -71px;
+      border-top: 75px solid $color-4;
+      border-right: 140px solid transparent;
+      filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      margin-bottom: -71px;
+      border-top: 75px solid $color-4;
+      border-left: 140px solid transparent;
+      filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+    }
+    & ul {
+      @include margin-padding(0, 0);
+    }
+    & li {
+      line-height: 1.4rem;
+      @include font-size($font-size-small);
+      a:link {
+        color: $color-6;
+      }
+      a:hover {
+        color: $color-3;
+      }
+    }
+    & a {
+      font-family: $secondary-font;
+      font-weight: 100;
+    }
+    @include breakpoint(small) {
+      top: 15px;
+      left: 50px;
+      margin: 0;
+    }
+    & h3 {
+      margin: 25px 0 5px 0;
+      color: $color-6;
+    }
+    @include breakpoint(medium) {
+      z-index: 1;
+      left: 100px;
+      margin-top: -50px;
+      @include font-size($font-size-large);
+      & li {
+        @include font-size($font-size-medium);
+      }
+    }
+}
