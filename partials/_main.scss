@@ -62,24 +62,41 @@
 }
 //"Benefits"ticket--white ticket with barcode and gold line  
 .benefits {
-    @include center(100%);
-    @include margin-padding(0 0 20px 0, 20px);
+    @include center(100%, 180px);
+    @include margin-padding(0 0 20px 25px, 20px);
     @include box-shadow;
-    background: url('images/barcode.png') 105% 45% no-repeat, url('images/blue-push-pin-50.png') 50% 0% no-repeat, #ffffff;
-    background-size: 130px, 50px;
+    height: 445px;
+    background: url('images/barcode_horizontal_2nd.png') 42% 98% no-repeat, url('images/blue-push-pin-50.png') 64% 0% no-repeat, #ffffff;
+    background-size: 196px, 50px;
     transform: rotate(2deg);
     & h3 {
-      margin: 0;
+      text-align: center;
+      @include breakpoint (small) {
+        margin: 0px 0px 5px 20px;
+        text-align: left;
+      }
     }
     & p {
       @include font-size($font-size-small);
       line-height: 1.2rem;
+      padding: 5px 20px 1em 20px;
+      border-bottom: 8px solid $color-7;
+      @include breakpoint (small) {
+      line-height: 1.2rem;
       padding-right: 120px;
+      padding-top: 0;
+      border-bottom: none;
+      }
     }
     @include breakpoint(small) {
+      @include center(100%);
       max-width: 600px;
+      height: auto;
       grid-column: 1 / span 2;
       margin: 10px auto;
+      background: url('images/barcode.png') 105% 45% no-repeat, url('images/blue-push-pin-50.png') 50% 0% no-repeat, #ffffff;
+      background-size: 130px, 50px;
+      
     }
     @include breakpoint(medium) {
       grid-column: 2 / 3;
@@ -87,6 +104,7 @@
       max-width: 700px;
       max-height: 200px;
     }
+    
 }
 //"Requirements"paper--white paper with brown text and checkmark 
 .requirements {
