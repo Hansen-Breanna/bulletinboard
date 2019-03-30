@@ -201,6 +201,7 @@ header h2 {
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   border: 20px outset #4b5548;
   background-color: #efd9bf;
+  transform: rotate(-2deg);
 }
 
 .participation h3 {
@@ -223,9 +224,18 @@ header h2 {
     background: url("images/red-leaves.png") -15% 25% no-repeat, url("images/blue-push-pin-50.png") 50% 0% no-repeat, #efd9bf;
     background-size: 150px, 50px;
     margin-left: 15px;
+    width: 100%;
+  }
+  .participation h3 {
+    margin: 40px 10px 0 0;
+    padding: 10px;
+    text-align: right;
   }
   .participation p {
     margin-left: 70px;
+    text-align: right;
+    margin: 0 0 0 20px;
+    padding: 5px 20px;
   }
 }
 
@@ -373,6 +383,7 @@ p[role=contentinfo] {
 }
 p[role=contentinfo] a {
   color: #ffffff;
+  font-weight: normal;
 }
 @media (min-width: 45em) {
   p[role=contentinfo] {
@@ -667,6 +678,7 @@ p[role=contentinfo] a {
 
 .zen-resources li a:link {
   color: #ffffff;
+  font-weight: normal;
 }
 
 .zen-resources li a:hover {
@@ -724,7 +736,7 @@ footer a {
 
 @media (min-width: 45em) {
   footer {
-    bottom: -250px;
+    bottom: -300px;
   }
 }
 
