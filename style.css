@@ -16,12 +16,24 @@
   50% {
     background-position-y: 5px;
   }
+  75% {
+    background-size: 32px;
+  }
+  100% {
+    background-position-y: 5px;
+  }
 }
 @keyframes pushpin {
   0% {
     background-position-y: 4px;
   }
   50% {
+    background-position-y: 5px;
+  }
+  75% {
+    background-size: 32px;
+  }
+  100% {
     background-position-y: 5px;
   }
 }
@@ -75,8 +87,10 @@ header h2 {
 }
 
 header h2:hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 @media (min-width: 45em) {
@@ -150,8 +164,10 @@ header h2:hover {
 }
 
 .preamble:hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .preamble.preamble h3 {
@@ -201,8 +217,10 @@ header h2:hover {
 }
 
 .explanation:hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .explanation h3 {
@@ -370,8 +388,10 @@ header h2:hover {
 }
 
 .requirements:hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .requirements h3 {
@@ -464,8 +484,10 @@ p[role=contentinfo] a {
 }
 
 .design-archives:hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .design-archives ul {
@@ -518,8 +540,10 @@ p[role=contentinfo] a {
 }
 
 .design-selection h3:hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .design-selection ul {
@@ -584,8 +608,10 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(1):hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .design-selection li:nth-child(2) {
@@ -604,8 +630,10 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(2):hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .design-selection li:nth-child(3) {
@@ -618,8 +646,10 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(3):hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .design-selection li:nth-child(4) {
@@ -632,8 +662,10 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(4):hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .design-selection li:nth-child(5) {
@@ -646,8 +678,10 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(5):hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .design-selection li:nth-child(6) {
@@ -658,8 +692,10 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(6):hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .design-selection li:nth-child(7) {
@@ -672,8 +708,10 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(7):hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .design-selection li:nth-child(8) {
@@ -686,8 +724,10 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(8):hover {
-  -webkit-animation: pushpin 1s ease;
-          animation: pushpin 1s ease;
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .design-selection li a:nth-child(2) {
