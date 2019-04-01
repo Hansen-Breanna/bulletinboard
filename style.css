@@ -187,7 +187,7 @@ header h2 {
     position: absolute;
     top: 150px;
     right: 50px;
-    max-width: 300px;
+    max-width: 25%;
   }
 }
 
@@ -371,9 +371,11 @@ p[role=contentinfo] {
   padding: 75px 5% 75px 15%;
   font-size: 0.9rem;
 }
+
 p[role=contentinfo] a {
   color: #ffffff;
 }
+
 @media (min-width: 45em) {
   p[role=contentinfo] {
     bottom: -120px;
@@ -797,119 +799,6 @@ html {
 }
 
 body {
-  font: 1em georgia, sans-serif;
-  line-height: 1.5rem;
-  color: #382519;
-  background: #b8c8cc;
-  margin: 0;
-  padding: 0;
-  font-family: Lora, Georgia, serif;
-}
-
-p {
-  margin-top: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Source Sans Pro", Arial, sans-serif;
-}
-
-h2 {
-  text-transform: uppercase;
-}
-
-h3 {
-  letter-spacing: 1px;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  color: #382519;
-}
-
-.preamble h3,
-.explanation h3,
-.zen-resouces h3,
-.preamble,
-.explanation,
-.zen-resources {
-  color: #ffffff;
-}
-
-h1,
-h2,
-.summary,
-.benefits,
-.requirements {
-  background-color: #ffffff;
-}
-
-a:link {
-  font-weight: bold;
-  text-decoration: none;
-  color: #382519;
-}
-
-a:visited {
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-a:hover {
-  color: #ba8563;
-}
-
-a:active {
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-abbr {
-  border-bottom: none;
-}
-
-li {
-  list-style-type: none;
-}
-
-/* specific divs */
-.page-wrapper {
-  border-top: 150px solid #382519;
-  margin: 0 30px;
-  padding: 0 40px 200px 40px;
-  background-image: url("images/burlap.jpg");
-  background-size: 500px;
-  background-repeat: repeat;
-  position: relative;
-}
-
-@media (min-width: 45em) {
-  .page-wrapper {
-    margin: 0 30px;
-    padding: 0 40px;
-  }
-}
-
-@media (min-width: 65em) {
-  .page-wrapper {
-    max-width: 1200px;
-    margin: auto;
-  }
-}
-
-/* basic elements */
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   margin: 0;
   padding: 0;
   background: #b8c8cc;
@@ -965,14 +854,17 @@ a:link {
   text-decoration: none;
   color: #382519;
 }
+
 a:visited {
   font-weight: bold;
   text-decoration: none;
   color: #ffffff;
 }
+
 a:hover {
   color: #ba8563;
 }
+
 a:active {
   font-weight: bold;
   text-decoration: none;
@@ -997,12 +889,14 @@ li {
   margin: 0 30px;
   padding: 0 40px 200px 40px;
 }
+
 @media (min-width: 45em) {
   .page-wrapper {
     margin: 0 30px;
     padding: 0 40px;
   }
 }
+
 @media (min-width: 65em) {
   .page-wrapper {
     margin: auto;
