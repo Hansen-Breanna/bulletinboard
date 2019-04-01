@@ -466,25 +466,15 @@ header h2:hover {
 }
 
 .requirements {
-  background: url("images/check.svg");
-  padding: 30px 20px 30px 50px;
+  background: url("images/check.png") 0% 45% no-repeat, url("images/pin.svg") 50% 2% no-repeat, #ffffff;
+  background-size: 80px, 35px;
+  padding: 30px 20px 30px 80px;
   width: 90%;
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-image: url("images/pin.svg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 35px;
-}
-
-.requirements:hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
-  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
-          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
 .requirements h3 {
@@ -601,8 +591,6 @@ p[role=contentinfo] a {
   .design-archives {
     top: -50px;
     left: 70%;
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
   }
 }
 

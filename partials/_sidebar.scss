@@ -33,7 +33,6 @@
   @include breakpoint(small) {
     top: -50px;
     left: 70%;
-    transform: rotate(1deg);
   }
   &:hover {
     animation: hover_flutter2 1s ease;
