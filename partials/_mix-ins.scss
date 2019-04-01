@@ -33,6 +33,10 @@ $width: 90%) {
   background-image: $pin;
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
+  &:hover {
+  animation: pushpin 1s ease;
+  }
 }
 
 @mixin background-img ($url,

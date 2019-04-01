@@ -44,8 +44,8 @@
     @include margin-padding(0, 5px 20px 25px 20px);
   }
   @include breakpoint(small) {
-    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/blue-push-pin-50.png') 50% 0% no-repeat, #efd9bf;
-    background-size: 150px, 50px;
+    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #efd9bf;
+    background-size: 150px, 35px;
     margin-left: 15px;
     width: 100%;
     & h3 {
@@ -72,8 +72,8 @@
   @include margin-padding(0 0 20px 25px, 20px);
   @include box-shadow;
   height: 445px;
-  background: url('images/barcode_horizontal_2nd.png') 42% 98% no-repeat, url('images/blue-push-pin-50.png') 64% 0% no-repeat, #ffffff;
-  background-size: 196px, 50px;
+  background: url('images/barcode_horizontal_2nd.png') 42% 98% no-repeat, url('images/pin.svg') 64% 0% no-repeat, #ffffff;
+  background-size: 196px, 30px;
   transform: rotate(2deg);
   & h3 {
     text-align: center;
@@ -100,8 +100,8 @@
     height: auto;
     grid-column: 1 / span 2;
     margin: 10px auto;
-    background: url('images/barcode.png') 105% 45% no-repeat, url('images/blue-push-pin-50.png') 50% 0% no-repeat, #ffffff;
-    background-size: 130px, 50px;
+    background: url('images/barcode.png') 105% 45% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #ffffff;
+    background-size: 130px, 30px;
     
   }
   @include breakpoint(medium) {

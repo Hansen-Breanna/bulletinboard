@@ -8,8 +8,14 @@ $color-5: #4b5548; // green
 $color-6: #ffffff; // white
 $color-7: #f2b975; // orange
 $color-8: #ede3da; // light-cream
+
 /* Pin image */
-$pin: url('images/blue-push-pin-50.png');
+$pin: url('images/pin.svg');
+@keyframes pushpin {
+    0% {background-position-y: 4px;}
+    50% {background-position-y: 5px;}
+}
+
 /* Fonts */
 $secondary-font: Lora,
 Georgia,
@@ -24,3 +30,4 @@ $font-size-large: 1.4rem;
 /* Media Breaks */
 $break-small: 45em;
 $break-medium: 65em;
+

@@ -9,6 +9,23 @@
 /* SCSS variables */
 /* Colors */
 /* Pin image */
+@-webkit-keyframes pushpin {
+  0% {
+    background-position-y: 4px;
+  }
+  50% {
+    background-position-y: 5px;
+  }
+}
+@keyframes pushpin {
+  0% {
+    background-position-y: 4px;
+  }
+  50% {
+    background-position-y: 5px;
+  }
+}
+
 /* Fonts */
 /* Media Breaks */
 /* SCSS Mixins */
@@ -49,11 +66,17 @@ header h2 {
   line-height: 1em;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
   margin: auto;
   padding: 50px 25px 5px 25px;
+}
+
+header h2:hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 @media (min-width: 45em) {
@@ -120,9 +143,15 @@ header h2 {
           transform: rotate(-1deg);
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.preamble:hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .preamble.preamble h3 {
@@ -162,12 +191,18 @@ header h2 {
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: #ec637d;
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
   font-size: 0.9rem;
   margin: 0 0 20px 0;
   padding: 30px;
+}
+
+.explanation:hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .explanation h3 {
@@ -201,28 +236,27 @@ header h2 {
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   border: 20px outset #4b5548;
   background-color: #efd9bf;
-  transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
 }
 
 .participation h3 {
-  margin: 40px 0 0 0;
+  margin: 40px 0 0 10px;
   padding: 10px;
   font-size: 1.2rem;
-  text-align: right;
 }
 
 .participation p {
   font-size: 0.9rem;
   line-height: 1.2rem;
-  text-align: right;
-  margin: 0 0 0 20px;
-  padding: 5px 20px;
+  margin: 0;
+  padding: 5px 20px 25px 20px;
 }
 
 @media (min-width: 45em) {
   .participation {
-    background: url("images/red-leaves.png") -15% 25% no-repeat, url("images/blue-push-pin-50.png") 50% 0% no-repeat, #efd9bf;
-    background-size: 150px, 50px;
+    background: url("images/red-leaves.png") -15% 25% no-repeat, url("images/pin.svg") 50% 0% no-repeat, #efd9bf;
+    background-size: 150px, 35px;
     margin-left: 15px;
     width: 100%;
   }
@@ -260,8 +294,8 @@ header h2 {
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   height: 445px;
-  background: url("images/barcode_horizontal_2nd.png") 42% 98% no-repeat, url("images/blue-push-pin-50.png") 64% 0% no-repeat, #ffffff;
-  background-size: 196px, 50px;
+  background: url("images/barcode_horizontal_2nd.png") 42% 98% no-repeat, url("images/pin.svg") 64% 0% no-repeat, #ffffff;
+  background-size: 196px, 30px;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
 }
@@ -305,8 +339,8 @@ header h2 {
     -ms-grid-column-span: 2;
     grid-column: 1 / span 2;
     margin: 10px auto;
-    background: url("images/barcode.png") 105% 45% no-repeat, url("images/blue-push-pin-50.png") 50% 0% no-repeat, #ffffff;
-    background-size: 130px, 50px;
+    background: url("images/barcode.png") 105% 45% no-repeat, url("images/pin.svg") 50% 0% no-repeat, #ffffff;
+    background-size: 130px, 30px;
   }
 }
 
@@ -329,9 +363,15 @@ header h2 {
   margin-right: auto;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.requirements:hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .requirements h3 {
@@ -379,15 +419,17 @@ p[role=contentinfo] {
   max-width: 100%;
   text-align: right;
   padding: 75px 5% 75px 15%;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
+
 p[role=contentinfo] a {
   color: #ffffff;
   font-weight: normal;
 }
+
 @media (min-width: 45em) {
   p[role=contentinfo] {
-    bottom: -120px;
+    bottom: -180px;
     padding: 75px 5% 75px 55%;
   }
 }
@@ -403,9 +445,10 @@ p[role=contentinfo] a {
 .design-archives {
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
   position: absolute;
   top: -20px;
   left: 25px;
@@ -418,6 +461,11 @@ p[role=contentinfo] a {
   background-color: #efd9bf;
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
+}
+
+.design-archives:hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .design-archives ul {
@@ -457,15 +505,21 @@ p[role=contentinfo] a {
   margin-left: auto;
   margin-right: auto;
   text-transform: capitalize;
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
   font-family: Lora, Georgia, serif;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   font-size: 1.4rem;
   background-color: #efd9bf;
   text-align: center;
+}
+
+.design-selection h3:hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .design-selection ul {
@@ -517,9 +571,10 @@ p[role=contentinfo] a {
 .design-selection li:nth-child(1) {
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
@@ -528,12 +583,18 @@ p[role=contentinfo] a {
   grid-row: 1 / 2;
 }
 
+.design-selection li:nth-child(1):hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
+}
+
 .design-selection li:nth-child(2) {
   -webkit-transform: rotate(3deg);
           transform: rotate(3deg);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
@@ -542,50 +603,91 @@ p[role=contentinfo] a {
   grid-row: 1 / 2;
 }
 
+.design-selection li:nth-child(2):hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
+}
+
 .design-selection li:nth-child(3) {
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(3):hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .design-selection li:nth-child(4) {
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(4):hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .design-selection li:nth-child(5) {
   -webkit-transform: rotate(3deg);
           transform: rotate(3deg);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(5):hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .design-selection li:nth-child(6) {
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(6):hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .design-selection li:nth-child(7) {
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(7):hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .design-selection li:nth-child(8) {
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
-  background-image: url("images/blue-push-pin-50.png");
+  background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(8):hover {
+  -webkit-animation: pushpin 1s ease;
+          animation: pushpin 1s ease;
 }
 
 .design-selection li a:nth-child(2) {
@@ -621,7 +723,7 @@ p[role=contentinfo] a {
 }
 
 .zen-resources {
-  padding: 70px 20px 100px 20px;
+  padding: 20px 20px 200px 20px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   -webkit-transform: rotate(-5deg);
@@ -631,10 +733,10 @@ p[role=contentinfo] a {
   top: 0px;
   margin: auto;
   background-color: #ec637d;
-  background-image: url("images/blue-leaves.png");
+  background-image: url("images/blue-leaves-left.png");
   background-repeat: no-repeat;
-  background-size: 100px 200px;
-  background-position: right bottom;
+  background-size: 100px 220px;
+  background-position: 120px bottom;
   font-size: 0.8em;
 }
 
@@ -673,7 +775,7 @@ p[role=contentinfo] a {
 
 .zen-resources li {
   line-height: 1.4rem;
-  font-size: 0.9rem;
+  font-size: 1.1em;
 }
 
 .zen-resources li a:link {
@@ -708,10 +810,6 @@ p[role=contentinfo] a {
     z-index: 1;
     left: 100px;
     margin-top: -50px;
-    font-size: 1.4rem;
-  }
-  .zen-resources li {
-    font-size: 1.2rem;
   }
 }
 
@@ -809,119 +907,6 @@ html {
 }
 
 body {
-  font: 1em georgia, sans-serif;
-  line-height: 1.5rem;
-  color: #382519;
-  background: #b8c8cc;
-  margin: 0;
-  padding: 0;
-  font-family: Lora, Georgia, serif;
-}
-
-p {
-  margin-top: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Source Sans Pro", Arial, sans-serif;
-}
-
-h2 {
-  text-transform: uppercase;
-}
-
-h3 {
-  letter-spacing: 1px;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  color: #382519;
-}
-
-.preamble h3,
-.explanation h3,
-.zen-resouces h3,
-.preamble,
-.explanation,
-.zen-resources {
-  color: #ffffff;
-}
-
-h1,
-h2,
-.summary,
-.benefits,
-.requirements {
-  background-color: #ffffff;
-}
-
-a:link {
-  font-weight: bold;
-  text-decoration: none;
-  color: #382519;
-}
-
-a:visited {
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-a:hover {
-  color: #ba8563;
-}
-
-a:active {
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-abbr {
-  border-bottom: none;
-}
-
-li {
-  list-style-type: none;
-}
-
-/* specific divs */
-.page-wrapper {
-  border-top: 150px solid #382519;
-  margin: 0 30px;
-  padding: 0 40px 200px 40px;
-  background-image: url("images/burlap.jpg");
-  background-size: 500px;
-  background-repeat: repeat;
-  position: relative;
-}
-
-@media (min-width: 45em) {
-  .page-wrapper {
-    margin: 0 30px;
-    padding: 0 40px;
-  }
-}
-
-@media (min-width: 65em) {
-  .page-wrapper {
-    max-width: 1200px;
-    margin: auto;
-  }
-}
-
-/* basic elements */
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   margin: 0;
   padding: 0;
   background: #b8c8cc;
@@ -977,14 +962,17 @@ a:link {
   text-decoration: none;
   color: #382519;
 }
+
 a:visited {
   font-weight: bold;
   text-decoration: none;
   color: #ffffff;
 }
+
 a:hover {
   color: #ba8563;
 }
+
 a:active {
   font-weight: bold;
   text-decoration: none;
@@ -1009,12 +997,14 @@ li {
   margin: 0 30px;
   padding: 0 40px 200px 40px;
 }
+
 @media (min-width: 45em) {
   .page-wrapper {
     margin: 0 30px;
     padding: 0 40px;
   }
 }
+
 @media (min-width: 65em) {
   .page-wrapper {
     margin: auto;
