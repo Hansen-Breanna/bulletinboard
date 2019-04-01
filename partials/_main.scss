@@ -44,8 +44,8 @@
     @include margin-padding(0, 5px 20px 25px 20px);
   }
   @include breakpoint(small) {
-    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #efd9bf;
-    background-size: 150px, 35px;
+    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/pin.svg') 50% 3% no-repeat, #efd9bf;
+    background-size: 150px, 40px;
     margin-left: 15px;
     & h3 {
       @include margin-padding(40px 10px 0 0, 10px);
@@ -71,8 +71,8 @@
   @include margin-padding(0 0 20px 25px, 20px);
   @include box-shadow;
   height: 445px;
-  background: url('images/barcode_horizontal_2nd.png') 42% 98% no-repeat, url('images/pin.svg') 64% 0% no-repeat, #ffffff;
-  background-size: 196px, 30px;
+  background: url('images/barcode_horizontal_2nd.png') 42% 98% no-repeat, url('images/pin.svg') 64% 4% no-repeat, #ffffff;
+  background-size: 196px, 40px;
   transform: rotate(2deg);
   & h3 {
     text-align: center;
@@ -100,7 +100,7 @@
     grid-column: 1 / span 2;
     margin: 10px auto;
     background: url('images/barcode.png') 105% 45% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #ffffff;
-    background-size: 130px, 30px;
+    background-size: 130px, 40px;
     
   }
   @include breakpoint(medium) {
@@ -117,7 +117,7 @@
 //"Requirements"paper--white paper with brown text and checkmark 
 .requirements {
   background: url('images/check.png') 0% 45% no-repeat, url('images/pin.svg') 50% 2% no-repeat, #ffffff;
-  background-size: 80px, 35px;
+  background-size: 80px, 40px;
   padding: 30px 20px 30px 80px;
   @include center(80%);
   @include box-shadow;
