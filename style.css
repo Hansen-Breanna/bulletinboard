@@ -38,6 +38,98 @@
   }
 }
 
+@-webkit-keyframes hover_flutter {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  25% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  75% {
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+@keyframes hover_flutter {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  25% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  75% {
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+@-webkit-keyframes hover_flutter2 {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  50% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  75% {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+
+@keyframes hover_flutter2 {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  50% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  75% {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+
 /* Fonts */
 /* Media Breaks */
 /* SCSS Mixins */
@@ -291,10 +383,6 @@ header h2:hover {
 }
 
 @media (min-width: 65em) {
-  .participation {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg);
-  }
   .participation p {
     font-size: 1.2rem;
     line-height: 1.5rem;
@@ -372,7 +460,13 @@ header h2:hover {
   }
 }
 
+.benefits:hover {
+  -webkit-animation: hover_flutter 1s ease;
+          animation: hover_flutter 1s ease;
+}
+
 .requirements {
+  background: url("images/check.svg");
   padding: 30px 20px 30px 50px;
   width: 90%;
   max-width: 80%;
@@ -478,8 +572,8 @@ p[role=contentinfo] a {
   font-weight: normal;
   font-family: Lora, Georgia, serif;
   background-color: #efd9bf;
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
 }
 
 .design-archives:hover {
@@ -507,9 +601,14 @@ p[role=contentinfo] a {
   .design-archives {
     top: -50px;
     left: 70%;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
   }
+}
+
+.design-archives:hover {
+  -webkit-animation: hover_flutter2 1s ease;
+          animation: hover_flutter2 1s ease;
 }
 
 .design-selection {
@@ -765,8 +864,8 @@ p[role=contentinfo] a {
   padding: 20px 20px 200px 20px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
   max-width: 200px;
   position: relative;
   top: 0px;
@@ -850,6 +949,11 @@ p[role=contentinfo] a {
     left: 100px;
     margin-top: -50px;
   }
+}
+
+.zen-resources:hover {
+  -webkit-animation: hover_flutter2 1s ease;
+          animation: hover_flutter2 1s ease;
 }
 
 footer {

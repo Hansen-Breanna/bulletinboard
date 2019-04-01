@@ -62,7 +62,7 @@
       @include font-size($font-size-medium);
       line-height: 1.5rem;
     }
-    transform: rotate(-3deg);
+
   }
 }
 //"Benefits"ticket--white ticket with barcode and gold line  
@@ -109,10 +109,14 @@
     max-width: 700px;
     max-height: 200px;
   }
+  &:hover {
+    animation: hover_flutter 1s ease;
+  }
   
 }
 //"Requirements"paper--white paper with brown text and checkmark 
 .requirements {
+  background: url('images/check.svg');
   padding: 30px 20px 30px 50px;
   @include center(80%);
   @include box-shadow;
