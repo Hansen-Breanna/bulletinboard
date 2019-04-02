@@ -164,7 +164,7 @@
     @include center(80%);
     transform: translateY(100px);
     p {
-      @include font-size($font-size-medium);
+      font-size: $font-size-medium;
       line-height: 1.5rem;
     }
     ul {
