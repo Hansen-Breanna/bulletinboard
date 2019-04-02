@@ -71,10 +71,17 @@ header h2:hover {
   }
 }
 
-@media (min-width: 65em) {
+@media (min-width: 53.125em) {
   header h2 {
     top: 100px;
     right: -495px;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 75.1em) {
+  header h2 {
+    right: -380px;
   }
 }
 
@@ -108,10 +115,17 @@ header h2:hover {
   }
 }
 
-@media (min-width: 65em) {
+@media (min-width: 53.125em) {
   .summary {
     top: 190px;
     left: 590px;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 75.1em) {
+  .summary {
+    left: 533px;
   }
 }
 
@@ -162,7 +176,7 @@ header h2:hover {
   }
 }
 
-@media (min-width: 65em) {
+@media (min-width: 53.125em) {
   .preamble {
     margin-left: 0;
   }
@@ -185,6 +199,12 @@ header h2:hover {
   font-size: 0.9rem;
   margin: 0 0 20px 0;
   padding: 30px;
+  /*@include breakpoint (medium) {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    max-width: 300px;
+  }*/
 }
 
 .explanation:hover {
@@ -206,12 +226,12 @@ header h2:hover {
   }
 }
 
-@media (min-width: 65em) {
+@media (min-width: 75.1em) {
   .explanation {
     position: absolute;
     top: 150px;
     right: 50px;
-    max-width: 300px;
+    max-width: 350px;
   }
 }
 
@@ -261,7 +281,7 @@ header h2:hover {
   }
 }
 
-@media (min-width: 65em) {
+@media (min-width: 53.125em) {
   .participation p {
     font-size: 1.2rem;
     line-height: 1.5rem;
@@ -311,6 +331,12 @@ header h2:hover {
   }
 }
 
+@media (min-width: 35.9em) {
+  .benefits {
+    margin: -24px 0px 7px 90px;
+  }
+}
+
 @media (min-width: 45em) {
   .benefits {
     width: 90%;
@@ -328,12 +354,12 @@ header h2:hover {
   }
 }
 
-@media (min-width: 65em) {
+@media (min-width: 75.1em) {
   .benefits {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
-    margin: 250px -20px;
+    margin: 250px 29px;
     max-width: 700px;
     max-height: 200px;
   }
@@ -384,7 +410,7 @@ header h2:hover {
   }
 }
 
-@media (min-width: 65em) {
+@media (min-width: 53.125em) {
   .requirements {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -708,7 +734,7 @@ p[role=contentinfo] a {
   color: #382519;
 }
 
-@media (min-width: 65em) {
+@media (min-width: 53.125em) {
   .design-selection {
     font-size: 0.9rem;
     position: absolute;
@@ -810,7 +836,7 @@ p[role=contentinfo] a {
   color: #ffffff;
 }
 
-@media (min-width: 65em) {
+@media (min-width: 53.125em) {
   .zen-resources {
     z-index: 1;
     left: 100px;
@@ -1134,7 +1160,7 @@ li {
   }
 }
 
-@media (min-width: 65em) {
+@media (min-width: 53.125em) {
   .page-wrapper {
     background-image: url("images/burlap.jpg");
     margin: auto;

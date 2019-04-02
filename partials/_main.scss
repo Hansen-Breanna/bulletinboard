@@ -19,11 +19,17 @@
       @include font-size($font-size-medium);
     }
   }
-  @include breakpoint (medium) {
+  /*@include breakpoint (medium) {
     position: absolute;
     top: 150px;
     right: 50px;
     max-width: 300px;
+  }*/
+  @include breakpoint(large) {
+    position: absolute;
+    top: 150px;
+    right: 50px;//32px
+    max-width: 350px;
   }
 }
 //"Participation"card --cream card with brown text and red floral
@@ -93,6 +99,9 @@
     border-bottom: none;
     }
   }
+  @include breakpoint(xsmall) {
+    margin: -24px 0px 7px 90px;
+  }
   @include breakpoint(small) {
     @include center(100%);
     max-width: 600px;
@@ -103,9 +112,9 @@
     background-size: 130px, 40px;
     
   }
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     grid-column: 2 / 3;
-    margin: 250px -20px;
+    margin: 250px 29px;
     max-width: 700px;
     max-height: 200px;
   }
