@@ -13,6 +13,7 @@
 @import 'partials/main';
 @import 'partials/sidebar';
 @import 'partials/footer';
+@import 'partials/keyframes';
 
 
 /* basic elements */
@@ -20,6 +21,7 @@ html {
   @include margin-padding(0, 0);
   box-sizing: border-box;
 }
+
 
 body {
   @include margin-padding(0, 0);

@@ -1,12 +1,22 @@
 /* SCSS Mixins */
 @mixin breakpoint($break) {
-  @if $break==medium {
+  @if $break==large {
+    @media (min-width: $break-large) {
+      @content;
+    }
+  }
+  @else if $break==medium {
     @media (min-width: $break-medium) {
       @content;
     }
   }
   @else if $break==small {
     @media (min-width: $break-small) {
+      @content;
+    }
+  }
+  @else if $break==xsmall {
+    @media (min-width: $break-xsmall) {
       @content;
     }
   }
@@ -33,9 +43,9 @@ $width: 90%) {
   background-image: $pin;
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 35px;
+  background-size: 40px;
   &:hover {
-  animation: pushpin 1s;
+  animation: pushpin .5s;
   transition-timing-function: cubic-bezier(.1, 1.11, .01, .99);
   }
 }

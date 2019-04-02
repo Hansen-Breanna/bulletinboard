@@ -44,7 +44,13 @@ header h2 {
   @include breakpoint(medium) {
     top: 70px;
     right: -495px;
+    z-index: 10;
   }
+  @include breakpoint(large) {
+    right: -380px;
+
+  }
+
 }
 //"Beauty of CSS" card--white card with flower image (Title=header h2)
 .summary {
@@ -70,6 +76,10 @@ header h2 {
   @include breakpoint(medium) {
     top: 160px;
     left: 590px;
+    z-index: 10;
+  }
+  @include breakpoint(large) {
+    left: 533px;
   }
 }
 //"The Road to Enlightenment card" --dark brown card with white text
