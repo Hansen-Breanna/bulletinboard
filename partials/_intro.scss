@@ -27,22 +27,22 @@ header h1 {
     0);
   }
 }
-//title (h2) for .summary/Beauty of CSS card 
+//title (h2) for .summary/Beauty of CSS card
 header h2 {
-  @include font-size($font-size-medium);
-  width: 200px;
+  font-size: $font-size-medium;
+  line-height: 1.2rem;
+  width: 135px;
   color: $color-2;
   background-color: $color-6;
-  line-height: 1em;
   @include box-shadow;
   @include pin;
-  @include margin-padding(auto, 50px 25px 5px 25px);
+  @include margin-padding(auto, 50px 90px 5px 25px);
   @include breakpoint(small) {
     position: absolute;
     left: 180px;
   }
   @include breakpoint(medium) {
-    top: 100px;
+    top: 70px;
     right: -495px;
     z-index: 10;
   }
@@ -55,29 +55,26 @@ header h2 {
 //"Beauty of CSS" card--white card with flower image (Title=header h2)
 .summary {
   width: 200px;
-  @include margin-padding(0 auto 20px auto, 0 25px 25px 25px);
+  @include margin-padding(0 auto 20px auto, 0 25px 160px 25px);
   @include box-shadow;
   @include background-img (url('images/flower-combo.png'),
   no-repeat,
-  220px,
-  220px,
-  right -50px,
-  bottom -85px,
+  370px,
+  370px,
+  right -180px,
+  bottom -150px,
   .8em);
   & p {
-    width: 200px;
-    line-height: 1rem;
-  }
-  & p:nth-last-of-type(1) {
-    padding-bottom: 75px;
+    width: 175px;
+    line-height: 1.3rem;
   }
   @include breakpoint(small) {
     position: absolute;
-    top: 270px;
+    top: 260px;
     left: 400px;
   }
   @include breakpoint(medium) {
-    top: 190px;
+    top: 160px;
     left: 590px;
     z-index: 10;
   }
@@ -85,28 +82,28 @@ header h2 {
     left: 533px;
   }
 }
-//"The Road to Enlightenment card" --dark brown card with white text 
+//"The Road to Enlightenment card" --dark brown card with white text
 .preamble {
-  @include center(90%);
+  @include center(85%);
   @include margin-padding(0 0 20px 0, 30px);
   background-color: $color-2;
   color: $color-6;
   transform: rotate(-1deg);
   @include box-shadow;
   @include pin;
+  text-align: center;
   &.preamble h3 {
-    text-align: center;
-    @include font-size($font-size-medium);
+    font-size: $font-size-medium;
   }
   &.preamble p {
-    @include font-size($font-size-small);
+    font-size: $font-size-small;
   }
   @include breakpoint(small) {
-    @include center (70%);
+    @include center (75%);
     margin-top: 150px;
     transform: rotate(-4deg);
   }
   @include breakpoint(medium) {
-    margin-left: 0;
+    margin: 110px 0 0 0;
   }
 }

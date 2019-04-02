@@ -64,10 +64,6 @@ $font-size) {
   font-size: $font-size;
 }
 
-@mixin font-size($font-size) {
-  font-size: ($font-size);
-}
-
 @mixin links($weight, $decoration, $color) {
   font-weight: $weight;
   text-decoration: $decoration;

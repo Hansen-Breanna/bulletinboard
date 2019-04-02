@@ -22,13 +22,14 @@ html {
   box-sizing: border-box;
 }
 
+
 body {
   @include margin-padding(0, 0);
   background: $color-1;
   color: $color-2;
-  font: 1em georgia, sans-serif;
-  font-family: $secondary-font;
+  font-size: 16pt;
   line-height: 1.5rem;
+  font-family: $primary-font;
 }
 
 p {
