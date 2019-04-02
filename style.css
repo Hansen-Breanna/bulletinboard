@@ -10,6 +10,7 @@
 /* Colors */
 /* Pin image */
 /* Fonts */
+/*Font Sizes*/
 /* Media Breaks */
 /* SCSS Mixins */
 header h1 {
@@ -243,7 +244,6 @@ header h2:hover {
   margin-bottom: 30px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  border: 20px outset #4b5548;
   background-color: #efd9bf;
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
@@ -264,28 +264,35 @@ header h2:hover {
 
 @media (min-width: 45em) {
   .participation {
-    background: url("images/red-leaves.png") -15% 25% no-repeat, url("images/pin.svg") 50% 3% no-repeat, #efd9bf;
-    background-size: 150px, 40px;
+    background: url("images/red-leaves.png") -15% 25% no-repeat, url("images/pin.svg") 50% 3% no-repeat, url("images/envelope.png") 50% 3% no-repeat;
+    background-size: 150px, 40px, 600px;
     margin-left: 15px;
   }
   .participation h3 {
-    margin: 40px 10px 0 0;
-    padding: 10px;
+    background: url("images/pin.svg") 50% 3% no-repeat, #ede3da;
+    margin: 0 0 0 20px;
+    padding: 10px 20px;
     text-align: right;
   }
   .participation p {
+    background-color: #ede3da;
     margin-left: 70px;
     text-align: right;
     margin: 0 0 0 20px;
-    padding: 5px 20px;
+    padding: 10px 20px;
   }
 }
 
 @media (min-width: 53.125em) {
   .participation p {
-    font-size: 1.2rem;
+    font-size: 1.1em;
     line-height: 1.5rem;
   }
+}
+
+.participation:hover {
+  -webkit-animation: hover_flutter2 1s ease;
+          animation: hover_flutter2 1s ease;
 }
 
 .benefits {
