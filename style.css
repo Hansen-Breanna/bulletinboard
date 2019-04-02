@@ -327,6 +327,7 @@ header h2:hover {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
+
 .requirements p {
   font-size: 0.9rem;
 }
@@ -489,98 +490,144 @@ p[role=contentinfo] a {
   grid-column: 1/2;
   grid-row: 1/2;
 }
+
 .design-selection li:nth-child(1):hover {
-  animation: pushpin 1s;
-  transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
+
 .design-selection li:nth-child(2) {
-  transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 35px;
-  grid-column: 2/3;
-  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
 }
+
 .design-selection li:nth-child(2):hover {
-  animation: pushpin 1s;
-  transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
+
 .design-selection li:nth-child(3) {
-  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 35px;
 }
+
 .design-selection li:nth-child(3):hover {
-  animation: pushpin 1s;
-  transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
+
 .design-selection li:nth-child(4) {
-  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 35px;
 }
+
 .design-selection li:nth-child(4):hover {
-  animation: pushpin 1s;
-  transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
+
 .design-selection li:nth-child(5) {
-  transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 35px;
 }
+
 .design-selection li:nth-child(5):hover {
-  animation: pushpin 1s;
-  transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
+
 .design-selection li:nth-child(6) {
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 35px;
 }
+
 .design-selection li:nth-child(6):hover {
-  animation: pushpin 1s;
-  transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
+
 .design-selection li:nth-child(7) {
-  transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 35px;
 }
+
 .design-selection li:nth-child(7):hover {
-  animation: pushpin 1s;
-  transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
+
 .design-selection li:nth-child(8) {
-  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 35px;
 }
+
 .design-selection li:nth-child(8):hover {
-  animation: pushpin 1s;
-  transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
+
 .design-selection li a:nth-child(2) {
   font-weight: normal;
 }
+
 .design-selection li:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
+
 .design-selection li a:link {
   color: #382519;
 }
-@media (min-width: 65em) {
+
+@media (min-width: 53.125em) {
   .design-selection {
     font-size: 0.9rem;
     position: absolute;
@@ -601,8 +648,10 @@ p[role=contentinfo] a {
 
 .zen-resources {
   padding: 20px 20px 200px 20px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  transform: rotate(-5deg);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
   max-width: 200px;
   position: relative;
   top: 0px;
@@ -614,6 +663,7 @@ p[role=contentinfo] a {
   background-position: 120px bottom;
   font-size: 0.8em;
 }
+
 .zen-resources:before {
   content: "";
   position: absolute;
@@ -624,8 +674,10 @@ p[role=contentinfo] a {
   margin-bottom: -71px;
   border-top: 75px solid #ec637d;
   border-right: 140px solid transparent;
-  filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
 }
+
 .zen-resources:after {
   content: "";
   position: absolute;
@@ -636,27 +688,34 @@ p[role=contentinfo] a {
   margin-bottom: -71px;
   border-top: 75px solid #ec637d;
   border-left: 140px solid transparent;
-  filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
 }
+
 .zen-resources ul {
   margin: 0;
   padding: 0;
 }
+
 .zen-resources li {
   line-height: 1.4rem;
   font-size: 1.1em;
 }
+
 .zen-resources li a:link {
   color: #ffffff;
   font-weight: normal;
 }
+
 .zen-resources li a:hover {
   color: #efd9bf;
 }
+
 .zen-resources a {
   font-family: Lora, Georgia, serif;
   font-weight: 100;
 }
+
 @media (min-width: 45em) {
   .zen-resources {
     top: 15px;
@@ -664,11 +723,13 @@ p[role=contentinfo] a {
     margin: 0;
   }
 }
+
 .zen-resources h3 {
   margin: 25px 0 5px 0;
   color: #ffffff;
 }
-@media (min-width: 65em) {
+
+@media (min-width: 53.125em) {
   .zen-resources {
     z-index: 1;
     left: 100px;
@@ -679,16 +740,22 @@ p[role=contentinfo] a {
 footer {
   width: 100%;
   padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   bottom: -275px;
   left: 0px;
   background-color: #efd9bf;
 }
+
 footer a {
   background: transparent;
 }
+
 @media (min-width: 45em) {
   footer {
     bottom: -300px;
@@ -702,6 +769,7 @@ a.zen-validate-html {
   background-size: 60px 60px;
   background-position: center center;
   font-size: 0;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -712,6 +780,7 @@ a.zen-validate-css {
   background-size: 55px 55px;
   background-position: center center;
   font-size: 0;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -722,6 +791,7 @@ a.zen-license {
   background-size: 55px 55px;
   background-position: center center;
   font-size: 0;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -732,6 +802,7 @@ a.zen-github {
   background-size: 55px 55px;
   background-position: center center;
   font-size: 0;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -742,18 +813,21 @@ a.zen-accessibility {
   background-size: 60px 60px;
   background-position: center center;
   font-size: 0;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 a.zen-validate-html:hover, a.zen-validate-css:hover, a.zen-license:hover, a.zen-github:hover, a.zen-accessibility:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 /* basic elements */
 html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -812,14 +886,17 @@ a:link {
   text-decoration: none;
   color: #382519;
 }
+
 a:visited {
   font-weight: bold;
   text-decoration: none;
   color: #ffffff;
 }
+
 a:hover {
   color: #ba8563;
 }
+
 a:active {
   font-weight: bold;
   text-decoration: none;
@@ -841,13 +918,15 @@ li {
   margin: 0 0;
   padding: 0 40px 200px 40px;
 }
+
 @media (min-width: 45em) {
   .page-wrapper {
     margin: 0 0;
     padding: 0 40px;
   }
 }
-@media (min-width: 65em) {
+
+@media (min-width: 53.125em) {
   .page-wrapper {
     background-image: url("images/burlap.jpg");
     margin: auto;
@@ -858,19 +937,20 @@ li {
 /*medium styles*/
 @media (min-width: 45em) {
   section.intro {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
-
   header {
     left: 220px;
     position: absolute;
   }
-
   div#zen-supporting {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
