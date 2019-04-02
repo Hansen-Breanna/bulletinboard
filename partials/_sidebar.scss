@@ -1,11 +1,11 @@
 //sidebar (aside) section including Design Selection, Design Archives, and Zen Resources
 
 .sidebar .wrapper {
-  font: 1.2rem verdana, $primary-font;
+  font-size: 1.2rem;
 }
 
 .sidebar li a:visited {
-  color: $color-5; 
+  color: $color-5;
 }
 //"Archives"links card--cream card with brown text at top right of screen
 .design-archives {
@@ -15,10 +15,10 @@
   top: -20px;
   left: 25px;
   @include margin-padding(0 auto, 15px);
-  @include font-size($font-size-small);
-  max-width: 200px;
   font-weight: normal;
-  font-family: $secondary-font;
+  font-size: $font-size-small;
+  font-family: $primary-font;
+  max-width: 200px;
   background-color: $color-3;
   transform: rotate(-2deg);
   & ul {
@@ -28,17 +28,29 @@
   & h3 {
     margin: 25px 0 5px 0;
     text-transform: capitalize;
-    font-family: $secondary-font;
+    font-family: $primary-font;
+    font-size: $font-size-medium;
   }
   @include breakpoint(small) {
     top: -50px;
     left: 70%;
+/*CHECK THIS!*/
+    transform: rotate(0deg);
+    & h3 {
+      font-size: $font-size-mid;
+      margin: 25px 0 0 0;
+    }
   }
   &:hover {
     animation: hover_flutter2 1s ease;
   }
 }
-// 8 cream colored notes with dark brown text--one per site/creator (8 notes, one title card) 
+
+.indicator {
+  display: none;
+}
+
+// 8 cream colored notes with dark brown text--one per site/creator (8 notes, one title card)
 .design-selection {
   @include center(100%);
   & h3 { //moved from top down to be by links so more intuitive
@@ -46,23 +58,29 @@
     @include center(250px);
     text-transform: capitalize;
     @include pin;
-    font-family: $secondary-font;
+    font-size: $font-size-large;
+    font-family: $primary-font;
     @include box-shadow;
-    @include font-size($font-size-large);
     background-color: $color-3;
     text-align: center;
   }
   & ul {
     display: grid;
+    grid-gap: 40px;
     @include margin-padding(20px auto, 0);
+    transform: translateX(-40px);
     max-width: 500px;
+    @include breakpoint(medium) {
+      grid-gap: 0px;
+      transform: translateX(0px);
+    }
   }
   & li {
-    @include center(70%);
+    @include center(160px, 95%);
+    height: 110px;
     @include box-shadow;
-    @include font-size(0.8rem);
-    font-size: .8rem;
-    @include margin-padding(10px, 35px 15px 20px 15px);
+    font-size: $font-size-mid;
+    @include margin-padding(10px, 45px 15px 20px 15px);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -70,8 +88,15 @@
     background-color: $color-3;
     transition: 0.5s;
     @include breakpoint(small) {
-      @include center(50%);
-      @include font-size($font-size-small);
+      transform: scale(1.1);
+      height: 150px;
+      font-size: $font-size-medium;
+      padding: 50px 20px;
+    }
+    @include breakpoint(small) {
+      @include center(175px);
+      height: 125px;
+      font-size: $font-size-medium;
       padding: 50px 20px;
     }
   }
@@ -100,6 +125,7 @@
     @include pin;
   }
   & li:nth-child(6) {
+    transform: scale(1);
     @include pin;
   }
   & li:nth-child(7) {
@@ -120,11 +146,12 @@
     color: $color-2;
   }
   @include breakpoint(medium) {
-    @include font-size($font-size-small);
+    font-size: $font-size-small;
     position: absolute;
-    bottom: 10%;
+    bottom: 7%;
     left: 35%;
     @include center(80%);
+    transform: translateY(100px);
     ul {
         @include center(60%);
     }
@@ -132,7 +159,7 @@
 }
 //"Resources" ribbon--Pink ribbon with white text and green floral image
 .zen-resources {
-  padding: 20px 20px 200px 20px;
+  padding: 20px 20px 220px 20px;
   @include box-shadow;
   transform: rotate(-2deg);
   max-width: 200px;
@@ -171,12 +198,16 @@
     border-left: 140px solid transparent;
     filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
   }
+  & h3 {
+    text-transform: initial;
+    font-size: $font-size-medium;
+  }
   & ul {
     @include margin-padding(0, 0);
   }
   & li {
-    line-height: 1.4rem;
-    @include font-size($font-size-mid);
+    font-size: $font-size-medium;
+    line-height: 1.5rem;
     a:link {
       color: $color-6;
       font-weight: normal;
@@ -186,8 +217,7 @@
     }
   }
   & a {
-    font-family: $secondary-font;
-    font-weight: 100;
+    font-family: 100 $secondary-font;
   }
   @include breakpoint(small) {
     top: 15px;
