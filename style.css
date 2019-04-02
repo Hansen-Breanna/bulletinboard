@@ -1,0 +1,1261 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+@import url("https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+/* SCSS variables */
+/* Colors */
+/* Pin image */
+@-webkit-keyframes pushpin {
+  0% {
+    background-position-y: 4px;
+  }
+  50% {
+    background-position-y: 5px;
+  }
+  75% {
+    background-size: 33px;
+  }
+  100% {
+    background-position-y: 5px;
+  }
+}
+@keyframes pushpin {
+  0% {
+    background-position-y: 4px;
+  }
+  50% {
+    background-position-y: 5px;
+  }
+  75% {
+    background-size: 33px;
+  }
+  100% {
+    background-position-y: 5px;
+  }
+}
+
+/* Fonts */
+/* Media Breaks */
+/* SCSS Mixins */
+header h1 {
+  background: transparent;
+  width: 155px;
+  height: 130px;
+  margin: -155px auto 40px auto;
+  padding: 80px 30px 0px 30px;
+  vertical-align: middle;
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  background-size: 225px 225px;
+  background-position: center center;
+  font-size: 0;
+}
+
+@media (min-width: 45em) {
+  header h1 {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    width: 255px;
+    height: 230px;
+    margin-top: -180px;
+    background-image: url(images/logo_blue.png);
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+    background-position: center center;
+    font-size: 0;
+  }
+}
+
+header h2 {
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+  width: 135px;
+  color: #382519;
+  background-color: #ffffff;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  margin: auto;
+  padding: 50px 90px 5px 25px;
+}
+
+header h2:hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+@media (min-width: 45em) {
+  header h2 {
+    position: absolute;
+    left: 180px;
+  }
+}
+
+@media (min-width: 65em) {
+  header h2 {
+    top: 70px;
+    right: -495px;
+  }
+}
+
+.summary {
+  width: 200px;
+  margin: 0 auto 20px auto;
+  padding: 0 25px 160px 25px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-image: url("images/flower-combo.png");
+  background-repeat: no-repeat;
+  background-size: 370px 370px;
+  background-position: right -180px bottom -150px;
+  font-size: 0.8em;
+}
+
+.summary p {
+  width: 175px;
+  line-height: 1.3rem;
+}
+
+@media (min-width: 45em) {
+  .summary {
+    position: absolute;
+    top: 260px;
+    left: 400px;
+  }
+}
+
+@media (min-width: 65em) {
+  .summary {
+    top: 160px;
+    left: 590px;
+  }
+}
+
+.preamble {
+  width: 90%;
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 0 20px 0;
+  padding: 30px;
+  background-color: #382519;
+  color: #ffffff;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  text-align: center;
+}
+
+.preamble:hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.preamble.preamble h3 {
+  font-size: 1.3rem;
+}
+
+.preamble.preamble p {
+  font-size: 1rem;
+}
+
+@media (min-width: 45em) {
+  .preamble {
+    width: 90%;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+}
+
+@media (min-width: 65em) {
+  .preamble {
+    margin: 110px 0 0 0;
+  }
+}
+
+.sidebar .wrapper {
+  font-size: 1.2rem;
+}
+
+.sidebar li a:visited {
+  color: #4b5548;
+}
+
+.design-archives {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  position: absolute;
+  top: -20px;
+  left: 25px;
+  margin: 0 auto;
+  padding: 15px;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  max-width: 200px;
+  background-color: #efd9bf;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.design-archives:hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-archives ul {
+  margin: 0;
+  padding: 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+.design-archives h3 {
+  margin: 25px 0 5px 0;
+  text-transform: capitalize;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 45em) {
+  .design-archives {
+    top: -50px;
+    left: 70%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .design-archives h3 {
+    font-size: 1.1rem;
+    margin: 25px 0 0 0;
+  }
+}
+
+.indicator {
+  display: none;
+}
+
+.design-selection {
+  width: 90%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.design-selection h3 {
+  padding: 45px 10px;
+  width: 90%;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: capitalize;
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  font-size: 1.4rem;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: #efd9bf;
+  text-align: center;
+}
+
+.design-selection h3:hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection ul {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 40px;
+  margin: 20px auto;
+  padding: 0;
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
+  max-width: 500px;
+}
+
+@media (min-width: 65em) {
+  .design-selection ul {
+    grid-gap: 0px;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.design-selection li {
+  width: 95%;
+  max-width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 110px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+  margin: 10px;
+  padding: 45px 15px 20px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #efd9bf;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (min-width: 45em) {
+  .design-selection li {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    height: 150px;
+    font-size: 1.3rem;
+    padding: 50px 20px;
+  }
+}
+
+@media (min-width: 45em) {
+  .design-selection li {
+    width: 90%;
+    max-width: 175px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 125px;
+    font-size: 1.3rem;
+    padding: 50px 20px;
+  }
+}
+
+.design-selection li:nth-child(1) {
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.design-selection li:nth-child(1):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(2) {
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.design-selection li:nth-child(2):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(3) {
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(3):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(4) {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(4):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(5) {
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(5):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(6) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(6):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(7) {
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(7):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(8) {
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(8):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li a:nth-child(2) {
+  font-weight: normal;
+}
+
+.design-selection li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.design-selection li a:link {
+  color: #382519;
+}
+
+@media (min-width: 65em) {
+  .design-selection {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 7%;
+    left: 35%;
+    width: 90%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  .design-selection ul {
+    width: 90%;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.zen-resources {
+  padding: 20px 20px 220px 20px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  max-width: 200px;
+  position: relative;
+  top: 0px;
+  margin: auto;
+  background-color: #ec637d;
+  background-image: url("images/blue-leaves-left.png");
+  background-repeat: no-repeat;
+  background-size: 100px 220px;
+  background-position: 120px bottom;
+  font-size: 0.8em;
+}
+
+.zen-resources:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  margin-bottom: -71px;
+  border-top: 75px solid #ec637d;
+  border-right: 140px solid transparent;
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
+.zen-resources:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  margin-bottom: -71px;
+  border-top: 75px solid #ec637d;
+  border-left: 140px solid transparent;
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
+.zen-resources h3 {
+  text-transform: initial;
+  font-size: 1.3rem;
+}
+
+.zen-resources ul {
+  margin: 0;
+  padding: 0;
+}
+
+.zen-resources li {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+.zen-resources li a:link {
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.zen-resources li a:hover {
+  color: #efd9bf;
+}
+
+.zen-resources a {
+  font-family: 100 Lora, Georgia, serif;
+}
+
+@media (min-width: 45em) {
+  .zen-resources {
+    top: 15px;
+    left: 50px;
+    margin: 0;
+  }
+}
+
+.zen-resources h3 {
+  margin: 25px 0 5px 0;
+  color: #ffffff;
+}
+
+@media (min-width: 65em) {
+  .zen-resources {
+    z-index: 1;
+    left: 100px;
+    margin-top: -50px;
+  }
+}
+
+.sidebar .wrapper {
+  font-size: 1.2rem;
+}
+
+.sidebar li a:visited {
+  color: #4b5548;
+}
+
+.design-archives {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  position: absolute;
+  top: -20px;
+  left: 25px;
+  margin: 0 auto;
+  padding: 15px;
+  font-weight: normal;
+  font-size: 1rem;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  max-width: 200px;
+  background-color: #efd9bf;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.design-archives:hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-archives ul {
+  margin: 0;
+  padding: 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+.design-archives h3 {
+  margin: 25px 0 5px 0;
+  text-transform: capitalize;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 45em) {
+  .design-archives {
+    top: -50px;
+    left: 70%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .design-archives h3 {
+    font-size: 1.1rem;
+    margin: 25px 0 0 0;
+  }
+}
+
+.indicator {
+  display: none;
+}
+
+.design-selection {
+  width: 90%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.design-selection h3 {
+  padding: 45px 10px;
+  width: 90%;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: capitalize;
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  font-size: 1.4rem;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: #efd9bf;
+  text-align: center;
+}
+
+.design-selection h3:hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection ul {
+  display: -ms-grid;
+  display: grid;
+  margin: 20px auto;
+  padding: 0;
+  max-width: 500px;
+}
+
+.design-selection li {
+  width: 90%;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+  margin: 10px;
+  padding: 35px 15px 20px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #efd9bf;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (min-width: 45em) {
+  .design-selection li {
+    width: 90%;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3rem;
+    padding: 50px 20px;
+  }
+}
+
+.design-selection li:nth-child(1) {
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.design-selection li:nth-child(1):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(2) {
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.design-selection li:nth-child(2):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(3) {
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(3):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(4) {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(4):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(5) {
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(5):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(6) {
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(6):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(7) {
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(7):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li:nth-child(8) {
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  background-image: url("images/pin.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+
+.design-selection li:nth-child(8):hover {
+  -webkit-animation: pushpin 1s;
+          animation: pushpin 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+          transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
+}
+
+.design-selection li a:nth-child(2) {
+  font-weight: normal;
+}
+
+.design-selection li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.design-selection li a:link {
+  color: #382519;
+}
+
+@media (min-width: 65em) {
+  .design-selection {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 10%;
+    left: 35%;
+    width: 90%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .design-selection ul {
+    width: 90%;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.zen-resources {
+  padding: 20px 20px 220px 20px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  max-width: 200px;
+  position: relative;
+  top: 0px;
+  margin: auto;
+  background-color: #ec637d;
+  background-image: url("images/blue-leaves-left.png");
+  background-repeat: no-repeat;
+  background-size: 100px 220px;
+  background-position: 120px bottom;
+  font-size: 0.8em;
+}
+
+.zen-resources:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  margin-bottom: -71px;
+  border-top: 75px solid #ec637d;
+  border-right: 140px solid transparent;
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
+.zen-resources:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  margin-bottom: -71px;
+  border-top: 75px solid #ec637d;
+  border-left: 140px solid transparent;
+  -webkit-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
+.zen-resources h3 {
+  text-transform: initial;
+  font-size: 1.3rem;
+}
+
+.zen-resources ul {
+  margin: 0;
+  padding: 0;
+}
+
+.zen-resources li {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+.zen-resources li a:link {
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.zen-resources li a:hover {
+  color: #efd9bf;
+}
+
+.zen-resources a {
+  font-family: 100 Lora, Georgia, serif;
+}
+
+@media (min-width: 45em) {
+  .zen-resources {
+    top: 15px;
+    left: 50px;
+    margin: 0;
+  }
+}
+
+.zen-resources h3 {
+  margin: 25px 0 5px 0;
+  color: #ffffff;
+}
+
+@media (min-width: 65em) {
+  .zen-resources {
+    z-index: 1;
+    left: 100px;
+    margin-top: -50px;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: -275px;
+  left: 0px;
+  background-color: #efd9bf;
+}
+
+footer a {
+  background: transparent;
+}
+
+@media (min-width: 45em) {
+  footer {
+    bottom: -300px;
+  }
+}
+
+a.zen-validate-html {
+  padding: 35px;
+  background-image: url("images/icons/html.png");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  background-position: center center;
+  font-size: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a.zen-validate-css {
+  padding: 35px;
+  background-image: url("images/icons/css.png");
+  background-repeat: no-repeat;
+  background-size: 55px 55px;
+  background-position: center center;
+  font-size: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a.zen-license {
+  padding: 35px;
+  background-image: url("images/icons/creative.png");
+  background-repeat: no-repeat;
+  background-size: 55px 55px;
+  background-position: center center;
+  font-size: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a.zen-github {
+  padding: 35px;
+  background-image: url("images/icons/github.png");
+  background-repeat: no-repeat;
+  background-size: 55px 55px;
+  background-position: center center;
+  font-size: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a.zen-accessibility {
+  padding: 35px;
+  background-image: url("images/icons/accessible.png");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  background-position: center center;
+  font-size: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a.zen-validate-html:hover, a.zen-validate-css:hover, a.zen-license:hover, a.zen-github:hover, a.zen-accessibility:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* basic elements */
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #b8c8cc;
+  color: #382519;
+  font-size: 16pt;
+  line-height: 1.5rem;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #382519;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.preamble h3,
+.explanation h3,
+.zen-resouces h3,
+.preamble,
+.explanation,
+.zen-resources {
+  color: #ffffff;
+}
+
+h1,
+h2,
+.summary,
+.benefits,
+.requirements {
+  background-color: #ffffff;
+}
+
+a:link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #382519;
+}
+
+a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  color: #ba8563;
+}
+
+a:active {
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+abbr {
+  border-bottom: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* specific divs */
+.page-wrapper {
+  border-top: 150px solid #382519;
+  position: relative;
+  margin: 0 0;
+  padding: 0 40px 200px 40px;
+}
+
+@media (min-width: 45em) {
+  .page-wrapper {
+    margin: 0 0;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 65em) {
+  .page-wrapper {
+    background-image: url("images/burlap.jpg");
+    margin: auto;
+    max-width: 1200px;
+  }
+}
+
+/*medium styles*/
+@media (min-width: 45em) {
+  section.intro {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  header {
+    left: 220px;
+    position: absolute;
+  }
+  div#zen-supporting {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+/*# sourceMappingURL=style.css.map */

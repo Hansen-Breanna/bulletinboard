@@ -1,175 +1,232 @@
-//main section includng Explanation, Participation, Benefits, Requirements, and Content Info
+//sidebar (aside) section including Design Selection, Design Archives, and Zen Resources
 
-//"So What Is This About?"card--pink card with white text
-.explanation {
-  @include center(75%);
-  transform: rotate(1deg);
-  @include box-shadow;
-  background-color: $color-4;
-  @include pin;
-  @include font-size($font-size-small);
-  @include margin-padding(0 0 20px 0, 30px);
-  & h3 {
-    margin-top: 20px;
-    text-align: center;
-    @include font-size($font-size-small);
-  }
-  @include breakpoint (small) {
-    & h3 {
-      margin-top: 20px;
-      text-align: center;
-      @include font-size($font-size-small);
-    }
-    @include breakpoint (small) {
-      & h3 {
-        @include font-size($font-size-medium);
-      }
-    }
-    @include breakpoint (medium) {
-      position: absolute;
-      top: 150px;
-      right: 50px;
-      max-width: 300px;
-    }
-  }
-  @include breakpoint (medium) {
-    position: absolute;
-    top: 150px;
-    right: 50px;
-    max-width: 300px;
-  }
+.sidebar .wrapper {
+  font-size: 1.2rem;
 }
-//"Participation"card --cream card with brown text and red floral
-.participation {
-  @include center(100%);
-  margin-bottom: 30px;
-  @include box-shadow;
-  border: 20px outset #4b5548;
-  background-color: $color-3;
-  transform: rotate(-2deg);
-  & h3 {
-    @include margin-padding(40px 0 0 10px, 10px);
-    @include font-size($font-size-medium);
-  }
-  & p {
-    @include font-size($font-size-small);
-    line-height: 1.2rem;
-    @include margin-padding(0, 5px 20px 25px 20px);
-  }
-  @include breakpoint(small) {
-    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #efd9bf;
-    background-size: 150px, 35px;
-    margin-left: 15px;
-    & h3 {
-      @include margin-padding(40px 10px 0 0, 10px);
-      text-align: right;
-    }
-    & p {
-      margin-left: 70px;
-      text-align: right;
-      @include margin-padding(0 0 0 20px, 5px 20px);
-    }
-  }
-  @include breakpoint(medium) {
-    p {
-      @include font-size($font-size-medium);
-      line-height: 1.5rem;
-    }
-    transform: rotate(-3deg);
-  }
+
+.sidebar li a:visited {
+  color: $color-5;
 }
-//"Benefits"ticket--white ticket with barcode and gold line  
-.benefits {
-  @include center(100%, 180px);
-  @include margin-padding(0 0 20px 25px, 20px);
-  @include box-shadow;
-  height: 445px;
-  background: url('images/barcode_horizontal_2nd.png') 42% 98% no-repeat, url('images/pin.svg') 64% 0% no-repeat, #ffffff;
-  background-size: 196px, 30px;
-  transform: rotate(2deg);
-  & h3 {
-    text-align: center;
-    @include breakpoint (small) {
-      margin: 0px 0px 5px 20px;
-      text-align: left;
-    }
-  }
-  & p {
-    @include font-size($font-size-small);
-    line-height: 1.2rem;
-    padding: 5px 20px 1em 20px;
-    border-bottom: 8px solid $color-7;
-    @include breakpoint (small) {
-    line-height: 1.2rem;
-    padding-right: 120px;
-    padding-top: 0;
-    border-bottom: none;
-    }
-  }
-  @include breakpoint(small) {
-    @include center(100%);
-    max-width: 600px;
-    height: auto;
-    grid-column: 1 / span 2;
-    margin: 10px auto;
-    background: url('images/barcode.png') 105% 45% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #ffffff;
-    background-size: 130px, 30px;
-    
-  }
-  @include breakpoint(medium) {
-    grid-column: 2 / 3;
-    margin: 250px -20px;
-    max-width: 700px;
-    max-height: 200px;
-  }
-  
-}
-//"Requirements"paper--white paper with brown text and checkmark 
-.requirements {
-  padding: 30px 20px 30px 50px;
-  @include center(80%);
+//"Archives"links card--cream card with brown text at top right of screen
+.design-archives {
   @include box-shadow;
   @include pin;
-  & h3 {
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  & p {
-    @include font-size($font-size-small);
-  }
-  & p:nth-of-type(1) {
-    border-top: 15px solid $color-2;
-    padding-top: 15px;
-  }
-  & role {
-    background-color: $color-2;
-  }
-  @include breakpoint(small) {
-    grid-column: 1 / span 2;
-    max-width: 600px;
-    margin: 20px auto;
-  }
-  @include breakpoint(medium) {
-    grid-column: 1 / 2;
-  }
-}
-//bottom dark brown band with website/author information in white text 
-p[role=contentinfo] {
   position: absolute;
-  bottom: -150px;
-  left: 0px;
-  background-color: #382519;
-  color: #ffffff;
-  max-width: 100%;
-  text-align: right;
-  padding: 75px 5% 75px 15%;
-  @include font-size($font-size-medium);
-  & a {
-    color: $color-6;
-    font-weight: normal
+  top: -20px;
+  left: 25px;
+  @include margin-padding(0 auto, 15px);
+  font-weight: normal;
+  font-size: $font-size-small;
+  font-family: $primary-font;
+  max-width: 200px;
+  background-color: $color-3;
+  transform: rotate(-5deg);
+  & ul {
+    @include margin-padding(0, 0);
+    grid-column: 1 / 3;
+  }
+  & h3 {
+    margin: 25px 0 5px 0;
+    text-transform: capitalize;
+    font-family: $primary-font;
+    font-size: $font-size-medium;
   }
   @include breakpoint(small) {
-    bottom: -180px;
-    padding: 75px 5% 75px 55%;
+    top: -50px;
+    left: 70%;
+    transform: rotate(0deg);
+    & h3 {
+      font-size: $font-size-mid;
+      margin: 25px 0 0 0;
+    }
+  }
+}
+
+.indicator {
+  display: none;
+}
+
+// 8 cream colored notes with dark brown text--one per site/creator (8 notes, one title card)
+.design-selection {
+  @include center(100%);
+  & h3 { //moved from top down to be by links so more intuitive
+    padding: 45px 10px;
+    @include center(250px);
+    text-transform: capitalize;
+    @include pin;
+    font-size: $font-size-large;
+    font-family: $primary-font;
+    @include box-shadow;
+    background-color: $color-3;
+    text-align: center;
+  }
+  & ul {
+    display: grid;
+    grid-gap: 40px;
+    @include margin-padding(20px auto, 0);
+    transform: translateX(-40px);
+    max-width: 500px;
+    @include breakpoint(medium) {
+      grid-gap: 0px;
+      transform: translateX(0px);
+    }
+  }
+  & li {
+    @include center(160px, 95%);
+    height: 110px;
+    @include box-shadow;
+    font-size: $font-size-mid;
+    @include margin-padding(10px, 45px 15px 20px 15px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    background-color: $color-3;
+    transition: 0.5s;
+    @include breakpoint(small) {
+      transform: scale(1.1);
+      height: 150px;
+      font-size: $font-size-medium;
+      padding: 50px 20px;
+    }
+    @include breakpoint(small) {
+      @include center(175px);
+      height: 125px;
+      font-size: $font-size-medium;
+      padding: 50px 20px;
+    }
+  }
+  & li:nth-child(1) {
+    transform: rotate(-3deg);
+    @include pin;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  & li:nth-child(2) {
+    transform: rotate(3deg);
+    @include pin;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  & li:nth-child(3) {
+    transform: rotate(2deg);
+    @include pin;
+  }
+  & li:nth-child(4) {
+    transform: rotate(-5deg);
+    @include pin;
+  }
+  & li:nth-child(5) {
+    transform: rotate(3deg);
+    @include pin;
+  }
+  & li:nth-child(6) {
+    transform: scale(1);
+    @include pin;
+  }
+  & li:nth-child(7) {
+    transform: rotate(-3deg);
+    @include pin;
+  }
+  & li:nth-child(8) {
+    transform: rotate(2deg);
+    @include pin;
+  }
+  & li a:nth-child(2) {
+    font-weight: normal;
+  }
+  & li:hover {
+    transform: scale(1.2);
+  }
+  & li a:link {
+    color: $color-2;
+  }
+  @include breakpoint(medium) {
+    font-size: $font-size-small;
+    position: absolute;
+    bottom: 7%;
+    left: 35%;
+    @include center(80%);
+    transform: translateY(100px);
+    ul {
+        @include center(60%);
+    }
+  }
+}
+//"Resources" ribbon--Pink ribbon with white text and green floral image
+.zen-resources {
+  padding: 20px 20px 220px 20px;
+  @include box-shadow;
+  transform: rotate(-5deg);
+  max-width: 200px;
+  position: relative;
+  top: 0px;
+  margin: auto;
+  background-color: $color-4;
+  @include background-img (url('images/blue-leaves-left.png'),
+  no-repeat,
+  100px,
+  220px,
+  120px,
+  bottom,
+  0.8em);
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    margin-bottom: -71px;
+    border-top: 75px solid $color-4;
+    border-right: 140px solid transparent;
+    filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    margin-bottom: -71px;
+    border-top: 75px solid $color-4;
+    border-left: 140px solid transparent;
+    filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+  }
+  & h3 {
+    text-transform: initial;
+    font-size: $font-size-medium;
+  }
+  & ul {
+    @include margin-padding(0, 0);
+  }
+  & li {
+    font-size: $font-size-medium;
+    line-height: 1.5rem;
+    a:link {
+      color: $color-6;
+      font-weight: normal;
+    }
+    a:hover {
+      color: $color-3;
+    }
+  }
+  & a {
+    font-family: 100 $secondary-font;
+  }
+  @include breakpoint(small) {
+    top: 15px;
+    left: 50px;
+    margin: 0;
+  }
+  & h3 {
+    margin: 25px 0 5px 0;
+    color: $color-6;
+  }
+  @include breakpoint(medium) {
+    z-index: 1;
+    left: 100px;
+    margin-top: -50px;
   }
 }

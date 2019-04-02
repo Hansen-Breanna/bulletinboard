@@ -27,7 +27,7 @@ header h1 {
     0);
   }
 }
-//title (h2) for .summary/Beauty of CSS card 
+//title (h2) for .summary/Beauty of CSS card
 header h2 {
   font-size: $font-size-medium;
   line-height: 1.2rem;
@@ -42,7 +42,7 @@ header h2 {
     left: 180px;
   }
   @include breakpoint(medium) {
-    top: 100px;
+    top: 70px;
     right: -495px;
   }
 }
@@ -60,7 +60,7 @@ header h2 {
   .8em);
   & p {
     width: 175px;
-    line-height: 1rem;
+    line-height: 1.3rem;
   }
   @include breakpoint(small) {
     position: absolute;
@@ -68,13 +68,13 @@ header h2 {
     left: 400px;
   }
   @include breakpoint(medium) {
-    top: 190px;
+    top: 160px;
     left: 590px;
   }
 }
-//"The Road to Enlightenment card" --dark brown card with white text 
+//"The Road to Enlightenment card" --dark brown card with white text
 .preamble {
-  @include center(90%);
+  @include center(85%);
   @include margin-padding(0 0 20px 0, 30px);
   background-color: $color-2;
   color: $color-6;
@@ -89,11 +89,11 @@ header h2 {
     font-size: $font-size-small;
   }
   @include breakpoint(small) {
-    @include center (65%);
+    @include center (75%);
     margin-top: 150px;
     transform: rotate(-4deg);
   }
   @include breakpoint(medium) {
-    margin-left: 0;
+    margin: 110px 0 0 0;
   }
 }
