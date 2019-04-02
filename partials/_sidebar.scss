@@ -5,12 +5,13 @@
 }
 
 .sidebar li a:visited {
-  color: $color-5; 
+  color: $color-5;
 }
+
 //"Archives"links card--cream card with brown text at top right of screen
 .design-archives {
   @include box-shadow;
-  @include font-size($font-size-small);
+  font-size: $font-size-small;
   @include margin-padding(0 auto, 15px);
   @include pin;
 
@@ -21,46 +22,55 @@
   font-family: $secondary-font;
   background-color: $color-3;
   transform: rotate(-2deg);
+
   & ul {
     @include margin-padding(0, 0);
     grid-column: 1 / 3;
   }
+
   & h3 {
     margin: 25px 0 5px 0;
     text-transform: capitalize;
     font-family: $secondary-font;
   }
+
   @include breakpoint(small) {
     top: -50px;
     left: 70%;
   }
+
   &:hover {
     animation: hover_flutter2 1s ease;
   }
 }
+
 // 8 cream colored notes with dark brown text--one per site/creator (8 notes, one title card) 
 .design-selection {
   @include center(100%);
-  & h3 { //moved from top down to be by links so more intuitive
+
+  & h3 {
+    //moved from top down to be by links so more intuitive
     padding: 45px 10px;
     @include center(250px);
     text-transform: capitalize;
     @include pin;
     font-family: $secondary-font;
     @include box-shadow;
-    @include font-size($font-size-large);
+    font-size: $font-size-large;
     background-color: $color-3;
     text-align: center;
   }
+
   & ul {
     display: grid;
     @include margin-padding(20px auto, 0);
     max-width: 500px;
   }
+
   & li {
     @include center(70%);
     @include box-shadow;
-    @include font-size(0.8rem);
+    font-size: 0.8rem;
     font-size: .8rem;
     @include margin-padding(10px, 35px 15px 20px 15px);
     display: flex;
@@ -69,67 +79,82 @@
     text-align: center;
     background-color: $color-3;
     transition: 0.5s;
+
     @include breakpoint(small) {
       @include center(50%);
-      @include font-size($font-size-small);
+      font-size: $font-size-small;
       padding: 50px 20px;
     }
   }
+
   & li:nth-child(1) {
     transform: rotate(-3deg);
     @include pin;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
+
   & li:nth-child(2) {
     transform: rotate(3deg);
     @include pin;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
+
   & li:nth-child(3) {
     transform: rotate(2deg);
     @include pin;
   }
+
   & li:nth-child(4) {
     transform: rotate(-5deg);
     @include pin;
   }
+
   & li:nth-child(5) {
     transform: rotate(3deg);
     @include pin;
   }
+
   & li:nth-child(6) {
     @include pin;
   }
+
   & li:nth-child(7) {
     transform: rotate(-3deg);
     @include pin;
   }
+
   & li:nth-child(8) {
     transform: rotate(2deg);
     @include pin;
   }
+
   & li a:nth-child(2) {
     font-weight: normal;
   }
+
   & li:hover {
     transform: scale(1.2);
   }
+
   & li a:link {
     color: $color-2;
   }
+
   @include breakpoint(medium) {
-    @include font-size($font-size-small);
+    font-size: $font-size-small;
     position: absolute;
     bottom: 10%;
     left: 35%;
     @include center(80%);
+
     ul {
-        @include center(60%);
+      @include center(60%);
     }
   }
 }
+
 //"Resources" ribbon--Pink ribbon with white text and green floral image
 .zen-resources {
   padding: 20px 20px 200px 20px;
@@ -147,6 +172,7 @@
   120px,
   bottom,
   0.8em);
+
   &:before {
     content: "";
     position: absolute;
@@ -159,6 +185,7 @@
     border-right: 140px solid transparent;
     filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
   }
+
   &:after {
     content: "";
     position: absolute;
@@ -171,38 +198,47 @@
     border-left: 140px solid transparent;
     filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
   }
+
   & ul {
     @include margin-padding(0, 0);
   }
+
   & li {
     line-height: 1.4rem;
-    @include font-size($font-size-mid);
+    font-size: $font-size-mid;
+
     a:link {
       color: $color-6;
       font-weight: normal;
     }
+
     a:hover {
       color: $color-3;
     }
   }
+
   & a {
     font-family: $secondary-font;
     font-weight: 100;
   }
+
   @include breakpoint(small) {
     top: 15px;
     left: 50px;
     margin: 0;
   }
+
   & h3 {
     margin: 25px 0 5px 0;
     color: $color-6;
   }
+
   @include breakpoint(medium) {
     z-index: 1;
     left: 100px;
     margin-top: -50px;
   }
+
   &:hover {
     animation: hover_flutter2 1s ease;
   }
