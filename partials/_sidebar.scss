@@ -37,6 +37,25 @@
   @include breakpoint(small) {
     top: -50px;
     left: 70%;
+
+    transform: rotate(0deg);
+    & h3 {
+      font-size: $font-size-mid;
+      margin: 25px 0 0 0;
+    }
+  }
+  
+  @include breakpoint (medium) {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    max-width: 300px;
+  }
+  @include breakpoint(large) {
+    position: absolute;
+    top: 150px;
+    right: 50px;//32px
+    max-width: 350px;
   }
 
   &:hover {
@@ -81,8 +100,14 @@
     transition: 0.5s;
 
     @include breakpoint(small) {
-      @include center(50%);
-      font-size: $font-size-small;
+      & h3 {
+        @include margin-padding(40px 10px 0 0, 10px);
+        text-align: right;
+      }
+      @include center(175px);
+      height: 125px;
+      font-size: $font-size-medium;
+
       padding: 50px 20px;
     }
   }
@@ -148,6 +173,11 @@
     bottom: 10%;
     left: 35%;
     @include center(80%);
+    transform: translateY(100px);
+    p {
+      font-size: $font-size-medium;
+      line-height: 1.5rem;
+    }
 
     ul {
       @include center(60%);
