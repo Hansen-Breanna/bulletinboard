@@ -9,127 +9,6 @@
 /* SCSS variables */
 /* Colors */
 /* Pin image */
-@-webkit-keyframes pushpin {
-  0% {
-    background-position-y: 4px;
-  }
-  50% {
-    background-position-y: 5px;
-  }
-  75% {
-    background-size: 33px;
-  }
-  100% {
-    background-position-y: 5px;
-  }
-}
-@keyframes pushpin {
-  0% {
-    background-position-y: 4px;
-  }
-  50% {
-    background-position-y: 5px;
-  }
-  75% {
-    background-size: 33px;
-  }
-  100% {
-    background-position-y: 5px;
-  }
-}
-
-@-webkit-keyframes hover_flutter {
-  0% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-  25% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  50% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  75% {
-    -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
-  }
-  100% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-}
-
-@keyframes hover_flutter {
-  0% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-  25% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  50% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  75% {
-    -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
-  }
-  100% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-}
-
-@-webkit-keyframes hover_flutter2 {
-  0% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  25% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
-  }
-  50% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
-  }
-  75% {
-    -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
-  }
-  100% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-}
-
-@keyframes hover_flutter2 {
-  0% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-  25% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
-  }
-  50% {
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
-  }
-  75% {
-    -webkit-transform: rotate(-7deg);
-            transform: rotate(-7deg);
-  }
-  100% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
-  }
-}
-
 /* Fonts */
 /* Media Breaks */
 /* SCSS Mixins */
@@ -179,8 +58,8 @@ header h2 {
 }
 
 header h2:hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -256,8 +135,8 @@ header h2:hover {
 }
 
 .preamble:hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -309,8 +188,8 @@ header h2:hover {
 }
 
 .explanation:hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -567,8 +446,8 @@ p[role=contentinfo] a {
 }
 
 .design-archives:hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -626,8 +505,8 @@ p[role=contentinfo] a {
 }
 
 .design-selection h3:hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -694,8 +573,8 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(1):hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -716,8 +595,8 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(2):hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -732,8 +611,8 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(3):hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -748,8 +627,8 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(4):hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -764,8 +643,8 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(5):hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -778,8 +657,8 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(6):hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -794,8 +673,8 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(7):hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -810,8 +689,8 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(8):hover {
-  -webkit-animation: pushpin 1s;
-          animation: pushpin 1s;
+  -webkit-animation: pushpin .5s;
+          animation: pushpin .5s;
   -webkit-transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
@@ -1027,6 +906,128 @@ a.zen-accessibility {
 a.zen-validate-html:hover, a.zen-validate-css:hover, a.zen-license:hover, a.zen-github:hover, a.zen-accessibility:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+/*keyframes*/
+@-webkit-keyframes pushpin {
+  0% {
+    background-position-y: 4px;
+  }
+  50% {
+    background-position-y: 5px;
+  }
+  75% {
+    background-size: 33px;
+  }
+  100% {
+    background-position-y: 5px;
+  }
+}
+@keyframes pushpin {
+  0% {
+    background-position-y: 4px;
+  }
+  50% {
+    background-position-y: 5px;
+  }
+  75% {
+    background-size: 33px;
+  }
+  100% {
+    background-position-y: 5px;
+  }
+}
+
+@-webkit-keyframes hover_flutter {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  25% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  75% {
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+@keyframes hover_flutter {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  25% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  75% {
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+@-webkit-keyframes hover_flutter2 {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  50% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  75% {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+
+@keyframes hover_flutter2 {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  50% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  75% {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
 }
 
 /* basic elements */

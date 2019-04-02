@@ -35,7 +35,7 @@ $width: 90%) {
   background-repeat: no-repeat;
   background-size: 40px;
   &:hover {
-  animation: pushpin 1s;
+  animation: pushpin .5s;
   transition-timing-function: cubic-bezier(.1, 1.11, .01, .99);
   }
 }
