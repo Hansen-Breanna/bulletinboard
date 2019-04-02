@@ -43,9 +43,9 @@ $width: 90%) {
   background-image: $pin;
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 35px;
+  background-size: 40px;
   &:hover {
-  animation: pushpin 1s;
+  animation: pushpin .5s;
   transition-timing-function: cubic-bezier(.1, 1.11, .01, .99);
   }
 }
