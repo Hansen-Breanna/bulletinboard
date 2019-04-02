@@ -1,65 +1,66 @@
 /* SCSS Mixins */
 @mixin breakpoint($break) {
-    @if $break==medium {
-      @media (min-width: $break-medium) {
-        @content;
-      }
+  @if $break==medium {
+    @media (min-width: $break-medium) {
+      @content;
     }
-    @else if $break==small {
-      @media (min-width: $break-small) {
-        @content;
-      }
+  }
+  @else if $break==small {
+    @media (min-width: $break-small) {
+      @content;
     }
-    @else {
-      @media ($break) {
-        @content;
-      }
+  }
+  @else {
+    @media ($break) {
+      @content;
     }
+  }
 }
-  
+
 @mixin center($max-width,
-  $width: 90%) {
-    width: $width;
-    max-width: $max-width;
-    margin-left: auto;
-    margin-right: auto;
+$width: 90%) {
+  width: $width;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
 }
-  
+
 @mixin box-shadow {
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-  
+
 @mixin pin {
-    background-image: $pin;
-    background-position: top center;
-    background-repeat: no-repeat;
+  background-image: $pin;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  &:hover {
+  animation: pushpin 1s;
+  transition-timing-function: cubic-bezier(.1, 1.11, .01, .99);
+  }
 }
-  
+
 @mixin background-img ($url,
-  $repeat,
-  $size1,
-  $size2,
-  $position1,
-  $position2,
-  $font-size) {
-    background-image: $url;
-    background-repeat: $repeat;
-    background-size: $size1 $size2;
-    background-position: $position1 $position2;
-    font-size: $font-size;
+$repeat,
+$size1,
+$size2,
+$position1,
+$position2,
+$font-size) {
+  background-image: $url;
+  background-repeat: $repeat;
+  background-size: $size1 $size2;
+  background-position: $position1 $position2;
+  font-size: $font-size;
 }
-  
-@mixin font-size($font-size) {
-    font-size: ($font-size);
-}
-  
+
 @mixin links($weight, $decoration, $color) {
-    font-weight: $weight;
-    text-decoration: $decoration;
-    color: $color;
+  font-weight: $weight;
+  text-decoration: $decoration;
+  color: $color;
 }
-  
+
 @mixin margin-padding($margin, $padding) {
-    margin: $margin;
-    padding: $padding;
+  margin: $margin;
+  padding: $padding;
 }

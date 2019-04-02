@@ -8,8 +8,16 @@ $color-5: #4b5548; // green
 $color-6: #ffffff; // white
 $color-7: #f2b975; // orange
 $color-8: #ede3da; // light-cream
+
 /* Pin image */
-$pin: url('images/blue-push-pin-50.png');
+$pin: url('images/pin.svg');
+@keyframes pushpin {
+    0% {background-position-y: 4px;}
+    50% {background-position-y: 5px;}
+    75% {background-size: 33px;}
+    100% {background-position-y: 5px;}
+}
+
 /* Fonts */
 $secondary-font: Lora,
 Georgia,
@@ -17,9 +25,12 @@ serif;
 $primary-font: 'Source Sans Pro',
 Arial,
 sans-serif;
-$font-size-small: 0.9rem;
-$font-size-medium: 1.2rem;
+$font-size-small: 1rem;
+$font-size-mid: 1.1rem;
+$font-size-medium: 1.3rem;
 $font-size-large: 1.4rem;
+$font-size-extra-large: 1.6rem;
 /* Media Breaks */
 $break-small: 45em;
 $break-medium: 65em;
+
