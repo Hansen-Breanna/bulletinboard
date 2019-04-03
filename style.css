@@ -356,15 +356,35 @@ template {
 /*Font Sizes*/
 /* Media Breaks */
 /* SCSS Mixins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #382519;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
 header h1 {
-  background-image: url(images/logo.png);
+  background: transparent;
+  background-image: url(images/logo_pink.png);
   background-repeat: no-repeat;
   background-size: 225px 225px;
   background-position: center center;
   font-size: 0;
   margin: -155px auto 40px auto;
   padding: 80px 30px 0px 30px;
-  background: transparent;
   height: 130px;
   vertical-align: middle;
   width: 155px;
@@ -418,7 +438,7 @@ header h2:hover {
 @media (min-width: 53.125em) {
   header h2 {
     right: -395px;
-    top: 70px;
+    top: 140px;
     z-index: 10;
   }
 }
@@ -426,6 +446,7 @@ header h2:hover {
 @media (min-width: 75.1em) {
   header h2 {
     right: -380px;
+    top: 55px;
   }
 }
 
@@ -440,6 +461,7 @@ header h2:hover {
   background-position: right -180px bottom -150px;
   font-size: 0.8em;
   width: 200px;
+  z-index: 10;
 }
 
 .summary p {
@@ -457,15 +479,15 @@ header h2:hover {
 
 @media (min-width: 53.125em) {
   .summary {
-    top: 160px;
+    top: 230px;
     left: 560px;
-    z-index: 10;
   }
 }
 
 @media (min-width: 75.1em) {
   .summary {
     left: 552px;
+    top: 145px;
   }
 }
 
@@ -510,7 +532,7 @@ header h2:hover {
     margin-right: auto;
     max-width: 75%;
     width: 90%;
-    margin-top: 150px;
+    margin-top: 140px;
     -webkit-transform: rotate(-4deg);
             transform: rotate(-4deg);
   }
@@ -518,7 +540,11 @@ header h2:hover {
 
 @media (min-width: 53.125em) {
   .preamble {
-    margin: 110px 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+    width: 90%;
+    margin: 140px 0 0 0;
   }
 }
 
@@ -819,7 +845,7 @@ p[role=contentinfo] a {
 }
 
 .sidebar .wrapper {
-  font: 1.2rem verdana, "Source Sans Pro", Arial, sans-serif;
+  font: 1.2rem "Source Sans Pro", Arial, sans-serif;
 }
 
 .sidebar li a:visited {
@@ -830,21 +856,21 @@ p[role=contentinfo] a {
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   margin: 0 auto;
-  padding: 15px;
+  padding: 20px;
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 40px;
   background-color: #efd9bf;
   font-size: 1rem;
-  font-family: "Lora", Georgia, serif;
+  font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: normal;
   position: absolute;
   left: 20px;
   top: -15px;
-  max-width: 150px;
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
+  max-width: 200px;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 
 .design-archives:hover {
@@ -857,6 +883,8 @@ p[role=contentinfo] a {
 .design-archives h3 {
   font-family: "Source Sans Pro", Arial, sans-serif;
   margin: 35px 0 5px 0;
+  text-transform: capitalize;
+  margin: 30px 0 10px 0;
 }
 
 .design-archives ul {
@@ -876,13 +904,14 @@ p[role=contentinfo] a {
   .design-archives {
     left: 70%;
     top: -50px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    font-weight: normal;
   }
-}
-
-@media (min-width: 53.125em) {
-  .design-archives {
-    right: 50px;
-    top: -100px;
+  .design-archives h3 {
+    margin: 25px 0 0 0;
   }
 }
 
@@ -1170,31 +1199,31 @@ p[role=contentinfo] a {
 }
 
 .zen-resources:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  margin-bottom: -71px;
-  border-top: 75px solid #ec637d;
   border-right: 140px solid transparent;
+  border-top: 75px solid #ec637d;
+  bottom: 0;
+  content: "";
   -webkit-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
           filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+  height: 0;
+  left: 0;
+  margin-bottom: -71px;
+  position: absolute;
+  width: 0;
 }
 
 .zen-resources:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  margin-bottom: -71px;
-  border-top: 75px solid #ec637d;
   border-left: 140px solid transparent;
+  border-top: 75px solid #ec637d;
+  bottom: 0;
+  content: "";
   -webkit-filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
           filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+  height: 0;
+  margin-bottom: -71px;
+  position: absolute;
+  right: 0;
+  width: 0;
 }
 
 .zen-resources a {
@@ -1203,9 +1232,9 @@ p[role=contentinfo] a {
 }
 
 .zen-resources h3 {
+  color: #ffffff;
   font-family: "Great Vibes", cursive;
   font-size: 1.6rem;
-  color: #ffffff;
   margin: 25px 0 5px 0;
   text-transform: capitalize;
 }
@@ -1231,17 +1260,17 @@ p[role=contentinfo] a {
 
 @media (min-width: 45em) {
   .zen-resources {
-    top: 15px;
     left: 50px;
     margin: 0;
+    top: 15px;
   }
 }
 
 @media (min-width: 53.125em) {
   .zen-resources {
-    z-index: 1;
     left: 100px;
     margin-top: -50px;
+    z-index: 1;
   }
 }
 
