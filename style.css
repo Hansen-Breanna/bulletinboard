@@ -256,14 +256,14 @@ header h2:hover {
 
 @media (min-width: 53.125em) {
   .participation::before {
-    background-position: 80% 100%, 50% 3%;
+    background-position: 80% 100%, 50% 0%;
     background-size: 400px, 40px;
   }
 }
 
 @media (min-width: 75.1em) {
   .participation::before {
-    background-postion: 80% 80%, 50% 3%;
+    background-position: 80% 95%, 50% 3%;
   }
 }
 
@@ -314,6 +314,12 @@ header h2:hover {
   .participation p {
     font-size: 1.3rem;
     line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 75.1em) {
+  .participation {
+    margin-top: 30px;
   }
 }
 
