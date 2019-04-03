@@ -30,32 +30,55 @@
   }
 }
 //"Participation"card --cream card with brown text and red floral
+
+/*Cream, red-leaves and pin backgrounds*/
+.participation::before {
+  content: "";
+  width: 80%;
+  height: 100%;
+  background: url('images/red-leaves-bottom.png') 75% 98% no-repeat, url('images/pin.svg') 60% 0% no-repeat;
+  background-color: $color-3;
+  background-size: 300px, 40px;
+  z-index: -1;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  @include box-shadow;
+  @include breakpoint(small) {
+    width: 100%;
+  }
+  @include breakpoint(medium) {
+    background-position: 80% 100%, 50% 0%;
+    background-size: 400px, 40px;
+  }
+  @include breakpoint(large) {
+    background-position: 80% 95%, 50% 3%;
+  }
+
+}
+
 .participation {
   @include center(100%);
+  background: url('images/envelope.png') no-repeat;
+  background-size: 500px;
   margin-bottom: 30px;
-  @include box-shadow;
-  border: 20px outset #4b5548;
-  background-color: $color-3;
   padding-bottom: 50px;
   transform: rotate(-2deg);
-  background: url('images/red-leaves-bottom.png') 75% 98% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #efd9bf;
-  background-size: 300px, 40px;
   & h3 {
-    @include margin-padding(40px 0 0 10px, 10px);
+    @include margin-padding(40px 0 0 10px, 60px 0 0 40px);
     font-size: $font-size-medium;
   }
   & p {
     font-size: $font-size-small;
 
     line-height: 1.2rem;
-    @include margin-padding(0, 5px 20px 25px 20px);
+    @include margin-padding(0, 5px 100px 5px 50px);
   }
   @include breakpoint(small) {
-    background: url('images/red-leaves.png') -15% 50% no-repeat, url('images/pin.svg') 50% 3% no-repeat, #efd9bf;
-    background-size: 150px, 40px;
-    padding-left: 30px;
+
+
     & h3 {
-      @include margin-padding(40px 10px 0 0, 10px);
+      @include margin-padding(60px 10px 0 0, 10px);
       text-align: right;
     }
     & p {
@@ -65,16 +88,20 @@
     }
   }
   @include breakpoint(medium) {
+    background-size: 600px;
     p {
       font-size: $font-size-medium;
       line-height: 1.5rem;
     }
 
   }
-  &:hover {
-    animation: hover_flutter2 1s ease;
+  @include breakpoint(large) {
+    margin-top: 30px;
   }
+
 }
+
+
 //"Benefits"ticket--white ticket with barcode and gold line  
 .benefits {
   @include center(100%, 180px);
