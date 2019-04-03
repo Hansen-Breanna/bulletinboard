@@ -182,7 +182,7 @@
   background: url('images/blue-leaves.png') 75% 120% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #ffffff;
   @include box-shadow;
   background-color: $color-4;
-background-size: 150px, 40px;
+  background-size: 150px, 40px;
   margin: auto;
   max-width: 200px;
   padding: 20px 20px 200px 20px;
@@ -222,8 +222,11 @@ background-size: 150px, 40px;
   }
 
   & h3 {
-    margin: 25px 0 5px 0;
+    font-family: $cursive-font;
+    font-size: $font-size-extra-large;
     color: $color-6;
+    margin: 25px 0 5px 0;
+    text-transform: capitalize;
   }
 
   & li {

@@ -866,8 +866,11 @@ p[role=contentinfo] a {
 }
 
 .zen-resources h3 {
-  margin: 25px 0 5px 0;
+  font-family: "Great Vibes", cursive;
+  font-size: 1.6rem;
   color: #ffffff;
+  margin: 25px 0 5px 0;
+  text-transform: capitalize;
 }
 
 .zen-resources li {
