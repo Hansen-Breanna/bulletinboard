@@ -219,9 +219,6 @@ header h2:hover {
 
 @media (min-width: 53.125em) {
   .explanation {
-    position: absolute;
-    top: 150px;
-    right: 50px;
     max-width: 300px;
   }
 }
@@ -248,7 +245,7 @@ header h2:hover {
   padding-bottom: 50px;
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
-  background: url("images/red-leaves-bottom.png") 75% 98% no-repeat, url("images/pin.svg") 50% 3% no-repeat, #efd9bf;
+  background: url("images/red-leaves-bottom.png") 75% 98% no-repeat, url("images/pin.svg") 50% 0% no-repeat, #efd9bf;
   background-size: 300px, 40px;
 }
 
