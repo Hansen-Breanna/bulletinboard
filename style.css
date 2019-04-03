@@ -43,19 +43,19 @@ header h1 {
 }
 
 header h2 {
-  font-size: 1.3rem;
-  line-height: 1.2rem;
-  width: 135px;
-  color: #382519;
-  background-color: #ffffff;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  padding: 50px 90px 5px 25px;
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 40px;
-  margin: auto;
-  padding: 50px 90px 5px 25px;
+  background-color: #ffffff;
+  color: #382519;
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+  width: 135px;
 }
 
 header h2:hover {
@@ -67,15 +67,15 @@ header h2:hover {
 
 @media (min-width: 45em) {
   header h2 {
+    left: 220px;
     position: absolute;
-    left: 180px;
   }
 }
 
 @media (min-width: 53.125em) {
   header h2 {
+    right: -395px;
     top: 70px;
-    right: -495px;
     z-index: 10;
   }
 }
@@ -87,7 +87,6 @@ header h2:hover {
 }
 
 .summary {
-  width: 200px;
   margin: 0 auto 20px auto;
   padding: 0 25px 160px 25px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -97,6 +96,7 @@ header h2:hover {
   background-size: 370px 370px;
   background-position: right -180px bottom -150px;
   font-size: 0.8em;
+  width: 200px;
 }
 
 .summary p {
@@ -108,21 +108,21 @@ header h2:hover {
   .summary {
     position: absolute;
     top: 260px;
-    left: 400px;
+    left: 440px;
   }
 }
 
 @media (min-width: 53.125em) {
   .summary {
     top: 160px;
-    left: 590px;
+    left: 560px;
     z-index: 10;
   }
 }
 
 @media (min-width: 75.1em) {
   .summary {
-    left: 533px;
+    left: 552px;
   }
 }
 

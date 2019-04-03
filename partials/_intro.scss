@@ -29,32 +29,33 @@ header h1 {
 }
 //title (h2) for .summary/Beauty of CSS card
 header h2 {
+  @include box-shadow;
+  @include margin-padding(auto, 50px 90px 5px 25px);
+  @include pin;
+  background-color: $color-6;
+  color: $color-2;
   font-size: $font-size-medium;
   line-height: 1.2rem;
   width: 135px;
-  color: $color-2;
-  background-color: $color-6;
-  @include box-shadow;
-  @include pin;
-  @include margin-padding(auto, 50px 90px 5px 25px);
+
   @include breakpoint(small) {
+    left: 220px;
     position: absolute;
-    left: 180px;
   }
+
   @include breakpoint(medium) {
+    right: -395px;
     top: 70px;
-    right: -495px;
     z-index: 10;
   }
+
   @include breakpoint(large) {
     right: -380px;
-
   }
-
 }
+
 //"Beauty of CSS" card--white card with flower image (Title=header h2)
 .summary {
-  width: 200px;
   @include margin-padding(0 auto 20px auto, 0 25px 160px 25px);
   @include box-shadow;
   @include background-img (url('images/flower-combo.png'),
@@ -64,24 +65,31 @@ header h2 {
   right -180px,
   bottom -150px,
   .8em);
+
+  width: 200px;
+
   & p {
     width: 175px;
     line-height: 1.3rem;
   }
+
   @include breakpoint(small) {
     position: absolute;
     top: 260px;
-    left: 400px;
+    left: 440px;
   }
+
   @include breakpoint(medium) {
     top: 160px;
-    left: 590px;
+    left: 560px;
     z-index: 10;
   }
+
   @include breakpoint(large) {
-    left: 533px;
+    left: 552px;
   }
 }
+
 //"The Road to Enlightenment card" --dark brown card with white text
 .preamble {
   @include center(85%);
