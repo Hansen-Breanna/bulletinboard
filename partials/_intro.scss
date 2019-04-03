@@ -3,13 +3,6 @@
 //Header with Logo image and text(h1)
 header h1 {
   background: transparent;
-<<<<<<< HEAD
-=======
-  height: 130px;
-  width: 155px;
-  vertical-align: middle;
-  @include margin-padding(-155px auto 40px auto, 80px 30px 0px 30px);
->>>>>>> 5ba1208a4584cb04cec1720929be9e6b293cb174
   @include background-img (url(images/logo_pink.png),
   no-repeat,
   225px,
@@ -17,14 +10,11 @@ header h1 {
   center,
   center,
   0);
-<<<<<<< HEAD
   @include margin-padding(-155px auto 40px auto, 80px 30px 0px 30px);
   height: 130px;
   vertical-align: middle;
   width: 155px;
 
-=======
->>>>>>> 5ba1208a4584cb04cec1720929be9e6b293cb174
   @include breakpoint(small) {
     height: 230px;
     margin-top: -180px;
