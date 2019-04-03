@@ -323,11 +323,6 @@ header h2:hover {
   }
 }
 
-.participation:hover {
-  -webkit-animation: hover_flutter2 1s ease;
-          animation: hover_flutter2 1s ease;
-}
-
 .benefits {
   width: 180px;
   max-width: 100%;
@@ -890,11 +885,6 @@ p[role=contentinfo] a {
     left: 100px;
     margin-top: -50px;
   }
-}
-
-.zen-resources:hover {
-  -webkit-animation: hover_flutter2 1s ease;
-          animation: hover_flutter2 1s ease;
 }
 
 footer {
