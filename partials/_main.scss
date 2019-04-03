@@ -20,9 +20,6 @@
     }
   }
   @include breakpoint (medium) {
-    position: absolute;
-    top: 150px;
-    right: 50px;
     max-width: 300px;
   }
   @include breakpoint(large) {
@@ -41,7 +38,7 @@
   background-color: $color-3;
   padding-bottom: 50px;
   transform: rotate(-2deg);
-  background: url('images/red-leaves-bottom.png') 75% 98% no-repeat, url('images/pin.svg') 50% 3% no-repeat, #efd9bf;
+  background: url('images/red-leaves-bottom.png') 75% 98% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #efd9bf;
   background-size: 300px, 40px;
   & h3 {
     @include margin-padding(40px 0 0 10px, 10px);
