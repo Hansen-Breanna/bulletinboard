@@ -53,35 +53,27 @@
   @include center(100%);
 
   & h3 {
-    //moved from top down to be by links so more intuitive
-    padding: 45px 10px;
-    @include center(250px);
-    text-transform: capitalize;
-    @include pin;
-    font-family: $secondary-font;
     @include box-shadow;
-    font-size: $font-size-large;
+    @include center(250px);
+    @include pin;
     background-color: $color-3;
+    font-family: $cursive-font;
+    font-size: $font-size-extra-large;
+    padding: 55px 10px;
+    text-transform: capitalize;
     text-align: center;
-  }
-
-  & ul {
-    display: grid;
-    @include margin-padding(20px auto, 0);
-    max-width: 500px;
   }
 
   & li {
-    @include center(70%);
     @include box-shadow;
-    font-size: 0.8rem;
-    font-size: .8rem;
-    @include margin-padding(10px, 35px 15px 20px 15px);
+    @include center(70%);
+    @include margin-padding(10px, 45px 15px 20px 15px);
+    background-color: $color-3;
     display: flex;
+    font-size: 0.8rem;
     flex-flow: column nowrap;
     justify-content: center;
     text-align: center;
-    background-color: $color-3;
     transition: 0.5s;
 
     @include breakpoint(small) {
@@ -93,43 +85,48 @@
       @include center(175px);
       height: 125px;
       font-size: $font-size-medium;
-
       padding: 50px 20px;
     }
   }
 
+  & ul {
+    @include margin-padding(20px auto, 0);
+    display: grid;
+    max-width: 500px;
+  }
+
   & li:nth-child(1) {
-    transform: rotate(-3deg);
     @include pin;
+    background-size: 35px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    background-size: 35px;
+    transform: rotate(-3deg);
   }
 
   & li:nth-child(2) {
-    transform: rotate(3deg);
     @include pin;
+    background-size: 35px;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    background-size: 35px;
+    transform: rotate(3deg);
   }
 
   & li:nth-child(3) {
-    transform: rotate(2deg);
     @include pin;
     background-size: 35px;
+    transform: rotate(2deg);
   }
 
   & li:nth-child(4) {
-    transform: rotate(-5deg);
     @include pin;
     background-size: 35px;
+    transform: rotate(-5deg);
   }
 
   & li:nth-child(5) {
-    transform: rotate(3deg);
     @include pin;
     background-size: 35px;
+    transform: rotate(3deg);
   }
 
   & li:nth-child(6) {
@@ -144,9 +141,9 @@
   }
 
   & li:nth-child(8) {
-    transform: rotate(2deg);
     @include pin;
     background-size: 35px;
+    transform: rotate(2deg);
   }
 
   & li a:nth-child(2) {
@@ -162,11 +159,11 @@
   }
 
   @include breakpoint(medium) {
-    font-size: $font-size-small;
-    position: absolute;
-    bottom: 10%;
-    left: 35%;
     @include center(80%);
+    bottom: 10%;
+    font-size: $font-size-small;
+    left: 35%;
+    position: absolute;
     transform: translateY(100px);
 
     p {
@@ -182,21 +179,16 @@
 
 //"Resources" ribbon--Pink ribbon with white text and green floral image
 .zen-resources {
-  padding: 20px 20px 200px 20px;
+  background: url('images/blue-leaves.png') 75% 120% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #ffffff;
   @include box-shadow;
-  transform: rotate(-2deg);
+  background-color: $color-4;
+background-size: 150px, 40px;
+  margin: auto;
   max-width: 200px;
+  padding: 20px 20px 200px 20px;
   position: relative;
   top: 0px;
-  margin: auto;
-  background-color: $color-4;
-  @include background-img (url('images/blue-leaves-left.png'),
-  no-repeat,
-  100px,
-  220px,
-  120px,
-  bottom,
-  0.8em);
+  transform: rotate(-2deg);
 
   &:before {
     content: "";
@@ -224,38 +216,39 @@
     filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
   }
 
-  & ul {
-    @include margin-padding(0, 0);
+  & a {
+    font-family: $secondary-font;
+    font-weight: 100;
+  }
+
+  & h3 {
+    margin: 25px 0 5px 0;
+    color: $color-6;
   }
 
   & li {
-    line-height: 1.4rem;
     font-size: $font-size-mid;
+    line-height: 1.4rem;
+
+    a:hover {
+      color: $color-3;
+    }
 
     a:link {
       color: $color-6;
       font-weight: normal;
     }
 
-    a:hover {
-      color: $color-3;
-    }
   }
 
-  & a {
-    font-family: $secondary-font;
-    font-weight: 100;
+  & ul {
+    @include margin-padding(0, 0);
   }
 
   @include breakpoint(small) {
     top: 15px;
     left: 50px;
     margin: 0;
-  }
-
-  & h3 {
-    margin: 25px 0 5px 0;
-    color: $color-6;
   }
 
   @include breakpoint(medium) {

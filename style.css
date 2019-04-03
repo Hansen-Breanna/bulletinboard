@@ -283,7 +283,9 @@ header h2:hover {
 .participation h3 {
   margin: 40px 0 0 10px;
   padding: 60px 0 0 40px;
-  font-size: 1.3rem;
+  font-family: "Great Vibes", cursive;
+  text-transform: capitalize;
+  font-size: 1.6rem;
 }
 
 .participation p {
@@ -498,7 +500,7 @@ p[role=contentinfo] a {
   background-size: 40px;
   background-color: #efd9bf;
   font-size: 1rem;
-  font-family: Lora, Georgia, serif;
+  font-family: "Lora", Georgia, serif;
   font-weight: normal;
   position: absolute;
   left: 20px;
@@ -555,21 +557,21 @@ p[role=contentinfo] a {
 }
 
 .design-selection h3 {
-  padding: 45px 10px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   width: 90%;
   max-width: 250px;
   margin-left: auto;
   margin-right: auto;
-  text-transform: capitalize;
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 40px;
-  font-family: Lora, Georgia, serif;
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  font-size: 1.4rem;
   background-color: #efd9bf;
+  font-family: "Great Vibes", cursive;
+  font-size: 1.6rem;
+  padding: 55px 10px;
+  text-transform: capitalize;
   text-align: center;
 }
 
@@ -580,28 +582,20 @@ p[role=contentinfo] a {
           transition-timing-function: cubic-bezier(0.1, 1.11, 0.01, 0.99);
 }
 
-.design-selection ul {
-  display: -ms-grid;
-  display: grid;
-  margin: 20px auto;
-  padding: 0;
-  max-width: 500px;
-}
-
 .design-selection li {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   width: 90%;
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  font-size: 0.8rem;
-  font-size: .8rem;
   margin: 10px;
-  padding: 35px 15px 20px 15px;
+  padding: 45px 15px 20px 15px;
+  background-color: #efd9bf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 0.8rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -610,7 +604,6 @@ p[role=contentinfo] a {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background-color: #efd9bf;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -632,20 +625,28 @@ p[role=contentinfo] a {
   }
 }
 
+.design-selection ul {
+  margin: 20px auto;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  max-width: 500px;
+}
+
 .design-selection li:nth-child(1) {
-  -webkit-transform: rotate(-3deg);
-          transform: rotate(-3deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 40px;
+  background-size: 35px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  background-size: 35px;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
 }
 
 .design-selection li:nth-child(1):hover {
@@ -656,19 +657,19 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(2) {
-  -webkit-transform: rotate(3deg);
-          transform: rotate(3deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 40px;
+  background-size: 35px;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  background-size: 35px;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
 }
 
 .design-selection li:nth-child(2):hover {
@@ -679,13 +680,13 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(3) {
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 40px;
   background-size: 35px;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
 }
 
 .design-selection li:nth-child(3):hover {
@@ -696,13 +697,13 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(4) {
-  -webkit-transform: rotate(-5deg);
-          transform: rotate(-5deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 40px;
   background-size: 35px;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 
 .design-selection li:nth-child(4):hover {
@@ -713,13 +714,13 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(5) {
-  -webkit-transform: rotate(3deg);
-          transform: rotate(3deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 40px;
   background-size: 35px;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
 }
 
 .design-selection li:nth-child(5):hover {
@@ -762,13 +763,13 @@ p[role=contentinfo] a {
 }
 
 .design-selection li:nth-child(8) {
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
   background-image: url("images/pin.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 40px;
   background-size: 35px;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
 }
 
 .design-selection li:nth-child(8):hover {
@@ -793,14 +794,14 @@ p[role=contentinfo] a {
 
 @media (min-width: 53.125em) {
   .design-selection {
-    font-size: 1rem;
-    position: absolute;
-    bottom: 10%;
-    left: 35%;
     width: 90%;
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    bottom: 10%;
+    font-size: 1rem;
+    left: 35%;
+    position: absolute;
     -webkit-transform: translateY(100px);
             transform: translateY(100px);
   }
@@ -817,21 +818,18 @@ p[role=contentinfo] a {
 }
 
 .zen-resources {
-  padding: 20px 20px 200px 20px;
+  background: url("images/blue-leaves.png") 75% 120% no-repeat, url("images/pin.svg") 50% 0% no-repeat, #ffffff;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
+  background-color: #ec637d;
+  background-size: 150px, 40px;
+  margin: auto;
   max-width: 200px;
+  padding: 20px 20px 200px 20px;
   position: relative;
   top: 0px;
-  margin: auto;
-  background-color: #ec637d;
-  background-image: url("images/blue-leaves-left.png");
-  background-repeat: no-repeat;
-  background-size: 100px 220px;
-  background-position: 120px bottom;
-  font-size: 0.8em;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
 }
 
 .zen-resources:before {
@@ -862,14 +860,23 @@ p[role=contentinfo] a {
           filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
 }
 
-.zen-resources ul {
-  margin: 0;
-  padding: 0;
+.zen-resources a {
+  font-family: "Lora", Georgia, serif;
+  font-weight: 100;
+}
+
+.zen-resources h3 {
+  margin: 25px 0 5px 0;
+  color: #ffffff;
 }
 
 .zen-resources li {
-  line-height: 1.4rem;
   font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+
+.zen-resources li a:hover {
+  color: #efd9bf;
 }
 
 .zen-resources li a:link {
@@ -877,13 +884,9 @@ p[role=contentinfo] a {
   font-weight: normal;
 }
 
-.zen-resources li a:hover {
-  color: #efd9bf;
-}
-
-.zen-resources a {
-  font-family: Lora, Georgia, serif;
-  font-weight: 100;
+.zen-resources ul {
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 45em) {
@@ -892,11 +895,6 @@ p[role=contentinfo] a {
     left: 50px;
     margin: 0;
   }
-}
-
-.zen-resources h3 {
-  margin: 25px 0 5px 0;
-  color: #ffffff;
 }
 
 @media (min-width: 53.125em) {
