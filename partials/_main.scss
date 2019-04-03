@@ -193,8 +193,10 @@
 //bottom dark brown band with website/author information in white text 
 p[role=contentinfo] {
   position: absolute;
-  bottom: -150px;
+  bottom: -142px;
   left: 0px;
+  padding: 3rem;
+  padding-right: 15px;
   background-color: #382519;
   color: #ffffff;
   max-width: 100%;
