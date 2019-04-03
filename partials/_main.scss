@@ -39,7 +39,10 @@
   @include box-shadow;
   border: 20px outset #4b5548;
   background-color: $color-3;
+  padding-bottom: 50px;
   transform: rotate(-2deg);
+  background: url('images/red-leaves-bottom.png') 75% 98% no-repeat, url('images/pin.svg') 50% 3% no-repeat, #efd9bf;
+  background-size: 300px, 40px;
   & h3 {
     @include margin-padding(40px 0 0 10px, 10px);
     font-size: $font-size-medium;
@@ -51,9 +54,9 @@
     @include margin-padding(0, 5px 20px 25px 20px);
   }
   @include breakpoint(small) {
-    background: url('images/red-leaves.png') -15% 25% no-repeat, url('images/pin.svg') 50% 3% no-repeat, #efd9bf;
+    background: url('images/red-leaves.png') -15% 50% no-repeat, url('images/pin.svg') 50% 3% no-repeat, #efd9bf;
     background-size: 150px, 40px;
-    margin-left: 15px;
+    padding-left: 30px;
     & h3 {
       @include margin-padding(40px 10px 0 0, 10px);
       text-align: right;
@@ -71,20 +74,25 @@
     }
 
   }
+  &:hover {
+    animation: hover_flutter2 1s ease;
+  }
 }
 //"Benefits"ticket--white ticket with barcode and gold line  
 .benefits {
   @include center(100%, 180px);
   @include margin-padding(0 0 20px 25px, 20px);
   @include box-shadow;
-  height: 445px;
-  background: url('images/barcode_horizontal_2nd.png') 42% 98% no-repeat, url('images/pin.svg') 64% 4% no-repeat, #ffffff;
+
+  background: url('images/barcode_horizontal_2nd.png') 42% 98% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #ffffff;
   background-size: 196px, 40px;
+  height: 445px;
+  padding-top: 35px;
   transform: rotate(2deg);
   & h3 {
     text-align: center;
     @include breakpoint (small) {
-      margin: 0px 0px 5px 20px;
+      margin: 0 0 5px 20px;
       text-align: left;
     }
   }
@@ -127,7 +135,7 @@
 }
 //"Requirements"paper--white paper with brown text and checkmark 
 .requirements {
-  background: url('images/check.png') 0% 45% no-repeat, url('images/pin.svg') 50% 2% no-repeat, #ffffff;
+  background: url('images/check.png') 0% 45% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #ffffff;
   background-size: 80px, 40px;
   padding: 30px 20px 30px 80px;
   @include center(80%);
@@ -156,6 +164,8 @@
     grid-column: 1 / 2;
   }
 }
+
+
 //bottom dark brown band with website/author information in white text 
 p[role=contentinfo] {
   position: absolute;
