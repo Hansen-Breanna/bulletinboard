@@ -1,11 +1,7 @@
 //Intro section including Header, Summary, Preamble
+
 //Header with Logo image and text(h1)
 header h1 {
-  background: transparent;
-  width: 155px;
-  height: 130px;
-  @include margin-padding(-155px auto 40px auto, 80px 30px 0px 30px);
-  vertical-align: middle;
   @include background-img (url(images/logo.png),
   no-repeat,
   225px,
@@ -13,11 +9,13 @@ header h1 {
   center,
   center,
   0);
+  @include margin-padding(-155px auto 40px auto, 80px 30px 0px 30px);
+  background: transparent;
+  height: 130px;
+  vertical-align: middle;
+  width: 155px;
+
   @include breakpoint(small) {
-    transform: translateX(-100px);
-    width: 255px;
-    height: 230px;
-    margin-top: -180px;
     @include background-img (url(images/logo_blue.png),
     no-repeat,
     300px,
@@ -25,8 +23,13 @@ header h1 {
     center,
     center,
     0);
+    height: 230px;
+    margin-top: -180px;
+    transform: translateX(-100px);
+    width: 255px;
   }
 }
+
 //title (h2) for .summary/Beauty of CSS card
 header h2 {
   @include box-shadow;
@@ -92,20 +95,22 @@ header h2 {
 
 //"The Road to Enlightenment card" --dark brown card with white text
 .preamble {
+  @include box-shadow;
   @include center(85%);
   @include margin-padding(0 0 20px 0, 30px);
+  @include pin;
   background-color: $color-2;
   color: $color-6;
-  transform: rotate(-1deg);
-  @include box-shadow;
-  @include pin;
   text-align: center;
+  transform: rotate(-1deg);
+
   &.preamble h3 {
     font-size: $font-size-medium;
   }
   &.preamble p {
     font-size: $font-size-small;
   }
+  
   @include breakpoint(small) {
     @include center (75%);
     margin-top: 150px;

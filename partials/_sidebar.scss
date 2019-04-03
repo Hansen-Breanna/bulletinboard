@@ -179,8 +179,8 @@
 
 //"Resources" ribbon--Pink ribbon with white text and green floral image
 .zen-resources {
-  background: url('images/blue-leaves.png') 75% 120% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #ffffff;
   @include box-shadow;
+  background: url('images/blue-leaves.png') 75% 120% no-repeat, url('images/pin.svg') 50% 0% no-repeat, #ffffff;
   background-color: $color-4;
   background-size: 150px, 40px;
   margin: auto;
@@ -191,29 +191,29 @@
   transform: rotate(-2deg);
 
   &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    margin-bottom: -71px;
-    border-top: 75px solid $color-4;
     border-right: 140px solid transparent;
+    border-top: 75px solid $color-4;
+    bottom: 0;
+    content: "";
     filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+    height: 0;
+    left: 0;
+    margin-bottom: -71px;
+    position: absolute;
+    width: 0;
   }
 
   &:after {
-    content: "";
-    position: absolute;
-    right: 0;
+    border-left: 140px solid transparent;
+    border-top: 75px solid $color-4;
     bottom: 0;
-    width: 0;
+    content: "";
+    filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
     height: 0;
     margin-bottom: -71px;
-    border-top: 75px solid $color-4;
-    border-left: 140px solid transparent;
-    filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.5));
+    position: absolute;
+    right: 0;
+    width: 0;
   }
 
   & a {
@@ -222,9 +222,9 @@
   }
 
   & h3 {
+    color: $color-6;
     font-family: $cursive-font;
     font-size: $font-size-extra-large;
-    color: $color-6;
     margin: 25px 0 5px 0;
     text-transform: capitalize;
   }
@@ -241,7 +241,6 @@
       color: $color-6;
       font-weight: normal;
     }
-
   }
 
   & ul {
@@ -249,14 +248,15 @@
   }
 
   @include breakpoint(small) {
-    top: 15px;
     left: 50px;
     margin: 0;
+    top: 15px;
+
   }
 
   @include breakpoint(medium) {
-    z-index: 1;
     left: 100px;
     margin-top: -50px;
+    z-index: 1;
   }
 }
