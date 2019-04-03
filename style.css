@@ -462,7 +462,6 @@ p[role=contentinfo] {
   color: #ffffff;
   max-width: 100%;
   text-align: right;
-  padding: 75px 5% 75px 15%;
   font-size: 1.3rem;
 }
 
@@ -531,6 +530,30 @@ p[role=contentinfo] a {
   .design-archives {
     top: -50px;
     left: 70%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .design-archives h3 {
+    font-size: 1.1rem;
+    margin: 25px 0 0 0;
+  }
+}
+
+@media (min-width: 53.125em) {
+  .design-archives {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 75.1em) {
+  .design-archives {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    max-width: 350px;
   }
 }
 
@@ -610,11 +633,17 @@ p[role=contentinfo] a {
 @media (min-width: 45em) {
   .design-selection li {
     width: 90%;
-    max-width: 50%;
+    max-width: 175px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1rem;
+    height: 125px;
+    font-size: 1.3rem;
     padding: 50px 20px;
+  }
+  .design-selection li h3 {
+    margin: 40px 10px 0 0;
+    padding: 10px;
+    text-align: right;
   }
 }
 
@@ -787,6 +816,12 @@ p[role=contentinfo] a {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  .design-selection p {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
   }
   .design-selection ul {
     width: 90%;
