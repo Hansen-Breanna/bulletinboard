@@ -2,20 +2,23 @@
 
 //Header with Logo image and text(h1)
 header h1 {
-  @include background-img (url(images/logo.png),
+  background: transparent;
+  height: 130px;
+  width: 155px;
+  vertical-align: middle;
+  @include margin-padding(-155px auto 40px auto, 80px 30px 0px 30px);
+  @include background-img (url(images/logo_pink.png),
   no-repeat,
   225px,
   225px,
   center,
   center,
   0);
-  @include margin-padding(-155px auto 40px auto, 80px 30px 0px 30px);
-  background: transparent;
-  height: 130px;
-  vertical-align: middle;
-  width: 155px;
-
   @include breakpoint(small) {
+    height: 230px;
+    margin-top: -180px;
+    transform: translateX(-100px);
+    width: 255px;
     @include background-img (url(images/logo_blue.png),
     no-repeat,
     300px,
@@ -23,10 +26,6 @@ header h1 {
     center,
     center,
     0);
-    height: 230px;
-    margin-top: -180px;
-    transform: translateX(-100px);
-    width: 255px;
   }
 }
 
@@ -110,7 +109,7 @@ header h2 {
   &.preamble p {
     font-size: $font-size-small;
   }
-  
+
   @include breakpoint(small) {
     @include center (75%);
     margin-top: 150px;
