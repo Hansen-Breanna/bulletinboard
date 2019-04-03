@@ -29,9 +29,9 @@ body {
   @include margin-padding(0, 0);
   background: $color-1;
   color: $color-2;
+  font-family: $primary-font;
   font-size: 16pt;
   line-height: 1.5rem;
-  font-family: $primary-font;
 }
 
 p {
@@ -100,12 +100,14 @@ li {
 
 /* specific divs */
 .page-wrapper {
+  @include margin-padding(0 0, 0 40px 200px 40px);
   border-top: 150px solid $color-2;
   position: relative;
-  @include margin-padding(0 0, 0 40px 200px 40px);
+
   @include breakpoint(small) {
     @include margin-padding(0 0, 0 40px);
   }
+  
   @include breakpoint(medium) {
     background-image: url('images/burlap.jpg');
     margin: auto;
